@@ -1,4 +1,4 @@
-# Hi there, I'm Dan 👋
+## Hi there, I'm Dan 👋
 
 Currently a Junior Research Engineer for Natural Transformations, working on improving PairTime; a marketplace for pair problem-solving.
 
