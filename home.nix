@@ -67,6 +67,12 @@ in {
     # Apps
     vscode # Code editor
     utm # Virtual machine
+
+    # Fun
+    asciiquarium
+    cmatrix
+    cowsay
+    lolcat
   ];
 
   home.file = {
@@ -202,6 +208,7 @@ in {
     ];
     shellAliases = {
       # Config
+      nixconf = "cd ~/.config/nixpkgs";
       # zshconfig = "vim ~/.zshrc && source ~/.zshrc";
       # aliasconfig = "vim ~/.oh-my-zsh/custom/aliases.zsh && source ~/.zshrc";
       # vimconfig = "vim ~/.vimrc";
