@@ -2,9 +2,10 @@
 # - https://sourcegraph.com/github.com/knl/dotskel/-/blob/home.nix?L532:17
 # - [zsh plugin func] https://sourcegraph.com/github.com/Icy-Thought/Snowflake/-/blob/modules/shell/zsh.nix
 
-{ config, pkgs, ... }:
+# { config, pkgs, ... }:
 let
-  pkgs = import <nixpkgs> { };
+  # pkgs = import <nixpkgs> { };
+  pkgs = import ./default.nix { };
 
   github-nvim-theme = pkgs.vimUtils.buildVimPluginFrom2Nix {
     name = "github-nvim-theme";
