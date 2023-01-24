@@ -64,6 +64,7 @@ in {
     bottom
     neofetch
     # macchina
+    tree
 
     # Apps
     vscode # Code editor
@@ -351,7 +352,7 @@ in {
       selection.save_to_clipboard = true;
       # shell.program = "${pkgs.zsh}/bin/zsh";
       window = {
-        decorations = "full";
+        decorations = "Transparent"; # Full | Transparent | Buttonless | None
         opacity = 1.00;
         padding = {
           x = 12;
