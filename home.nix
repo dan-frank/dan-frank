@@ -127,6 +127,10 @@ in {
       bindkey -s '\el' 'ls\n'                               # [Esc-l] - run command: ls
       bindkey ' ' magic-space                               # [Space] - don't do history expansion
 
+      # Change auto suggest color
+      # - fg=[https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg]
+      ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=013'
+
       # Load colors for prettier `ls`
       eval $(dircolors ~/.nix-profile/share/LS_COLORS)
       
@@ -308,7 +312,8 @@ in {
         # italic.family = "Liga SFMono Nerd Font";
         # italic.style = "Italic";
       };
-      # GitHub Dark - https://gist.github.com/huytd/6e76206fb02267c5da5018f725693862?permalink_comment_id=3681421
+      # GitHub Theme
+      # -> https://gist.github.com/huytd/6e76206fb02267c5da5018f725693862?permalink_comment_id=3681421
       colors = {
         primary = {
           background = "#252729";
@@ -325,14 +330,14 @@ in {
           white = "#e0e2e4";
         };
         bright = {
-          black = "0x686868";
-          red = "0xF07178";
-          green = "0xC2D94C";
-          yellow = "0xFFB454";
-          blue = "0x59C2FF";
-          magenta = "0xFFEE99";
-          cyan = "0x95E6CB";
-          white = "0xFFFFFF";
+          black = "#282828";
+          red = "#fdaeb7";
+          green = "#bef5cb";
+          yellow = "#fff5b1";
+          blue = "#c8e1ff";
+          magenta = "#d1bcf9";
+          cyan = "#b3f0ff";
+          white = "#e1e4e8";
         };
       };
       key_bindings = [
