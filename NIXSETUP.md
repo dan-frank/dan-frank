@@ -66,3 +66,13 @@ We then clone the repo containing the project into the current directory, which 
 home-manager switch
 ```
 
+## Further Reading
+
+The following links consit of useful resources that I used to learn about Nix and how to set it up, and other users setups that I used for inspiration (or completely ripped off) to improve my config management:
+
+- [Nixology](https://www.youtube.com/playlist?list=PLRGI9KQ3_HP_OFRG6R-p4iFgMSK1t5BHs) <- Great walkthrough of managing your packages and dev envrionment with Nix
+- [burke/b](https://github.com/burke/b) <- Burke's in depth setup
+- [jpetrucciani/nix](https://github.com/jpetrucciani/nix) <- Jacobi's clever breakdown (that is simple to implement)
+- [yuanw/nix-home](https://github.com/yuanw/nix-home) <- Yuan's neet packages
+- [Sourcegraph](https://sourcegraph.com/search?q=context:global+lang:nix&patternType=standard&sm=1&groupBy=repo) <- Every users public file from GitHub
+
