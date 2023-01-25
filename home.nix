@@ -71,20 +71,11 @@ in {
     ".hushlogin".text = "";
   };
 
-  programs.git = {
-    enable = true;
-    userName = "dan-frank";
-    userEmail = "dan.frank.lucas@gmail.com";
-    extraConfig = {
-      core.editor = "vim";
-      pull.rebase = "false";
-    };
-  };
-
-  programs.zsh = import ./config/zsh.nix pkgs;
   programs.alacritty = import ./config/alacritty.nix pkgs;
+  programs.bat = import ./config/bat.nix pkgs;
+  programs.git = import ./config/git.nix pkgs;
   programs.neovim = import ./config/neovim.nix pkgs;
   programs.vscode = import ./config/vscode.nix pkgs;
-  programs.bat = import ./config/bat.nix pkgs;
+  programs.zsh = import ./config/zsh.nix pkgs;
 }
 
