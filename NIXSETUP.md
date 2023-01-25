@@ -74,5 +74,7 @@ The following links consit of useful resources that I used to learn about Nix an
 - [burke/b](https://github.com/burke/b) <- Burke's in depth setup
 - [jpetrucciani/nix](https://github.com/jpetrucciani/nix) <- Jacobi's clever breakdown (that is simple to implement)
 - [yuanw/nix-home](https://github.com/yuanw/nix-home) <- Yuan's neet packages
+- [lucasew/nixcfg](https://github.com/lucasew/nixcfg) <- Interesting setup with custom (edited with config) packages
+- [alex35mil/dotfiles](https://github.com/alex35mil/dotfiles) <- Another nice and simple setup
 - [Sourcegraph](https://sourcegraph.com/search?q=context:global+lang:nix&patternType=standard&sm=1&groupBy=repo) <- Every users public file from GitHub
 
