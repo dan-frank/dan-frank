@@ -2,10 +2,9 @@
 # - https://sourcegraph.com/github.com/knl/dotskel/-/blob/home.nix?L532:17
 # - [zsh plugin func] https://sourcegraph.com/github.com/Icy-Thought/Snowflake/-/blob/modules/shell/zsh.nix
 
-# { config, pkgs, ... }:
+{ config, pkgs, ... }:
 let
-  # pkgs = import <nixpkgs> { };
-  pkgs = import ./default.nix { };
+  pkgs = import <nixpkgs> { };
 in {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
