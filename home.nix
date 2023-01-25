@@ -6,17 +6,6 @@
 let
   # pkgs = import <nixpkgs> { };
   pkgs = import ./default.nix { };
-
-  LS_COLORS = pkgs.fetchgit {
-    url = "https://github.com/trapd00r/LS_COLORS";
-    sha256 = "KsVuHBd4CzAWDeobS0N4NW+z1KMK1kBnZg14g67SCeQ=";
-  };
-  ls-colors = pkgs.runCommand "ls-colors" {} ''
-    mkdir -p $out/bin $out/share
-    ln -s ${pkgs.coreutils}/bin/ls $out/bin/ls
-    ln -s ${pkgs.coreutils}/bin/dircolors $out/bin/dircolors
-    cp ${LS_COLORS}/LS_COLORS $out/share/LS_COLORS
-  '';
 in {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
