@@ -66,6 +66,24 @@ We then clone the repo containing the project into the current directory, which 
 home-manager switch
 ```
 
+## Breakdown
+
+### `home.nix`
+
+My dev environment, managed with home manager.
+
+### `config.nix`
+
+This file includes minor configuration to allow for unfree packages to be installed.
+
+### `/configs`
+
+This folder includes various nix attribute files that contain the configurations of various packages and apps that I use.
+
+### `/overlays`
+
+This folder contains my personal overlays that don't really need to be pushed into the main nixpkgs repo.
+
 ## Further Reading
 
 The following links consit of useful resources that I used to learn about Nix and how to set it up, and other users setups that I used for inspiration (or completely ripped off) to improve my config management:
