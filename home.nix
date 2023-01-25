@@ -366,9 +366,7 @@ in {
   };
 
   programs.neovim = import ./config/neovim.nix pkgs;
-
-  programs.vscode.enable = true;
-
+  programs.vscode = import ./config/vscode.nix pkgs;
   programs.bat = import ./config/bat.nix pkgs;
 }
 
