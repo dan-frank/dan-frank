@@ -59,11 +59,11 @@ in {
     ".hushlogin".text = "";
   };
 
-  programs.alacritty = import ./config/alacritty.nix pkgs;
-  programs.bat = import ./config/bat.nix pkgs;
-  programs.git = import ./config/git.nix pkgs;
-  programs.neovim = import ./config/neovim.nix pkgs;
-  programs.vscode = import ./config/vscode.nix pkgs;
-  programs.zsh = import ./config/zsh.nix pkgs;
+  programs.alacritty = import ./configs/alacritty.nix pkgs;
+  programs.bat = import ./configs/bat.nix pkgs;
+  programs.git = import ./configs/git.nix pkgs;
+  programs.neovim = import ./configs/neovim.nix pkgs;
+  programs.vscode = import ./configs/vscode.nix pkgs;
+  programs.zsh = import ./configs/zsh.nix pkgs;
 }
 
