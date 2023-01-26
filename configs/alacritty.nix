@@ -20,7 +20,7 @@ pkgs: {
     # -> https://gist.github.com/huytd/6e76206fb02267c5da5018f725693862?permalink_comment_id=3681421
     colors = {
       primary = {
-        background = "#252729";
+        background = "#24292E";
         foreground = "#e0e2e4";
       };
       normal = {
@@ -61,11 +61,11 @@ pkgs: {
     selection.save_to_clipboard = true;
     # shell.program = "${pkgs.zsh}/bin/zsh";
     window = {
-      decorations = "Transparent"; # Full | Transparent | Buttonless | None
+      decorations = "Buttonless"; # Full | Transparent | Buttonless | None
       opacity = 1.00;
       padding = {
-        x = 12;
-        y = 12;
+        x = 10;
+        y = 10;
       };
     };
     mouse = {
