@@ -66,11 +66,6 @@ pkgs: {
       name = "zsh-vi-mode";
       src = "${pkgs.zsh-vi-mode}/share/zsh/zsh-vi-mode";
     }
-    # {
-    #   file = "zsh-you-should-use.plugin.zsh";
-    #   name = "zsh-you-should-use";
-    #   src = "${pkgs.zsh-you-should-use}/share/zsh/zsh-you-should-use";
-    # }
     {
       file = "history-search-multi-word.plugin.zsh";
       name = "history-search-mutli-word";
@@ -122,10 +117,8 @@ pkgs: {
   shellAliases = {
     # Config
     nixconf = "cd ~/.config/nixpkgs";
-    # zshconfig = "vim ~/.zshrc && source ~/.zshrc";
-    # aliasconfig = "vim ~/.oh-my-zsh/custom/aliases.zsh && source ~/.zshrc";
-    # vimconfig = "vim ~/.vimrc";
-    # nixconfig = "vim /etc/nix/nix.conf";
+    zshconf = "vim ~/.config/nixpkgs/configs/zsh.nix";
+    vimconf = "vim ~/.config/nixpkgs/configs/neovim.nix";
 
     # Git
     gst = "git status";
