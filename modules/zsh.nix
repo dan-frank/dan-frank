@@ -43,7 +43,8 @@ pkgs: {
 
     # Call neofetch on load
     typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-    neofetch
+
+    freshfetch
   '';
   # https://github.com/unixorn/awesome-zsh-plugins
   plugins = [

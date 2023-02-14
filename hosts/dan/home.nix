@@ -39,12 +39,8 @@ in {
     vifm
     # ls-colors
     bottom
-    neofetch
-    # macchina
+    freshfetch # neofetch, macchina
     tree
-
-    # Apps
-    # utm # Virtual machine
 
     # Fun
     asciiquarium
