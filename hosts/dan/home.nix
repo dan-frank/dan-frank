@@ -5,6 +5,8 @@
 { config, pkgs, ... }:
 let
   pkgs = import <nixpkgs> { };
+
+  link = config.lib.file.mkOutOfStoreSymlink;
 in {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -32,21 +34,17 @@ in {
   home.packages = with pkgs; [
     # Window Manager for Mac -> https://github.com/koekeishiya/yabai
     
-    # Theme
-    nerdfonts
-
     # CLI Tools
     ripgrep
     vifm
-    ls-colors
+    # ls-colors
     bottom
     neofetch
     # macchina
     tree
 
     # Apps
-    vscode # Code editor
-    utm # Virtual machine
+    # utm # Virtual machine
 
     # Fun
     asciiquarium
@@ -57,13 +55,14 @@ in {
 
   home.file = {
     ".hushlogin".text = "";
+    ".p10k.zsh".source = link ./../../dotfiles/p10k.zsh;
   };
 
-  programs.alacritty = import ./configs/alacritty.nix pkgs;
-  programs.bat = import ./configs/bat.nix pkgs;
-  programs.git = import ./configs/git.nix pkgs;
-  programs.neovim = import ./configs/neovim.nix pkgs;
-  programs.vscode = import ./configs/vscode.nix pkgs;
-  programs.zsh = import ./configs/zsh.nix pkgs;
+  programs.alacritty = import ./../../modules/alacritty.nix pkgs;
+  programs.bat = import ./../../modules/bat.nix pkgs;
+  programs.git = import ./../../modules/git.nix pkgs;
+  programs.neovim = import ./../../modules/neovim.nix pkgs;
+  programs.vscode = import ./../../modules/vscode.nix pkgs;
+  programs.zsh = import ./../../modules/zsh.nix pkgs;
 }
 

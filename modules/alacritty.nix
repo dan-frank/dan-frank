@@ -8,13 +8,15 @@ pkgs: {
     };
     font = {
       size = 14;
-      normal.family = "MesloLGS NF";
       # normal.family = "Liga SFMono Nerd Font";
-      # normal.style = "Light";
+      normal.family = "JetBrains Mono Regular Nerd Font Complete";
+      normal.style = "Regular";
       # bold.family = "Liga SFMono Nerd Font";
-      # bold.style = "Bold";
+      bold.family = "JetBrains Mono Bold Nerd Font Complete";
+      bold.style = "Bold";
       # italic.family = "Liga SFMono Nerd Font";
-      # italic.style = "Italic";
+      italic.family = "JetBrains Mono Italic Nerd Font Complete";
+      italic.style = "Italic";
     };
     # GitHub Theme
     # -> https://gist.github.com/huytd/6e76206fb02267c5da5018f725693862?permalink_comment_id=3681421
