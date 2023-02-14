@@ -33,6 +33,7 @@
   environment.systemPackages = with pkgs; [
     # _1password-gui
     alacritty
+    rectangle
     slack
     utm
     vscode
