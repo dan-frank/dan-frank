@@ -35,7 +35,7 @@
     alacritty
     rectangle
     slack
-    utm
+    # utm
     vscode
   ];
 
@@ -192,8 +192,8 @@
       };
 
       trackpad = {
-        Clicking = true;
-        TrackpadRightClick = false;
+        Clicking = false;
+        TrackpadRightClick = true;
       };
     };
 
