@@ -35,7 +35,7 @@
     alacritty
     rectangle
     slack
-    # utm
+    utm
     vscode
   ];
 
