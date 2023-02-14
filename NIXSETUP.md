@@ -8,6 +8,7 @@ This file will act as a guide for how to setup and run these files.
 1. Add custom overlay to `flake.nix` and apply with home-manager.
 1. Setup nerdfonts to work correctly and apply to alacritty
 1. Update configurations to allow for various hosts (i.e. Work M2 + NixOS VM + Asahi?)
+1. Add `.zshhistory` to repo
 
 ## Setup
 
