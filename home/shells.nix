@@ -2,14 +2,13 @@
 let
   inherit (config.home) user-info;
 in
-
 {
   home.sessionVariables = {
     EDITOR = "${pkgs.neovim}/bin/nvim";
+    VISUAL = "${pkgs.neovim}/bin/nvim";
     EMAIL = "${user-info.email}";
     PAGER = "${pkgs.less}/bin/less";
     CLICOLOR = 1;
-    GPG_TTY = "$TTY";
     PATH = "$PATH:$HOME/.local/bin:$HOME/.tfenv/bin";
   };
 
@@ -71,7 +70,7 @@ in
     enableCompletion = true;
     enableAutosuggestions = true;
     history = {
-      # path = "${relativeXDGDataPath}/zsh/.zsh_history";
+      # path = "${relativeXDGDataPath}//.zsh_history";
       size = 50000;
       save = 500000;
       ignoreDups = true;
@@ -113,15 +112,15 @@ in
         name = "powerlevel10k";
         src = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k";
       }
-      {
-        name = "git";
-        src = pkgs.fetchFromGitHub {
-          owner = "zsh-users";
-          repo = "git";
-          rev = "v0.6.3";
-          sha256 = "1h8h2mz9wpjpymgl2p7pc146c1jgb3dggpvzwm9ln3in336wl95c";
-        };
-      }
+      # {
+      #   name = "git";
+      #   src = pkgs.fetchFromGitHub {
+      #     owner = "zsh-users";
+      #     repo = "git";
+      #     rev = "v0.6.3";
+      #     sha256 = "1h8h2mz9wpjpymgl2p7pc146c1jgb3dggpvzwm9ln3in336wl95c";
+      #   };
+      # }
       {
         file = "zsh-vi-mode.plugin.zsh";
         name = "zsh-vi-mode";
@@ -181,11 +180,6 @@ in
 
       ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE = "fg=3";
       DEV_ALLOW_ITERM2_INTEGRATION = "1";
-
-      EDITOR = "vim";
-      VISUAL = EDITOR;
-      GIT_EDITOR = EDITOR;
     };
   };
 }
-

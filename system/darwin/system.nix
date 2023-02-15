@@ -77,4 +77,3 @@
     remapCapsLockToControl = false;
   };
 }
-

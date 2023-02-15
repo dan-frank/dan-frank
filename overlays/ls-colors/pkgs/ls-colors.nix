@@ -11,4 +11,3 @@ in
     ln -s ${coreutils}/bin/dircolors $out/bin/dircolors
     cp ${LS_COLORS}/LS_COLORS $out/share/LS_COLORS
   ''
-

@@ -8,4 +8,3 @@ Currently a Junior Research Engineer for Natural Transformations, working on imp
 - ❄️ I'm managing my dev environment with Nix
 
 _Open up and view [NIXSETUP.md](https://github.com/dan-frank/dan-frank/blob/master/NIXSETUP.md) to view installation instructions for my ❄️ Nix Home Manager config._
-

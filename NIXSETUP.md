@@ -116,7 +116,7 @@ The following links consit of useful resources that I used to learn about Nix an
 - [nix-darwin Instructions](https://xyno.space/post/nix-darwin-introduction) <- Nice blog post about setting up nix-darwin
 - [Nixology](https://www.youtube.com/playlist?list=PLRGI9KQ3_HP_OFRG6R-p4iFgMSK1t5BHs) <- Great walkthrough of managing your packages and dev envrionment with Nix
 - [@hardselius/dotfiles](https://github.com/hardselius/dotfiles) <- Brilliant Darwin & NixOS setup
-- [@burke/b](https://github.com/burke/b) <- Burke's in depth setup
+- [@burke/b](https://github.com/burke/b) <- Burke's (Nixology's) in depth setup
 - [@jpetrucciani/nix](https://github.com/jpetrucciani/nix) <- Jacobi's clever breakdown (that is simple to implement)
 - [@yuanw/nix-home](https://github.com/yuanw/nix-home) <- Yuan's neet packages
 - [@lucasew/nixcfg](https://github.com/lucasew/nixcfg) <- Interesting setup with custom (edited with config) packages
@@ -125,4 +125,3 @@ The following links consit of useful resources that I used to learn about Nix an
 - [@shaunsing/nix-darwin-dotfiles](https://github.com/shaunsingh/nix-darwin-dotfiles) <- Nicely commented flake
 - [@ahmedelgabri/dotfiles](https://github.com/ahmedelgabri/dotfiles/blob/main/flake.nix#L99) <- Interesting shared flake config
 - [Sourcegraph](https://sourcegraph.com/search?q=context:global+lang:nix&patternType=standard&sm=1&groupBy=repo) <- Every users public file from GitHub
-

@@ -1,6 +1,5 @@
 # This file contains configuration that is shared across all hosts.
 { pkgs, lib, options, ... }:
-
 {
   nix.settings.auto-optimise-store = true;
   nix.settings.keep-derivations = true;
@@ -28,4 +27,3 @@
   fonts.fontDir.enable = true;
   fonts.fonts = with pkgs; [ hack-font ];
 }
-

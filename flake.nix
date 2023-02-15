@@ -1,5 +1,5 @@
 {
-  description = "Martin's dotfiles";
+  description = "dan-franks's dotfiles";
 
   inputs = {
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
@@ -124,18 +124,18 @@
         };
 
         # Configuration used for CI with GitHub actions
-        gitHubActions = darwinSystem {
-          system = "x86_64-darwin";
-          modules = nixDarwinCommonModules ++ [
-            ./system/darwin/host-github.nix
-            ({ lib, ... }: {
-              users.primaryUser = primaryUserInfo // {
-                username = "runner";
-                gpg.enable = false;
-              };
-            })
-          ];
-        };
+        # gitHubActions = darwinSystem {
+        #   system = "x86_64-darwin";
+        #   modules = nixDarwinCommonModules ++ [
+        #     ./system/darwin/host-github.nix
+        #     ({ lib, ... }: {
+        #       users.primaryUser = primaryUserInfo // {
+        #         username = "runner";
+        #         gpg.enable = false;
+        #       };
+        #     })
+        #   ];
+        # };
       };
 
       nixosConfigurations = {
@@ -151,21 +151,21 @@
       };
 
       homeConfigurations = {
-        linuxGitHubActions = home-manager.lib.homeManagerConfiguration {
-          pkgs = import inputs.nixpkgs-unstable {
-            system = "x86_64-linux";
-            inherit (nixpkgsConfig) config overlays;
-          };
-          modules = attrValues self.homeManagerModules ++ singleton ({ config, ... }: {
-            home.username = config.home.user-info.username;
-            home.homeDirectory = "/home/${config.home.username}";
-            home.stateVersion = homeManagerStateVersion;
-            home.user-info = primaryUserInfo // {
-              username = "runner";
-              gpg.enable = false;
-            };
-          });
-        };
+        # linuxGitHubActions = home-manager.lib.homeManagerConfiguration {
+        #   pkgs = import inputs.nixpkgs-unstable {
+        #     system = "x86_64-linux";
+        #     inherit (nixpkgsConfig) config overlays;
+        #   };
+        #   modules = attrValues self.homeManagerModules ++ singleton ({ config, ... }: {
+        #     home.username = config.home.user-info.username;
+        #     home.homeDirectory = "/home/${config.home.username}";
+        #     home.stateVersion = homeManagerStateVersion;
+        #     home.user-info = primaryUserInfo // {
+        #       username = "runner";
+        #       gpg.enable = false;
+        #     };
+        #   });
+        # };
 
         linuxWsl = home-manager.lib.homeManagerConfiguration {
           pkgs = import inputs.nixpkgs-unstable {
