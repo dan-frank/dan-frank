@@ -2,7 +2,7 @@
 let
   LS_COLORS = fetchgit {
     url = "https://github.com/trapd00r/LS_COLORS";
-    sha256 = "KsVuHBd4CzAWDeobS0N4NW+z1KMK1kBnZg14g67SCeQ=";
+    sha256 = "hQTT/yNS9UIDZqHuul0xmknnOh6tOtfotQIm0SY5TTE=";
   };
 in
   runCommand "ls-colors" { meta.priority = 3; } ''

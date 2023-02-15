@@ -1,6 +1,6 @@
-# Nix Dev Environment
+# `dan-frank`'s Nix System Configuration 
 
-I'm using Nix and home-manager to manage my applications and their configurations.
+I'm using Nix to manage my applications and their configurations.
 This file will act as a guide for how to setup and run these files.
 
 ## Next steps
@@ -25,11 +25,17 @@ This file will act as a guide for how to setup and run these files.
 
 - [Nix](https://nixos.org/)
 
-## Build Instructions
+## Preliminary
+
+0. ? Install 'Command Line Developer Tools' for [Mac only]
+
+```sh
+xcode-select --install
+```
 
 1. Install Nix package manager
 
-```
+```sh
 sh <(curl -L https://nixos.org/nix/install)
 ```
 
@@ -40,21 +46,25 @@ nix-shell -p git
 git clone https://github.com/dan-frank/dan-frank ~/.config/dan-frank
 ```
 
-3. Install system configurations with nix
+## Build Instructions
 
----
-**TODO**
+1. Build the environment from the Nix flake
 
-Remove `--impure` flag
----
-
-```sh
-cd ~/.config/dan-frank
-nix build .#darwinConfigurations.dan.system --extra-experimental-features "nix-command flakes" --impure
-./result/sw/bin/darwin-rebuild switch --flake . --impure
+```
+nix build \
+	--extra-experimental-features nix-command \
+	--extra-experimental-features flakes \
+	.#darwinConfigurations.bootstrap-arm.system
+./result/sw/bin/darwin-rebuild switch --flake .#bootstrap-arm
 ```
 
-4. Install other apps
+2. **Open up a new terminal session** and run the following to apply the configs 
+
+```
+darwin-rebuild switch --flake .#macbook-arm
+```
+
+3. Install other apps
 
 Some apps are unable to be installed via Nix
 
@@ -105,13 +115,14 @@ The following links consit of useful resources that I used to learn about Nix an
 
 - [nix-darwin Instructions](https://xyno.space/post/nix-darwin-introduction) <- Nice blog post about setting up nix-darwin
 - [Nixology](https://www.youtube.com/playlist?list=PLRGI9KQ3_HP_OFRG6R-p4iFgMSK1t5BHs) <- Great walkthrough of managing your packages and dev envrionment with Nix
-- [burke/b](https://github.com/burke/b) <- Burke's in depth setup
-- [jpetrucciani/nix](https://github.com/jpetrucciani/nix) <- Jacobi's clever breakdown (that is simple to implement)
-- [yuanw/nix-home](https://github.com/yuanw/nix-home) <- Yuan's neet packages
-- [lucasew/nixcfg](https://github.com/lucasew/nixcfg) <- Interesting setup with custom (edited with config) packages
-- [alex35mil/dotfiles](https://github.com/alex35mil/dotfiles) <- Another nice and simple setup
-- [jakehamilton/dotfiles](https://github.com/jakehamilton/dotfiles) <- Cool darwin setup with tiling manager and top bar
-- [shaunsing/nix-darwin-dotfiles](https://github.com/shaunsingh/nix-darwin-dotfiles) <- Nicely commented flake
-- [ahmedelgabri/dotfiles](https://github.com/ahmedelgabri/dotfiles/blob/main/flake.nix#L99) <- Interesting shared flake config
+- [@hardselius/dotfiles](https://github.com/hardselius/dotfiles) <- Brilliant Darwin & NixOS setup
+- [@burke/b](https://github.com/burke/b) <- Burke's in depth setup
+- [@jpetrucciani/nix](https://github.com/jpetrucciani/nix) <- Jacobi's clever breakdown (that is simple to implement)
+- [@yuanw/nix-home](https://github.com/yuanw/nix-home) <- Yuan's neet packages
+- [@lucasew/nixcfg](https://github.com/lucasew/nixcfg) <- Interesting setup with custom (edited with config) packages
+- [@alex35mil/dotfiles](https://github.com/alex35mil/dotfiles) <- Another nice and simple setup
+- [@jakehamilton/dotfiles](https://github.com/jakehamilton/dotfiles) <- Cool darwin setup with tiling manager and top bar
+- [@shaunsing/nix-darwin-dotfiles](https://github.com/shaunsingh/nix-darwin-dotfiles) <- Nicely commented flake
+- [@ahmedelgabri/dotfiles](https://github.com/ahmedelgabri/dotfiles/blob/main/flake.nix#L99) <- Interesting shared flake config
 - [Sourcegraph](https://sourcegraph.com/search?q=context:global+lang:nix&patternType=standard&sm=1&groupBy=repo) <- Every users public file from GitHub
 
