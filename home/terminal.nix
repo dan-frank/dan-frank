@@ -4,28 +4,28 @@ let
 
   github-dark = {
     primary = {
-      background = "#24292E";
-      foreground = "#e0e2e4";
+      background = "0x24292E";
+      foreground = "0xe0e2e4";
     };
     normal = {
-      black = "#474646";
-      red = "#f97583";
-      green = "#85e89d";
-      yellow = "#ffab70";
-      blue = "#79b8ff";
-      magenta = "#b392f0";
-      cyan = "#9ecbff";
-      white = "#e0e2e4";
+      black = "0x474646";
+      red = "0xf97583";
+      green = "0x85e89d";
+      yellow = "0xffab70";
+      blue = "0x79b8ff";
+      magenta = "0xb392f0";
+      cyan = "0x9ecbff";
+      white = "0xe0e2e4";
     };
     bright = {
-      black = "#282828";
-      red = "#fdaeb7";
-      green = "#bef5cb";
-      yellow = "#fff5b1";
-      blue = "#c8e1ff";
-      magenta = "#d1bcf9";
-      cyan = "#b3f0ff";
-      white = "#e1e4e8";
+      black = "0x282828";
+      red = "0xfdaeb7";
+      green = "0xbef5cb";
+      yellow = "0xfff5b1";
+      blue = "0xc8e1ff";
+      magenta = "0xd1bcf9";
+      cyan = "0xb3f0ff";
+      white = "0xe1e4e8";
     };
   };
 
@@ -89,8 +89,8 @@ let
 
   slate = {
     primary = {
-      background = "#262626";
-      foreground = "#ffffff";
+      background = "0x262626";
+      foreground = "0xffffff";
     };
     normal = {
       black = "0x000000";
@@ -121,7 +121,7 @@ in
       bell = {
         animation = "EaseOutExpo";
         duration = 5;
-        color = "#ffffff";
+        color = "0xffffff";
       };
       # ??? https://sourcegraph.com/github.com/NeQuissimus/DevSetup/-/blob/users/nequi/home/alacritty.nix
       selection.save_to_clipboard = true;

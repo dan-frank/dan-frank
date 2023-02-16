@@ -1,4 +1,4 @@
 #!/bin/sh
-pushd ~/.dotfiles
+pushd ~/.d
 darwin-rebuild switch --flake .#$1
 popd

@@ -89,7 +89,6 @@
     in
     {
       darwinConfigurations = rec {
-
         # Minimal configuration to bootstrap systems
         bootstrap-x86 = makeOverridable darwinSystem {
           system = "x86_64-darwin";
@@ -99,11 +98,10 @@
             { nixpkgs = nixpkgsConfig; }
           ];
         };
-
         bootstrap-arm = bootstrap-x86.override { system = "aarch64-darwin"; };
 
         # My macOS configuration
-        macbook-x86 = darwinSystem {
+        macbook-x86 = makeOverridable darwinSystem {
           system = "x86_64-darwin";
           modules = nixDarwinCommonModules ++ [
             ./system/darwin/host-mac.nix
@@ -112,16 +110,16 @@
             }
           ];
         };
-
-        macbook-arm = darwinSystem {
-          system = "aarch64-darwin";
-          modules = nixDarwinCommonModules ++ [
-            ./system/darwin/host-mac.nix
-            {
-              users.primaryUser = primaryUserInfo;
-            }
-          ];
-        };
+        macbook-arm = macbook-x86.override { system = "aarch64-darwin"; };
+        # macbook-arm = darwinSystem {
+        #   system = "aarch64-darwin";
+        #   modules = nixDarwinCommonModules ++ [
+        #     ./system/darwin/host-mac.nix
+        #     {
+        #       users.primaryUser = primaryUserInfo;
+        #     }
+        #   ];
+        # };
 
         # Configuration used for CI with GitHub actions
         # gitHubActions = darwinSystem {

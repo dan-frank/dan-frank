@@ -2,7 +2,6 @@
 let
   inherit (config.users) primaryUser;
 in
-
 with lib; {
   imports = [
     "${modulesPath}/profiles/minimal.nix"
