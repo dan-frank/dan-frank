@@ -64,6 +64,7 @@ nix build \
 2. **Open up a new terminal session** and run the following to apply the configs 
 
 ```
+cd ~/d
 darwin-rebuild switch --flake .#macbook-arm
 ```
 
