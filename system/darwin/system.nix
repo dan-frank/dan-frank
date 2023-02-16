@@ -76,4 +76,6 @@
     enableKeyMapping = true;
     remapCapsLockToControl = false;
   };
+
+  time.timeZone = "Europe/London";
 }
