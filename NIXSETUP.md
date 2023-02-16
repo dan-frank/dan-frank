@@ -3,6 +3,8 @@
 I'm using Nix to manage my applications and their configurations.
 This file will act as a guide for how to setup and run these files.
 
+_This setup is heavily inspired (stolen) from the brilliant [@hardselius/dotfiles](https://github.com/hardselius/dotfiles)._
+
 ## Next steps
 
 1. Add custom overlay to `flake.nix` and apply with home-manager.
@@ -43,7 +45,7 @@ sh <(curl -L https://nixos.org/nix/install)
 
 ```sh
 nix-shell -p git
-git clone https://github.com/dan-frank/dan-frank ~/.config/dan-frank
+git clone https://github.com/dan-frank/dan-frank ~/d
 ```
 
 ## Build Instructions
@@ -51,11 +53,12 @@ git clone https://github.com/dan-frank/dan-frank ~/.config/dan-frank
 1. Build the environment from the Nix flake
 
 ```
+cd ~/d
 nix build \
 	--extra-experimental-features nix-command \
 	--extra-experimental-features flakes \
-	.#darwinConfigurations.bootstrap-arm.system
-./result/sw/bin/darwin-rebuild switch --flake .#bootstrap-arm
+	.#darwinConfigurations.macbook-arm.system
+./result/sw/bin/darwin-rebuild switch --flake .#macbook-arm
 ```
 
 2. **Open up a new terminal session** and run the following to apply the configs 
@@ -125,3 +128,4 @@ The following links consit of useful resources that I used to learn about Nix an
 - [@shaunsing/nix-darwin-dotfiles](https://github.com/shaunsingh/nix-darwin-dotfiles) <- Nicely commented flake
 - [@ahmedelgabri/dotfiles](https://github.com/ahmedelgabri/dotfiles/blob/main/flake.nix#L99) <- Interesting shared flake config
 - [Sourcegraph](https://sourcegraph.com/search?q=context:global+lang:nix&patternType=standard&sm=1&groupBy=repo) <- Every users public file from GitHub
+
