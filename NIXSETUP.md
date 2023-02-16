@@ -57,8 +57,8 @@ cd ~/d
 nix build \
 	--extra-experimental-features nix-command \
 	--extra-experimental-features flakes \
-	.#darwinConfigurations.macbook-arm.system
-./result/sw/bin/darwin-rebuild switch --flake .#macbook-arm
+	.#darwinConfigurations.bootstrap-arm.system
+./result/sw/bin/darwin-rebuild switch --flake .#bootstrap-arm
 ```
 
 2. **Open up a new terminal session** and run the following to apply the configs 
