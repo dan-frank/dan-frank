@@ -156,9 +156,9 @@
         home-shells = import ./home/shells.nix;
         home-terminal = import ./home/terminal.nix;
 
-        home-bat = import ./modules/home/programs/bat.nix;
-        home-neovim = import ./modules/home/programs/neovim.nix;
-        home-vscode = import ./modules/home/programs/vscode.nix;
+        home-bat = import ./home/programs/bat.nix;
+        home-neovim = import ./home/programs/neovim.nix;
+        home-vscode = import ./home/programs/vscode.nix;
 
         home-user-info = { lib, ... }: {
           options.home.user-info =
