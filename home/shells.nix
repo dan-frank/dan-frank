@@ -73,12 +73,13 @@ in
       source ${pkgs.zsh-you-should-use}/share/zsh/plugins/you-should-use/you-should-use.plugin.zsh
 
       # Bindings
-      bindkey '^[[A' up-line-or-search
-      bindkey '^[[B' down-line-or-search
-      bindkey -M vicmd 'k' up-line-or-search
-      bindkey -M vicmd 'j' down-line-or-search
-      bindkey '\ew' kill-region                             # [Esc-w] - Kill from the cursor to the mark
-      bindkey -s '\el' 'ls\n'                               # [Esc-l] - run command: ls
+      autoload -U history-search-end
+      zle -N history-beginning-search-backward-end history-search-end
+      zle -N history-beginning-search-forward-end history-search-end
+      bindkey '^[[A' history-beginning-search-backward-end
+      bindkey '^[[B' history-beginning-search-forward-end
+      bindkey -M vicmd 'k' history-beginning-search-backward-end
+      bindkey -M vicmd 'j' history-beginning-search-forward-end
       bindkey ' ' magic-space                               # [Space] - don't do history expansion
 
       # Change auto suggest color
