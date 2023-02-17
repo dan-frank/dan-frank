@@ -23,6 +23,13 @@ _This setup is heavily inspired (stolen) from the brilliant [@hardselius/dotfile
 | Terminal Emulator | Alacritty | ?     |
 | Editor            | NeoVim    | ?     |
 
+<!-- ## Screenshots
+
+<details>
+    <summary>Terminal</summary>
+    <img width="1728" alt="Terminal" src="https://user-images.githubusercontent.com/4244251/213017876-62a7a987-c0ac-4515-87db-df1c809351ef.png">
+</details> -->
+
 ## Dependencies
 
 - [Nix](https://nixos.org/)
