@@ -54,6 +54,7 @@
             nixpkgs = nixpkgsConfig;
             users.users.${primaryUser.username}.home = "/Users/${primaryUser.username}";
             home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
             home-manager.users.${primaryUser.username} = {
               imports = attrValues self.homeManagerModules;
               home.stateVersion = homeManagerStateVersion;
@@ -89,17 +90,6 @@
     in
     {
       darwinConfigurations = rec {
-        # Minimal configuration to bootstrap systems
-        bootstrap-x86 = makeOverridable darwinSystem {
-          system = "x86_64-darwin";
-          modules = [
-            self.darwinModules.common
-            self.darwinModules.darwin-bootstrap
-            { nixpkgs = nixpkgsConfig; }
-          ];
-        };
-        bootstrap-arm = bootstrap-x86.override { system = "aarch64-darwin"; };
-
         # My macOS configuration
         macbook-x86 = makeOverridable darwinSystem {
           system = "x86_64-darwin";

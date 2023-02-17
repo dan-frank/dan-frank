@@ -41,7 +41,7 @@ xcode-select --install
 sh <(curl -L https://nixos.org/nix/install)
 ```
 
-2. Clone this repo into your home config directory
+2. **Open up a new terminal session** and clone this repo into your home directory
 
 ```sh
 nix-shell -p git
@@ -50,15 +50,15 @@ git clone https://github.com/dan-frank/dan-frank ~/d
 
 ## Build Instructions
 
-1. Build the environment from the Nix flake
+1. Build the environment from the Nix flake (_call `-x86` if using an intel based mac_)
 
 ```
 cd ~/d
 nix build \
 	--extra-experimental-features nix-command \
 	--extra-experimental-features flakes \
-	.#darwinConfigurations.bootstrap-arm.system
-./result/sw/bin/darwin-rebuild switch --flake .#bootstrap-arm
+	.#darwinConfigurations.macbook-arm.system
+./result/sw/bin/darwin-rebuild switch --flake .#macbook-arm
 ```
 
 2. **Open up a new terminal session** and run the following to apply the configs 
@@ -70,7 +70,7 @@ darwin-rebuild switch --flake .#macbook-arm
 
 3. Install other apps
 
-Some apps are unable to be installed via Nix
+Some apps are unable to be installed via Nix, or have yet to be configured within this repo.
 
 - [1Password](https://1password.com/downloads/mac/)
 - [itsycal](https://www.mowglii.com/itsycal/)
@@ -129,4 +129,3 @@ The following links consit of useful resources that I used to learn about Nix an
 - [@shaunsing/nix-darwin-dotfiles](https://github.com/shaunsingh/nix-darwin-dotfiles) <- Nicely commented flake
 - [@ahmedelgabri/dotfiles](https://github.com/ahmedelgabri/dotfiles/blob/main/flake.nix#L99) <- Interesting shared flake config
 - [Sourcegraph](https://sourcegraph.com/search?q=context:global+lang:nix&patternType=standard&sm=1&groupBy=repo) <- Every users public file from GitHub
-
