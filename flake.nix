@@ -211,5 +211,21 @@
         );
       formatter =
         forAllSystems (system: nixpkgs.legacyPackages.${system}.nixpkgs-fmt);
+
+      # Figure this out -> https://github.com/jeslie0/fonts/blob/main/flake.nix
+      # fonts.shin-go = nixpkgs.stdenvNoCC.mkDerivation {
+      #   name = "shin-go-font";
+      #   dontConfigue = true;
+      #   src = nixpkgs.fetchzip {
+      #     url = "https://www.cufonfonts.com/download/redirect/a-otf-shin-go-pro";
+      #     sha256 = "sha256-FBA8Lj2yJzrBQnazylwUwsFGbCBp1MJ1mdgifaYches=";
+      #     stripRoot = false;
+      #   };
+      #   installPhase = ''
+      #     mkdir -p $out/share/fonts
+      #     cp -R $src/a-otf-shin-go-pro-cufonfonts $out/share/fonts/truetype/
+      #   '';
+      #   meta = { description = "The A-OTF Shin Go Pro Font Family derivation."; };
+      # };
     };
 }
