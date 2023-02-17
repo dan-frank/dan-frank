@@ -41,6 +41,12 @@ in
     la = "ls -a";
     lla = "ls -la";
 
+    # Navigation
+    ".." = "cd ..";
+    "..." = "cd ../..";
+    "...." = "cd ../../..";
+    "....." = "cd ../../../..";
+
     # Get public key
     pubkey = "pbcopy < ~/.ssh/id_rsa.pub";
 
