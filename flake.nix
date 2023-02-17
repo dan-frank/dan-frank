@@ -138,7 +138,7 @@
         darwin-packages = import ./system/darwin/packages.nix;
         darwin-system = import ./system/darwin/system.nix;
 
-        users-primaryUser = import ./modules/users.nix;
+        users-primaryUser = import ./schema/users.nix;
       };
 
       nixosModules = {
@@ -146,7 +146,7 @@
         stateVersion = { system.stateVersion = nixosStateVersion; };
         packages = import ./system/packages.nix;
 
-        users-primaryUser = import ./modules/users.nix;
+        users-primaryUser = import ./schema/users.nix;
       };
 
       homeManagerModules = {
