@@ -91,27 +91,39 @@ Some apps are unable to be installed via Nix, or have yet to be configured withi
   - [JSON Peep for Safari](https://apps.apple.com/gb/app/json-peep-for-safari/id1458969831?mt=12)
   - [\_scite](https://apps.apple.com/us/app/scite-extension/id1551820111?mt=12)
 
-## Breakdown
+## Brief Breakdown
 
 ### `flake.nix`
 
-Entry point and container of all my config dependancies.
+Entry point and container of all my config and dependancies.
+
+### `default.nix`
+
+Required for `flake-compat`, which adds flake combatability to non flake supported Nix versions. See [@edolstra/flake-compat](https://github.com/edolstra/flake-compat/blob/master/default.nix).
 
 ### `/dotfiles`
 
-`.` dotfiles that I was unable to 'nixify' and are imported as is.
+`.` dotfiles that I was unable, or have yet, to 'nixify' and are imported as is.
 
-### `/hosts`
+### `/home`
 
-My dev environments, managed with home manager and my nix flake.
+Collection of my home-manager configurations.
 
-### `/modules`
+### `/home/programs`
 
-This folder includes various nix attribute files that contain the configurations of various packages and apps that I use.
+Programs that are managed by home-manager.
 
 ### `/overlays`
 
-This folder contains my personal overlays that don't really need to be pushed into the main nixpkgs repo.
+This folder contains my personal overlays that don't really need, or have yet, to be pushed into the main nixpkgs repo.
+
+### `/schema`
+
+Holds schema for `flake.nix`.
+
+### `/system`
+
+My dev environments, managed with nixos and darwin. Both called via `flake.nix`.
 
 ## Further Reading
 
