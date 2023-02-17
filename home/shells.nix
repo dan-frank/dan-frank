@@ -35,21 +35,11 @@ in
     # RipGrep
     alias = "rgf='rg --files | rg'";
 
-    # Terminal.news
-    bitnews = "curl https://terminal.news | less";
-
-    # Command replacements
+    # Basic console commands
     ls = "ls --color=auto -F";
-
-    ## Basic console commands
     ll = "ls -l";
     la = "ls -a";
     lla = "ls -la";
-
-    # Wordpress
-    wpinstall = "curl -LO https://wordpress.org/latest.zip; unzip latest.zip; rm latest.zip";
-    wpdocker = "~/Documents/Projects/scripts/new-docker-wp-environment/new-docker-wordpress.sh";
-    twsdocker = "~/Documents/Work/the-website-space/git/tws_dev_scripts/newWebProject/newWebProject.sh";
 
     # Get public key
     pubkey = "pbcopy < ~/.ssh/id_rsa.pub";
@@ -58,10 +48,7 @@ in
     ntssh = "ssh daniel@ntworkstation.hopto.org -p 26";
     ntlocalhost = "open http://ntworkstation.hopto.org:9005";
   } // lib.optionalAttrs pkgs.stdenv.isDarwin {
-    lightswitch = "osascript -e  'tell application \"System Events\" to tell appearance preferences to set dark mode to not dark mode'";
-    restartaudio = "sudo killall coreaudiod";
-
-    # Homebrew - TODO Remove!
+    # Homebrew - TODO Remove / integrate into nix-darwin
     brewuu = "brew update; brew upgrade";
   };
 
