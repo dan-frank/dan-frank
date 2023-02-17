@@ -129,15 +129,11 @@ My dev environments, managed with nixos and darwin. Both called via `flake.nix`.
 
 The following links consit of useful resources that I used to learn about Nix and how to set it up, and other users setups that I used for inspiration (or completely ripped off) to improve my config management:
 
-- [nix-darwin Instructions](https://xyno.space/post/nix-darwin-introduction) <- Nice blog post about setting up nix-darwin
-- [Nixology](https://www.youtube.com/playlist?list=PLRGI9KQ3_HP_OFRG6R-p4iFgMSK1t5BHs) <- Great walkthrough of managing your packages and dev envrionment with Nix
-- [@hardselius/dotfiles](https://github.com/hardselius/dotfiles) <- Brilliant Darwin & NixOS setup
-- [@burke/b](https://github.com/burke/b) <- Burke's (Nixology's) in depth setup
-- [@jpetrucciani/nix](https://github.com/jpetrucciani/nix) <- Jacobi's clever breakdown (that is simple to implement)
-- [@yuanw/nix-home](https://github.com/yuanw/nix-home) <- Yuan's neet packages
-- [@lucasew/nixcfg](https://github.com/lucasew/nixcfg) <- Interesting setup with custom (edited with config) packages
-- [@alex35mil/dotfiles](https://github.com/alex35mil/dotfiles) <- Another nice and simple setup
-- [@jakehamilton/dotfiles](https://github.com/jakehamilton/dotfiles) <- Cool darwin setup with tiling manager and top bar
-- [@shaunsing/nix-darwin-dotfiles](https://github.com/shaunsingh/nix-darwin-dotfiles) <- Nicely commented flake
-- [@ahmedelgabri/dotfiles](https://github.com/ahmedelgabri/dotfiles/blob/main/flake.nix#L99) <- Interesting shared flake config
-- [Sourcegraph](https://sourcegraph.com/search?q=context:global+lang:nix&patternType=standard&sm=1&groupBy=repo) <- Every users public file from GitHub
+- [Nixology](https://www.youtube.com/playlist?list=PLRGI9KQ3_HP_OFRG6R-p4iFgMSK1t5BHs) ← Great walkthrough of managing your packages and dev envrionment with Nix
+- [nix-darwin Instructions](https://xyno.space/post/nix-darwin-introduction) ← Blog post about setting up nix-darwin
+- [@hardselius/dotfiles](https://github.com/hardselius/dotfiles) ← Hardselius' Darwin & NixOS flake configuration (Major inspiration for this repo)
+- [@burke/b](https://github.com/burke/b) ← Burke's (Nixology's author) Darwin configuration
+- [@jpetrucciani/nix](https://github.com/jpetrucciani/nix) ← Jacobi's quite indepth but relatively simple to read nix configuration
+- [@yuanw/nix-home](https://github.com/yuanw/nix-home) ← Yuan's Darwin & NixOS flake configuration
+- [@shaunsing/nix-darwin-dotfiles](https://github.com/shaunsingh/nix-darwin-dotfiles) ← Shaun's Darwin & Asahi Linux flake configuration
+- [Sourcegraph](https://sourcegraph.com/search?q=context:global+lang:nix&patternType=standard&sm=1&groupBy=repo) ← Public nix files sourced from every public repo on GitHub
