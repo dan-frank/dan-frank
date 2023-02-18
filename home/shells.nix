@@ -56,6 +56,9 @@ in
   } // lib.optionalAttrs pkgs.stdenv.isDarwin {
     # Homebrew - TODO Remove / integrate into nix-darwin
     brewuu = "brew update; brew upgrade";
+
+    # What fonts?
+    myfonts = "atsutil fonts -list";
   };
 
   programs.zsh = {
