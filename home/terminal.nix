@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:
 let
-  fontFamily = "Hack";
+  fontFamily = "Terminus (TTF)";
 
   github-dark = {
     primary = {
@@ -163,7 +163,7 @@ in
         bold.family = "${fontFamily}";
         italic.family = "${fontFamily}";
         bold_italic.family = "${fontFamily}";
-        size = 14;
+        size = 16;
       };
     };
   };

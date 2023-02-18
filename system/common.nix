@@ -22,6 +22,10 @@
 
   fonts = {
     fontDir.enable = true;
-    fonts = with pkgs; [ hack-font ];
+    fonts = with pkgs; [
+      terminus_font
+      hack-font
+      terminus_font_ttf
+    ];
   };
 }
