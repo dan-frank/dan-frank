@@ -19,6 +19,7 @@ in {
     cmatrix
     cowsay
     lolcat
+    vimgolf
   ];
 
   home.file = {
