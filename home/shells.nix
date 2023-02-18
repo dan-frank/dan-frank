@@ -78,7 +78,6 @@ in
     '';
     initExtra = ''
       # Plugins -> Try to move to plugins = [ ]
-      source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
       source ${pkgs.zsh-you-should-use}/share/zsh/plugins/you-should-use/you-should-use.plugin.zsh
 
       # Bindings
@@ -105,9 +104,13 @@ in
     # https://github.com/unixorn/awesome-zsh-plugins
     plugins = [
       {
-        file = "powerlevel10k.zsh-theme";
         name = "powerlevel10k";
-        src = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k";
+        src = pkgs.fetchFromGitHub {
+          owner = "romkatv";
+          repo = "powerlevel10k";
+          rev = "v1.17.0";
+          sha256 = "fgrwbWj6CcPoZ6GbCZ47HRUg8ZSJWOsa7aipEqYuE0Q=";
+        };
       }
       # {
       #   name = "git";
@@ -119,9 +122,13 @@ in
       #   };
       # }
       {
-        file = "zsh-vi-mode.plugin.zsh";
         name = "zsh-vi-mode";
-        src = "${pkgs.zsh-vi-mode}/share/zsh/zsh-vi-mode";
+        src = pkgs.fetchFromGitHub {
+          owner = "jeffreytse";
+          repo = "zsh-vi-mode";
+          rev = "v0.9.0";
+          sha256 = "KQ7UKudrpqUwI6gMluDTVN0qKpB15PI5P1YHHCBIlpg=";
+        };
       }
       {
         name = "history-search-multi-word";
