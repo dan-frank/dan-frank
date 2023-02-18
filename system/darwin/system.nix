@@ -25,7 +25,6 @@
       NSAutomaticSpellingCorrectionEnabled = false;
       NSNavPanelExpandedStateForSaveMode = true;
       NSNavPanelExpandedStateForSaveMode2 = true;
-      _HIHideMenuBar = true;
     };
 
     ActivityMonitor = {
