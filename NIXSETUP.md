@@ -7,12 +7,14 @@ _This setup is heavily inspired (stolen) from the brilliant [@hardselius/dotfile
 
 ## Next steps
 
-1. Add custom overlay to `flake.nix` and apply with home-manager.
+1. Resolve `.zsh` plugins not loading properly after switching to flake
 1. Look into resolving this which doesn't work [LnL7/nix-darwin#214](https://github.com/LnL7/nix-darwin/issues/214) & [IvarWithoutBones/dotfiles@0b3faad](https://github.com/IvarWithoutBones/dotfiles/commit/0b3faad8bd1d0e1af6103caf59b206666ab742f4)
-1. Setup nerdfonts to work correctly and apply to alacritty
-1. Update configurations to allow for various hosts (i.e. Work M2 + NixOS VM + Asahi?)
-1. Add `.zshhistory` to repo
 1. [Install some Mac Apps from App Store with `mas`](https://daiderd.com/nix-darwin/manual/index.html#opt-homebrew.masApps)
+1. Add custom overlay to `flake.nix` and apply with home-manager.
+1. Setup [koekeishiya/yabai](https://github.com/koekeishiya/yabai), replacing rectangle
+1. Update configurations to allow for various hosts (i.e. Work M2 + NixOS VM + Asahi?)
+1. Setup nerdfonts to work correctly and apply to alacritty
+1. Add `.zshhistory` to repo
 1. [Look into if I can configure Safari settings](https://daiderd.com/nix-darwin/manual/index.html#opt-system.defaults.CustomUserPreferences)
 
 ## Setup
