@@ -57,7 +57,7 @@ in {
     enable = true;
     package = pkgs.spacebar;
     config = {
-      position                   = "top";
+      position                   = "bottom";
       display                    = "all";
       height                     = 36;
       title                      = "on";
