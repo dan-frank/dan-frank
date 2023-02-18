@@ -26,6 +26,11 @@
       terminus_font
       hack-font
       terminus_font_ttf
+      (nerdfonts.override {
+        fonts = [
+          "Terminus"
+        ];
+      })
     ];
   };
 }
