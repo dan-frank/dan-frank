@@ -33,7 +33,7 @@ in
     git-fuck-everything = "git-abort; git reset .; git checkout .; git clean -f -d";
 
     # RipGrep
-    alias = "rgf='rg --files | rg'";
+    rgf = "rg --files | rg";
 
     # Basic console commands
     ls = "ls --color=auto -F";
