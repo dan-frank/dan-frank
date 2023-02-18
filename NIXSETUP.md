@@ -137,6 +137,8 @@ My dev environments, managed with nixos and darwin. Both called via `flake.nix`.
 The following links consit of useful resources that I used to learn about Nix and how to set it up, and other users setups that I used for inspiration (or completely ripped off) to improve my config management:
 
 - [Nixology](https://www.youtube.com/playlist?list=PLRGI9KQ3_HP_OFRG6R-p4iFgMSK1t5BHs) ← Great walkthrough of managing your packages and dev envrionment with Nix
+- [Intro to Flakes](https://www.youtube.com/watch?v=mJbQ--iBc1U&t=909s) ← Flake tutorial that introduces you to various concpets
+- [Moving Nixos System Configuration Into A Flake](https://www.youtube.com/watch?v=mJbQ--iBc1U&t=909s) ← Video tutorial on setting up a flake to manage your system configuration
 - [nix-darwin Instructions](https://xyno.space/post/nix-darwin-introduction) ← Blog post about setting up nix-darwin
 - [@hardselius/dotfiles](https://github.com/hardselius/dotfiles) ← Hardselius' Darwin & NixOS flake configuration (Major inspiration for this repo)
 - [@burke/b](https://github.com/burke/b) ← Burke's (Nixology's author) Darwin configuration
