@@ -84,12 +84,6 @@
       Clicking = false;
       TrackpadRightClick = true;
     };
-
-    universalaccess = {
-      reduceTransparency = false;
-      closeViewScrollWheelToggle = true;
-      closeViewZoomFollowsFocus = false;
-    };
   };
 
   system.keyboard = {
