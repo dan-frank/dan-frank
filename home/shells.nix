@@ -77,9 +77,6 @@ in
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
     '';
     initExtra = ''
-      # Plugins -> Try to move to plugins = [ ]
-      source ${pkgs.zsh-you-should-use}/share/zsh/plugins/you-should-use/you-should-use.plugin.zsh
-
       # Bindings
       autoload -U history-search-end
       zle -N history-beginning-search-backward-end history-search-end
@@ -121,6 +118,15 @@ in
       #     sha256 = "1h8h2mz9wpjpymgl2p7pc146c1jgb3dggpvzwm9ln3in336wl95c";
       #   };
       # }
+      {
+        name = "zsh-you-should-use";
+        src = pkgs.fetchFromGitHub {
+          owner = "MichaelAquilina";
+          repo = "zsh-you-should-use";
+          rev = "c062be916d0307fd851023c7afdbf7894b6667b6";
+          sha256 = "uUQ8E7CcjgBMPhdP6iA/PI5X+4SUr+/FpTrxckiob9Q=";
+        };
+      }
       {
         name = "zsh-vi-mode";
         src = pkgs.fetchFromGitHub {
