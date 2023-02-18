@@ -97,7 +97,7 @@ in
 
       # Little bit of visual flair on shell start
       typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-      freshfetch
+      neofetch
     '';
     # https://github.com/unixorn/awesome-zsh-plugins
     plugins = [

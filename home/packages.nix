@@ -10,7 +10,7 @@ in {
     vifm
     ls-colors
     bottom
-    freshfetch # neofetch, macchina
+    neofetch # freshfetch macchina
     tree
     less
 
