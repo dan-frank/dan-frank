@@ -124,9 +124,13 @@ in
         src = "${pkgs.zsh-vi-mode}/share/zsh/zsh-vi-mode";
       }
       {
-        file = "history-search-multi-word.plugin.zsh";
-        name = "history-search-mutli-word";
-        src = "${pkgs.zsh-history-search-multi-word}/share/zsh/zsh-history-search-multi-word";
+        name = "history-search-multi-word";
+        src = pkgs.fetchFromGitHub {
+          owner = "zdharma-continuum";
+          repo = "history-search-multi-word";
+          rev = "458e75c16db72596e4d7c6a45619dec285ebdcd7";
+          sha256 = "6B8uoKJm3gWmufsnLJzLEdSm1tQasrs2fUmS0pDsdMw=";
+        };
       }
       {
         name = "fast-syntax-highlighting";
