@@ -129,9 +129,13 @@ in
         src = "${pkgs.zsh-history-search-multi-word}/share/zsh/zsh-history-search-multi-word";
       }
       {
-        file = "fast-syntax-highlighting.plugin.zsh";
-        name = "zsh-fast-syntax-highlighting";
-        src = "${pkgs.zsh-fast-syntax-highlighting}/share/zsh/site-functions";
+        name = "fast-syntax-highlighting";
+        src = pkgs.fetchFromGitHub {
+          owner = "zdharma-continuum";
+          repo = "fast-syntax-highlighting";
+          rev = "7c390ee3bfa8069b8519582399e0a67444e6ea61";
+          sha256 = "wLpgkX53wzomHMEpymvWE86EJfxlIb3S8TPy74WOBD4=";
+        };
       }
       {
         name = "zsh-autosuggestions";
