@@ -87,10 +87,6 @@ in
       bindkey -M vicmd 'j' history-beginning-search-forward-end
       bindkey ' ' magic-space                               # [Space] - don't do history expansion
 
-      # Change auto suggest color
-      # - fg=[https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg]
-      ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=013'
-
       # Load colors for prettier `ls`
       eval $(dircolors ~/.nix-profile/share/LS_COLORS)
 
@@ -109,15 +105,6 @@ in
           sha256 = "fgrwbWj6CcPoZ6GbCZ47HRUg8ZSJWOsa7aipEqYuE0Q=";
         };
       }
-      # {
-      #   name = "git";
-      #   src = pkgs.fetchFromGitHub {
-      #     owner = "zsh-users";
-      #     repo = "git";
-      #     rev = "v0.6.3";
-      #     sha256 = "1h8h2mz9wpjpymgl2p7pc146c1jgb3dggpvzwm9ln3in336wl95c";
-      #   };
-      # }
       {
         name = "zsh-you-should-use";
         src = pkgs.fetchFromGitHub {
@@ -195,9 +182,8 @@ in
 
     sessionVariables = rec {
       NVIM_TUI_ENABLE_TRUE_COLOR = "1";
-
-      ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE = "fg=3";
       DEV_ALLOW_ITERM2_INTEGRATION = "1";
+      ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE = "fg=013"; # (colors)[https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg]
     };
   };
 }
