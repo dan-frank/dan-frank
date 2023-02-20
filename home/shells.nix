@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:
 let
-  inherit (config.home) user-info;
+  inherit (config.home) homeDirectory user-info;
 in
 {
   home.sessionVariables = {
@@ -65,8 +65,9 @@ in
     enable = true;
     enableCompletion = true;
     enableAutosuggestions = true;
+    dotDir = "${homeDirectory}/.config/.zsh";
     history = {
-      # path = "${relativeXDGDataPath}//.zsh_history";
+      path = config.programs.zsh.dotDir + "/.zsh_history";
       size = 50000;
       save = 500000;
       ignoreDups = true;
