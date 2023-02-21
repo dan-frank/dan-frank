@@ -65,9 +65,9 @@ in
     enable = true;
     enableCompletion = true;
     enableAutosuggestions = true;
-    dotDir = "${homeDirectory}/.config/.zsh";
+    # dotDir = "${homeDirectory}/.config/.zsh";
     history = {
-      path = config.programs.zsh.dotDir + "/.zsh_history";
+      # path = config.programs.zsh.dotDir + "/.zsh_history";
       size = 50000;
       save = 500000;
       ignoreDups = true;
@@ -95,6 +95,13 @@ in
       typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
       neofetch
     '';
+    # zplug = {
+    #   enable = true;
+    #   plugins = [
+    #     { name = "zsh-users/zsh-autosuggestions"; } # Simple plugin installation
+    #     { name = "romkatv/powerlevel10k"; tags = [ as:theme depth:1 ]; } # Installations with additional options. For the list of options, please refer to Zplug README.
+    #   ];
+    # };
     # https://github.com/unixorn/awesome-zsh-plugins
     plugins = [
       {
