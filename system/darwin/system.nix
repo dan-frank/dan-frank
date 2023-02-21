@@ -1,4 +1,10 @@
 {
+  # Throwing error:
+  # | 2023-02-21 17:24:16.275 systemsetup[33780:470021]
+  # |   ### Error:-99 File:/AppleInternal/Library/BuildRoots/9e200cfa-7d96-11ed-886f-
+  # |   a23c4f261b56/Library/Caches/com.apple.xbs/Sources/Admin/InternetServices.m Line:379
+  # time.timeZone = "Europe/London";
+
   system.defaults = {
     LaunchServices.LSQuarantine = false;
 
@@ -89,6 +95,4 @@
     enableKeyMapping = true;
     remapCapsLockToControl = false;
   };
-
-  time.timeZone = "Europe/London";
 }
