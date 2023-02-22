@@ -122,6 +122,7 @@ in
           rev = "c062be916d0307fd851023c7afdbf7894b6667b6";
           sha256 = "uUQ8E7CcjgBMPhdP6iA/PI5X+4SUr+/FpTrxckiob9Q=";
         };
+        file = "you-should-use.plugin.zsh";
       }
       {
         name = "zsh-vi-mode";
