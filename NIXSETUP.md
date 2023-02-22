@@ -81,13 +81,7 @@ darwin-rebuild switch --flake .#macbook-arm
 
 Some apps are unable to be installed via Nix, or have yet to be configured within this repo.
 
-- [1Password](https://1password.com/downloads/mac/)
-- [itsycal](https://www.mowglii.com/itsycal/)
-- [Bartender 4](https://www.macbartender.com)
-- [Night Owl](https://nightowlapp.co)
-- [Haze Over](https://hazeover.com)
 - [Logi Options +](https://www.logitech.com/en-gb/software/logi-options-plus.html)
-- [Duckduckgo Mac](https://duckduckgo.com/mac)
 
 ## Brief Breakdown
 

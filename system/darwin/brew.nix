@@ -2,6 +2,21 @@
 {
   homebrew = {
     enable = true;
+    casks = [
+      "1password"
+      "alacritty"
+      "bartender"
+      "docker"
+      "duckduckgo"
+      "firefox"
+      "google-chrome"
+      "hazeover"
+      "itsycal"
+      "nightowl"
+      "slack"
+      "utm"
+      "visual-studio-code"
+    ];
     masApps = {
       "Bears Countdown" = 1536711520;
       "Bears Gratitude" = 6443609622;
