@@ -39,12 +39,6 @@ _This setup is heavily inspired (stolen) from @hardselius' wonderful [dotfiles](
 
 ## Preliminary
 
-0. ? Install 'Command Line Developer Tools' for [Mac only]
-
-```sh
-xcode-select --install
-```
-
 1. Install Nix package manager
 
 ```sh
