@@ -43,7 +43,7 @@ _This setup is heavily inspired (stolen) from @hardselius' wonderful [dotfiles](
 sh <(curl -L https://nixos.org/nix/install)
 ```
 
-2. Install Homebrew
+2. Install Homebrew (MacOS only)
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
