@@ -3,7 +3,7 @@
 I'm using Nix to manage my applications and their configurations.
 This file will act as a guide for how to setup and run these files.
 
-_This setup is heavily inspired (stolen) from the brilliant [@hardselius/dotfiles](https://github.com/hardselius/dotfiles)._
+_This setup is heavily inspired (stolen) from @hardselius' wonderful [dotfiles](https://github.com/hardselius/dotfiles)._
 
 ## Next steps
 
