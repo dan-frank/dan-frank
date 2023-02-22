@@ -29,6 +29,8 @@
       PiPifier = 1160374471;
       "JSON Peep for Safari" = 1458969831;
       "scite extension" = 1551820111;
+      Pages = 409201541;
+      Numbers = 409203825;
     };
   };
 }
