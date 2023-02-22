@@ -38,13 +38,19 @@ _This setup is heavily inspired (stolen) from @hardselius' wonderful [dotfiles](
 
 ## Preliminary
 
-1. Install Nix package manager
+1. Install Nix
 
 ```sh
 sh <(curl -L https://nixos.org/nix/install)
 ```
 
-2. **Open up a new terminal session** and clone this repo into your home directory
+2. Install Homebrew
+
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+3. **Open up a new terminal session** and clone this repo into your home directory
 
 ```sh
 nix-shell -p git
