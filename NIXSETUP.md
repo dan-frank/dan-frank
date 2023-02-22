@@ -35,6 +35,7 @@ _This setup is heavily inspired (stolen) from @hardselius' wonderful [dotfiles](
 
 - [Nix](https://nixos.org/)
 - [Homebrew](https://brew.sh) (_MacOS only_)
+- **Log in** to AppStore (_MacOS only_)
 
 ## Preliminary
 
