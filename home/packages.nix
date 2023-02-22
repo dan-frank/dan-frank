@@ -22,12 +22,9 @@ in {
     vimgolf
   ];
 
-  # Throwing error:
-  # | Creating home file links in /Users/dan
-  # | ln: failed to create symbolic link '/Users/dan/Applications/Home Manager Apps': Permission denied
-  # home.file = {
-  #   ".hushlogin".text = "";
-  #   ".p10k.zsh".source = link ./../dotfiles/p10k.zsh;
-  # };
+  home.file = {
+    ".hushlogin".text = "";
+    ".p10k.zsh".source = link ./../dotfiles/p10k.zsh;
+  };
 }
 
