@@ -112,6 +112,7 @@ in
           rev = "v1.17.0";
           sha256 = "fgrwbWj6CcPoZ6GbCZ47HRUg8ZSJWOsa7aipEqYuE0Q=";
         };
+        file = "powerlevel10k.zsh-theme";
       }
       {
         name = "zsh-you-should-use";
