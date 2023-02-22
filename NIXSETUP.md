@@ -55,7 +55,7 @@ sh <(curl -L https://nixos.org/nix/install)
 
 ```sh
 nix-shell -p git
-git clone https://github.com/dan-frank/dan-frank ~/d
+git clone https://github.com/dan-frank/dan-frank ~/.d
 ```
 
 ## Build Instructions
@@ -63,7 +63,7 @@ git clone https://github.com/dan-frank/dan-frank ~/d
 1. Build the environment from the Nix flake (_call `-x86` if using an intel based mac_)
 
 ```
-cd ~/d
+cd ~/.d
 nix build \
 	--extra-experimental-features nix-command \
 	--extra-experimental-features flakes \
@@ -74,7 +74,7 @@ nix build \
 2. **Open up a new terminal session** and run the following to apply the configs 
 
 ```
-cd ~/d
+cd ~/.d
 darwin-rebuild switch --flake .#macbook-arm
 ```
 
