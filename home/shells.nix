@@ -95,34 +95,27 @@ in
       typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
       neofetch
     '';
-    # zplug = {
-    #   enable = true;
-    #   plugins = [
-    #     { name = "zsh-users/zsh-autosuggestions"; } # Simple plugin installation
-    #     { name = "romkatv/powerlevel10k"; tags = [ as:theme depth:1 ]; } # Installations with additional options. For the list of options, please refer to Zplug README.
-    #   ];
-    # };
     # https://github.com/unixorn/awesome-zsh-plugins
     plugins = [
       {
         name = "powerlevel10k";
+        file = "powerlevel10k.zsh-theme";
         src = pkgs.fetchFromGitHub {
           owner = "romkatv";
           repo = "powerlevel10k";
           rev = "v1.17.0";
           sha256 = "fgrwbWj6CcPoZ6GbCZ47HRUg8ZSJWOsa7aipEqYuE0Q=";
         };
-        file = "powerlevel10k.zsh-theme";
       }
       {
         name = "zsh-you-should-use";
+        file = "you-should-use.plugin.zsh";
         src = pkgs.fetchFromGitHub {
           owner = "MichaelAquilina";
           repo = "zsh-you-should-use";
           rev = "c062be916d0307fd851023c7afdbf7894b6667b6";
           sha256 = "uUQ8E7CcjgBMPhdP6iA/PI5X+4SUr+/FpTrxckiob9Q=";
         };
-        file = "you-should-use.plugin.zsh";
       }
       {
         name = "zsh-vi-mode";
