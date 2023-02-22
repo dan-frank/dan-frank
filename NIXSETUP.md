@@ -81,18 +81,7 @@ Some apps are unable to be installed via Nix, or have yet to be configured withi
 - [Night Owl](https://nightowlapp.co)
 - [Haze Over](https://hazeover.com)
 - [Logi Options +](https://www.logitech.com/en-gb/software/logi-options-plus.html)
-- [Bears Countdown](https://apps.apple.com/us/app/bears-countdown/id1536711520)
 - [Duckduckgo Mac](https://duckduckgo.com/mac)
-- Safari Extensions
-  - [1Password for Safari](https://apps.apple.com/us/app/1password-for-safari/id1569813296?mt=12)
-  - [Duckduckgo Privacy for Safari](https://apps.apple.com/us/app/duckduckgo-privacy-for-safari/id1482920575?mt=12)
-  - [Dark Reader for Safari](https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180)
-  - [Vimari](https://apps.apple.com/us/app/vimari/id1480933944?mt=12)
-  - [SponsorBlock for YouTube](https://apps.apple.com/us/app/sponsorblock-for-youtube/id1573461917)
-  - [AdGuard for Safari](https://apps.apple.com/app/adguard-for-safari/id1440147259)
-  - [PiPifier](https://apps.apple.com/us/app/pipifier/id1160374471?mt=12)
-  - [JSON Peep for Safari](https://apps.apple.com/gb/app/json-peep-for-safari/id1458969831?mt=12)
-  - [\_scite](https://apps.apple.com/us/app/scite-extension/id1551820111?mt=12)
 
 ## Brief Breakdown
 
