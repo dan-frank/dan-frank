@@ -82,6 +82,7 @@ darwin-rebuild switch --flake .#macbook-arm
 
 Some apps are unable to be installed via Nix, or have yet to be configured within this repo.
 
+- [Affinity Suite](https://affinity.serif.com/en-gb/)
 - [Logi Options +](https://www.logitech.com/en-gb/software/logi-options-plus.html)
 
 ## Brief Breakdown
