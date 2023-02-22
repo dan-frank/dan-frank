@@ -2,6 +2,16 @@
 {
   homebrew = {
     enable = true;
+    onActivation = {
+      upgrade = true;
+      autoUpdate = true;
+      cleanup = "zap";
+    };
+    global = {
+      autoUpdate = true;
+      brewfile = true;
+      lockfiles = true;
+    };
     casks = [
       "1password"
       "alacritty"
