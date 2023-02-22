@@ -34,6 +34,7 @@ _This setup is heavily inspired (stolen) from @hardselius' wonderful [dotfiles](
 ## Dependencies
 
 - [Nix](https://nixos.org/)
+- [Homebrew](https://brew.sh) (_MacOS only_)
 
 ## Preliminary
 
@@ -43,7 +44,7 @@ _This setup is heavily inspired (stolen) from @hardselius' wonderful [dotfiles](
 sh <(curl -L https://nixos.org/nix/install)
 ```
 
-2. Install Homebrew (MacOS only)
+2. Install Homebrew (_MacOS only_)
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
