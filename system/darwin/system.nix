@@ -83,8 +83,6 @@
       type = "jpg";
     };
 
-    spaces.spans-displays = true;
-
     trackpad = {
       Clicking = false;
       TrackpadRightClick = true;

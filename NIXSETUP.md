@@ -7,9 +7,10 @@ _This setup is heavily inspired (stolen) from @hardselius' wonderful [dotfiles](
 
 ## Next steps
 
+1. Setup [@koekeishiya/skhd](https://github.com/koekeishiya/skhd) for yabai shortcuts
+1. ? Setup new status bars with maybe [@felixhageloh/uebersicht](https://github.com/felixhageloh/uebersicht)
 1. Look into resolving this which doesn't work [LnL7/nix-darwin#214](https://github.com/LnL7/nix-darwin/issues/214) & [IvarWithoutBones/dotfiles@0b3faad](https://github.com/IvarWithoutBones/dotfiles/commit/0b3faad8bd1d0e1af6103caf59b206666ab742f4)
 1. Add custom overlay to `flake.nix` and apply with home-manager.
-1. Setup [koekeishiya/yabai](https://github.com/koekeishiya/yabai), replacing rectangle
 1. Update configurations to allow for various hosts (i.e. Work M2 + NixOS VM + Asahi?)
 1. Setup nerdfonts to work correctly and apply to alacritty
 1. Add `.zshhistory` to repo
@@ -20,7 +21,7 @@ _This setup is heavily inspired (stolen) from @hardselius' wonderful [dotfiles](
 |                   | MacOS     | NixOS |
 | ----------------- | --------- | ----- |
 | Shell             | ZSH       | ?     |
-| Window Manager    | ?         | ?     |
+| Window Manager    | Yabai     | ?     |
 | Terminal Emulator | Alacritty | ?     |
 | Editor            | NeoVim    | ?     |
 
