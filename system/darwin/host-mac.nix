@@ -34,7 +34,7 @@ in {
       alt - l : yabai -m window --focus east  || yabai -m display --focus east
 
       # Make window zoom to fullscreen
-      shift + lalt - f : yabai -m window --toggle zoom-fullscreen; sketchybar --trigger window_focus
+      shift + alt - f : yabai -m window --toggle zoom-fullscreen; sketchybar --trigger window_focus
 
       ## Window Movement
       # Moving windows in spaces
@@ -65,6 +65,9 @@ in {
       shift + ctrl - n : yabai -m window --focus stack.next
       shift + ctrl - p : yabai -m window --focus stack.prev
 
+      # Toggle center float
+      shift + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
       ## Resize
       # Resize windows
       ctrl + alt - h    : yabai -m window --resize right:-100:0 || yabai -m window --resize left:-100:0
@@ -75,8 +78,8 @@ in {
       # Equalize size of windows
       ctrl + alt - e : yabai -m space --balance
 
-      # Enable / Disable gaps in current workspace
-      ctrl + alt - g : yabai -m space --toggle padding; yabai -m space --toggle gap
+      # Toggle layout rotate clockwise
+      shift + alt - r : yabai -m space --rotate 270
 
       ## Misc
       # Open new Alacritty window
@@ -120,7 +123,7 @@ in {
       right_padding = 10;
       window_gap = 10;
 
-      mouse_modifier = "fn";
+      mouse_modifier = "alt";
       mouse_action1 = "move";
       mouse_action2 = "resize";
       mouse_drop_action = "swap";
