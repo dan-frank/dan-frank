@@ -7,7 +7,6 @@ _This setup is heavily inspired (stolen) from @hardselius' wonderful [dotfiles](
 
 ## Next steps
 
-1. Setup [@koekeishiya/skhd](https://github.com/koekeishiya/skhd) for yabai shortcuts
 1. ? Setup new status bars with maybe [@felixhageloh/uebersicht](https://github.com/felixhageloh/uebersicht)
 1. Look into resolving this which doesn't work [LnL7/nix-darwin#214](https://github.com/LnL7/nix-darwin/issues/214) & [IvarWithoutBones/dotfiles@0b3faad](https://github.com/IvarWithoutBones/dotfiles/commit/0b3faad8bd1d0e1af6103caf59b206666ab742f4)
 1. Add custom overlay to `flake.nix` and apply with home-manager.
@@ -38,21 +37,25 @@ _This setup is heavily inspired (stolen) from @hardselius' wonderful [dotfiles](
 - [Homebrew](https://brew.sh) (_MacOS only_)
 - **Log in** to AppStore (_MacOS only_)
 
-## Preliminary
+## Preliminary / Setup
 
-1. Install Nix
+1. Turn on Mission Control shortcuts (_MacOS only_)
+
+System Settings > Keyboard > Keyboard Shortcuts > Mission Control > Turn on "Switch to Desktop 1 - 9"
+
+2. Install Nix
 
 ```sh
 sh <(curl -L https://nixos.org/nix/install)
 ```
 
-2. Install Homebrew (_MacOS only_)
+3. Install Homebrew (_MacOS only_)
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-3. **Open up a new terminal session** and clone this repo into your home directory
+4. **Open up a new terminal session** and clone this repo into your home directory
 
 ```sh
 nix-shell -p git
