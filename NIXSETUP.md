@@ -39,7 +39,7 @@ _This setup is heavily inspired (stolen) from @hardselius' wonderful [dotfiles](
 - [Homebrew](https://brew.sh) (_MacOS only_)
 - **Log in** to AppStore (_MacOS only_)
 
-## Preliminary / Setup
+## Preliminary Steps / Setup
 
 1. Turn on Mission Control shortcuts (_MacOS only_)
 
@@ -64,6 +64,13 @@ nix-shell -p git
 git clone https://github.com/dan-frank/dan-frank ~/.d
 ```
 
+5. Install other apps
+
+Some apps are unable to be installed via Nix, or have yet to be configured within this repo.
+
+- [Affinity Suite](https://affinity.serif.com/en-gb/)
+- [Logi Options +](https://www.logitech.com/en-gb/software/logi-options-plus.html)
+
 ## Build Instructions
 
 1. Build the environment from the Nix flake (_call `-x86` if using an intel based mac_)
@@ -83,13 +90,6 @@ nix build \
 cd ~/.d
 darwin-rebuild switch --flake .#macbook-arm
 ```
-
-3. Install other apps
-
-Some apps are unable to be installed via Nix, or have yet to be configured within this repo.
-
-- [Affinity Suite](https://affinity.serif.com/en-gb/)
-- [Logi Options +](https://www.logitech.com/en-gb/software/logi-options-plus.html)
 
 ## Brief Breakdown
 
