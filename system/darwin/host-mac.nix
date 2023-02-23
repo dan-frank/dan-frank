@@ -142,7 +142,7 @@ in {
       mouse_drop_action = "swap";
     };
     extraConfig = ''
-      yabai -m rule --add app="^System Preferences$" manage=off
+      yabai -m rule --add app="^System Settings$" manage=off
       yabai -m rule --add app="^Calculator$" manage=off
     '';
   };
