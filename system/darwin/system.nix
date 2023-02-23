@@ -49,7 +49,7 @@
       mineffect = "genie";
       minimize-to-application = false;
       mouse-over-hilite-stack = true;
-      mru-spaces = true;
+      mru-spaces = false;
       orientation = "bottom";
       show-process-indicators = false;
       show-recents = false;
