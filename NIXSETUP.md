@@ -129,7 +129,7 @@ Holds schema for `flake.nix`.
 
 My dev environments, managed with nixos and darwin. Both called via `flake.nix`.
 
-## Further Reading
+## Resources & Further Reading
 
 The following links consit of useful resources that I used to learn about Nix and how to set it up, and other users setups that I used for inspiration (or completely ripped off) to improve my config management:
 
