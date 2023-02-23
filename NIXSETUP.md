@@ -131,6 +131,7 @@ The following links consit of useful resources that I used to learn about Nix an
 - [Intro to Flakes](https://www.youtube.com/watch?v=mJbQ--iBc1U&t=909s) ← Flake tutorial that introduces you to various concpets
 - [Moving Nixos System Configuration Into A Flake](https://www.youtube.com/watch?v=mJbQ--iBc1U&t=909s) ← Video tutorial on setting up a flake to manage your system configuration
 - [nix-darwin Instructions](https://xyno.space/post/nix-darwin-introduction) ← Blog post about setting up nix-darwin
+- [NixOS Flake Tour](https://youtu.be/ARjAsEJ9WVY) ← Interesting view on managing configuration and clever modules explanation
 - [@hardselius/dotfiles](https://github.com/hardselius/dotfiles) ← Hardselius' Darwin & NixOS flake configuration (Major inspiration for this repo)
 - [@burke/b](https://github.com/burke/b) ← Burke's (Nixology's author) Darwin configuration
 - [@jpetrucciani/nix](https://github.com/jpetrucciani/nix) ← Jacobi's quite indepth but relatively simple to read nix configuration
