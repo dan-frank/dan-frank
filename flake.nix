@@ -194,7 +194,6 @@
             inherit (nixpkgsConfig) config;
           };
         };
-        ls-colors = import ./overlays/ls-colors;
       };
 
       # `nix develop`

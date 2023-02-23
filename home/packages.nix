@@ -6,9 +6,9 @@ in {
 
   home.packages = with pkgs; [
     # CLI Tools
+    coreutils
     ripgrep
     vifm
-    ls-colors
     bottom
     neofetch # freshfetch macchina
     tree

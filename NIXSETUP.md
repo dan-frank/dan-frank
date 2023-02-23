@@ -7,7 +7,6 @@ _This setup is heavily inspired (stolen) from @hardselius' wonderful [dotfiles](
 
 ## Next steps
 
-1. Add custom overlay to `flake.nix` and apply with home-manager.
 1. ? Setup new status bars with maybe [@felixhageloh/uebersicht](https://github.com/felixhageloh/uebersicht)
 1. Update configurations to allow for various hosts (i.e. Work M2 + NixOS VM + Asahi?)
 1. Add `.zshhistory` to repo
