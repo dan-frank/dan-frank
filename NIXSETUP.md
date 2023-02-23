@@ -37,39 +37,48 @@ _This setup is heavily inspired (stolen) from @hardselius' wonderful [dotfiles](
 
 - [Nix](https://nixos.org/)
 - [Homebrew](https://brew.sh) (_MacOS only_)
-- **Log in** to AppStore (_MacOS only_)
 
 ## Preliminary Steps / Setup
 
-1. Turn on Mission Control shortcuts (_MacOS only_)
-
-System Settings > Keyboard > Keyboard Shortcuts > Mission Control > Turn on "Switch to Desktop 1 - 9"
-
-2. Install Nix
+1. Install Nix
 
 ```sh
 sh <(curl -L https://nixos.org/nix/install)
 ```
 
-3. Install Homebrew (_MacOS only_)
-
-```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-4. **Open up a new terminal session** and clone this repo into your home directory
+2. **Open up a new terminal session** and clone this repo into your home directory
 
 ```sh
 nix-shell -p git
 git clone https://github.com/dan-frank/dan-frank ~/.d
 ```
 
-5. Install other apps
+---
+
+**The following are _MacOS_ only steps**
+
+3. Install Homebrew
+
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+4. Turn on Mission Control shortcuts
+
+System Settings > Keyboard > Keyboard Shortcuts > Mission Control > Turn on "Switch to Desktop 1 - 9"
+
+5. **Log in** to AppStore
+
+AppStore > Login
+
+6. Install other apps
 
 Some apps are unable to be installed via Nix, or have yet to be configured within this repo.
 
 - [Affinity Suite](https://affinity.serif.com/en-gb/)
 - [Logi Options +](https://www.logitech.com/en-gb/software/logi-options-plus.html)
+
+---
 
 ## Build Instructions
 
