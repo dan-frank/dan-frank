@@ -10,8 +10,6 @@ _This setup is heavily inspired (stolen) from @hardselius' wonderful [dotfiles](
 1. Add custom overlay to `flake.nix` and apply with home-manager.
 1. ? Setup new status bars with maybe [@felixhageloh/uebersicht](https://github.com/felixhageloh/uebersicht)
 1. Update configurations to allow for various hosts (i.e. Work M2 + NixOS VM + Asahi?)
-1. Correctly apply glyph's in spacebar
-1. Setup nerdfonts to work correctly and apply to alacritty
 1. Add `.zshhistory` to repo
 1. [Look into if I can configure Safari settings](https://daiderd.com/nix-darwin/manual/index.html#opt-system.defaults.CustomUserPreferences)
 1. See if I can manage MacOS Keyboard Shortcuts with SKHD or alternative utility

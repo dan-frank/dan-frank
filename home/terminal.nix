@@ -1,6 +1,7 @@
 { config, pkgs, lib, ... }:
 let
-  fontFamily = "Terminus (TTF)";
+  # fontFamily = "Terminus (TTF)";
+  fontFamily = "TerminessTTF Nerd Font";
 
   github-dark = {
     primary = {
@@ -163,7 +164,7 @@ in
         bold.family = "${fontFamily}";
         italic.family = "${fontFamily}";
         bold_italic.family = "${fontFamily}";
-        size = 16;
+        size = 17;
       };
     };
   };
