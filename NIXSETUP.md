@@ -5,15 +5,6 @@ This file will act as a guide for how to setup and run these files.
 
 _This setup is heavily inspired (stolen) from @hardselius' wonderful [dotfiles](https://github.com/hardselius/dotfiles)._
 
-## Next steps
-
-1. ? Setup new status bars with maybe [@felixhageloh/uebersicht](https://github.com/felixhageloh/uebersicht)
-1. Update configurations to allow for various hosts (i.e. Work M2 + NixOS VM + Asahi?)
-1. Add `.zshhistory` to repo
-1. [Look into if I can configure Safari settings](https://daiderd.com/nix-darwin/manual/index.html#opt-system.defaults.CustomUserPreferences)
-1. See if I can manage MacOS Keyboard Shortcuts with SKHD or alternative utility
-1. Look into resolving this which doesn't work [LnL7/nix-darwin#214](https://github.com/LnL7/nix-darwin/issues/214) & [IvarWithoutBones/dotfiles@0b3faad](https://github.com/IvarWithoutBones/dotfiles/commit/0b3faad8bd1d0e1af6103caf59b206666ab742f4)
-
 ## Setup
 
 |                   | MacOS     | NixOS |
@@ -150,3 +141,12 @@ The following links consit of useful resources that I used to learn about Nix an
 - [@yuanw/nix-home](https://github.com/yuanw/nix-home) ← Yuan's Darwin & NixOS flake configuration
 - [@shaunsing/nix-darwin-dotfiles](https://github.com/shaunsingh/nix-darwin-dotfiles) ← Shaun's Darwin & Asahi Linux flake configuration
 - [Sourcegraph](https://sourcegraph.com/search?q=context:global+lang:nix&patternType=standard&sm=1&groupBy=repo) ← Public nix files sourced from every public repo on GitHub
+
+## Next Steps
+
+1. ? Setup new status bars with maybe [@felixhageloh/uebersicht](https://github.com/felixhageloh/uebersicht)
+1. Update configurations to allow for various hosts (i.e. Work M2 + NixOS VM + Asahi?)
+1. Add `.zshhistory` to repo
+1. [Look into if I can configure Safari settings](https://daiderd.com/nix-darwin/manual/index.html#opt-system.defaults.CustomUserPreferences)
+1. See if I can manage MacOS Keyboard Shortcuts with SKHD or alternative utility
+1. Look into resolving this which doesn't work [LnL7/nix-darwin#214](https://github.com/LnL7/nix-darwin/issues/214) & [IvarWithoutBones/dotfiles@0b3faad](https://github.com/IvarWithoutBones/dotfiles/commit/0b3faad8bd1d0e1af6103caf59b206666ab742f4) and removing some brew packages
