@@ -144,9 +144,9 @@ The following links consit of useful resources that I used to learn about Nix an
 
 ## Next Steps
 
-1. ? Setup new status bars with maybe [@felixhageloh/uebersicht](https://github.com/felixhageloh/uebersicht)
-1. Update configurations to allow for various hosts (i.e. Work M2 + NixOS VM + Asahi?)
+1. Setup packages / services / configurations with modules (more control, can easily create multiple hosts using only specific packages)
+1. Update configurations to allow for hosts Work M2 + NixOS VM + Asahi + RaspberryPi
 1. Add `.zshhistory` to repo
-1. [Look into if I can configure Safari settings](https://daiderd.com/nix-darwin/manual/index.html#opt-system.defaults.CustomUserPreferences)
 1. See if I can manage MacOS Keyboard Shortcuts with SKHD or alternative utility
+1. Look into if I can [configure Safari settings](https://daiderd.com/nix-darwin/manual/index.html#opt-system.defaults.CustomUserPreferences)
 1. Look into resolving this which doesn't work [LnL7/nix-darwin#214](https://github.com/LnL7/nix-darwin/issues/214) & [IvarWithoutBones/dotfiles@0b3faad](https://github.com/IvarWithoutBones/dotfiles/commit/0b3faad8bd1d0e1af6103caf59b206666ab742f4) and removing some brew packages
