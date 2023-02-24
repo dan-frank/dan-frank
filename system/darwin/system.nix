@@ -42,8 +42,8 @@
     dock = {
       appswitcher-all-displays = true;
       autohide = true;
-      autohide-time-modifier = 0.5;
-      expose-animation-duration = 0.5;
+      autohide-time-modifier = 0.3;
+      expose-animation-duration = 0.3;
       expose-group-by-app = true;
       launchanim = true;
       mineffect = "genie";
