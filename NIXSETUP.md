@@ -102,10 +102,6 @@ Required for `flake-compat`, which adds flake combatability to non flake support
 
 `.` dotfiles that I was unable, or have yet, to 'nixify' and are imported as is.
 
-### `/flakes`
-
-A collection of dev shell flakes I use.
-
 ### `/home`
 
 Collection of my home-manager configurations.
