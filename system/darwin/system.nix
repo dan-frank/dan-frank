@@ -93,4 +93,12 @@
     enableKeyMapping = true;
     remapCapsLockToControl = false;
   };
+
+  system.activationScripts = {
+    springboard-transition-time = ''
+      defaults write com.apple.dock springboard-show-duration -float 0.1
+      defaults write com.apple.dock springboard-hide-duration -float 0.1
+      defaults write com.apple.dock springboard-page-duration -float 0.1
+    '';
+  };
 }
