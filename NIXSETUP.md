@@ -31,7 +31,7 @@ _This setup is heavily inspired (stolen) from @hardselius' wonderful [dotfiles](
 1. Install Nix
 
 ```sh
-sh <(curl -L https://nixos.org/nix/install)
+sh <(curl -L https://nixos.org/nix/install) --daemon
 ```
 
 2. **Open up a new terminal session** and clone this repo into your home directory
@@ -41,25 +41,44 @@ nix-shell -p git
 git clone https://github.com/dan-frank/dan-frank ~/.d
 ```
 
+3. Prepare default Nix installation to allow for flake management
+
+Move default `nix.conf` to backup file:
+
+```sh
+sudo mv /etc/nix/nix.conf /etc/nix/nix.conf.bak
+```
+
+Resolve `/run` not existing error with:
+
+```sh
+error: Directory /run does not exist, aborting activation
+Create a symlink to /var/run with:
+
+$ printf 'run\tprivate/var/run\n' | sudo tee -a /etc/synthetic.conf
+$ /System/Library/Filesystems/apfs.fs/Contents/Resources/apfs.util -B # For Catalina
+$ /System/Library/Filesystems/apfs.fs/Contents/Resources/apfs.util -t # For Big Sur and later
+```
+
 ---
 
 **The following are _MacOS_ only steps**
 
-3. Install Homebrew
+4. Install Homebrew
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-4. Turn on Mission Control shortcuts
+5. Turn on Mission Control shortcuts
 
 System Settings > Keyboard > Keyboard Shortcuts > Mission Control > Turn on "Switch to Desktop 1 - 9"
 
-5. **Log in** to AppStore
+6. **Log in** to AppStore
 
 AppStore > Login
 
-6. Install other apps
+7. Install other apps
 
 Some apps are unable to be installed via Nix, or have yet to be configured within this repo.
 
