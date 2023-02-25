@@ -174,8 +174,8 @@ in
         src = pkgs.fetchFromGitHub {
           owner = "zsh-users";
           repo = "zsh-completions";
-          rev = "v0.34.0";
-          sha256 = "0w8x5ilpwx90s2s2y56vbzq92ircmrf0l5x8hz4g1nx3qzawv6af";
+          rev = "92dc417c3e818e9b526b2a574021361432b47282";
+          sha256 = "NPDjyLAXdtZ8lrt7WLaeyJ3psboCHNJtPamC2fohzE8=";
         };
       }
       {
