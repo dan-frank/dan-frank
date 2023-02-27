@@ -23,7 +23,6 @@
       "hazeover"
       "itsycal"
       "nightowl"
-      "slack"
       "utm"
       "visual-studio-code"
     ];
