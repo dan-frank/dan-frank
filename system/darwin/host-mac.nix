@@ -144,6 +144,7 @@ in {
     extraConfig = ''
       yabai -m rule --add app="^System Settings$" manage=off
       yabai -m rule --add app="^Calculator$" manage=off
+      yabai -m rule --add app="^Find My+ Installer$" manage=off
       yabai -m rule --add app="^Logi Options+$" manage=off
       yabai -m rule --add app="^Logi Options+ Installer$" manage=off
     '';
