@@ -54,6 +54,9 @@ in
     "...." = "cd ../../..";
     "....." = "cd ../../../..";
 
+    # Name shortening
+    docc = "docker-compose";
+
     # Get public key
     pubkey = "pbcopy < ~/.ssh/id_rsa.pub";
 
