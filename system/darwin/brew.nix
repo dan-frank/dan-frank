@@ -38,7 +38,7 @@
       Numbers = 409203825;
       Pages = 409201541;
       PiPifier = 1160374471;
-      "Reeder 5" = 1529445840;
+      "Reeder 5" = 1529448980;
       "scite extension" = 1551820111;
       "SponsorBlock for YouTube" = 1573461917;
       Vimari = 1480933944;
