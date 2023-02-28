@@ -104,19 +104,31 @@
       };
 
       nixosConfigurations = {
-        wsl = nixpkgs.lib.nixosSystem {
+        utm-x86 = makeOverrideable nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = nixosCommonModules ++ [
-            ./system/nixos/host-wsl.nix
+            ./system/nixos/host-utm.nix
             {
               users.primaryUser = primaryUserInfo;
             }
           ];
         };
+        utm-arm = utm-x86.override { system = "aarch64-linux"; };
+
+        linux-x86 = makeOverrideable nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = nixosCommonModules ++ [
+            ./system/nixos/host-linux.nix
+            {
+              users.primaryUser = primaryUserInfo;
+            }
+          ];
+        };
+        linux-arm = linux-x86.override { system = "aarch64-linux"; };
       };
 
       homeConfigurations = {
-        linuxWsl = home-manager.lib.homeManagerConfiguration {
+        dan = home-manager.lib.homeManagerConfiguration {
           pkgs = import inputs.nixpkgs-unstable {
             system = "x86_64-linux";
             inherit (nixpkgsConfig) config overlays;
