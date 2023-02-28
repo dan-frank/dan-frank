@@ -103,8 +103,8 @@
         macbook-arm = macbook-x86.override { system = "aarch64-darwin"; };
       };
 
-      nixosConfigurations = {
-        utm-x86 = makeOverrideable nixpkgs.lib.nixosSystem {
+      nixosConfigurations = rec {
+        utm-x86 = makeOverridable nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = nixosCommonModules ++ [
             ./system/nixos/host-utm.nix
@@ -115,7 +115,7 @@
         };
         utm-arm = utm-x86.override { system = "aarch64-linux"; };
 
-        linux-x86 = makeOverrideable nixpkgs.lib.nixosSystem {
+        linux-x86 = makeOverridable nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = nixosCommonModules ++ [
             ./system/nixos/host-linux.nix
