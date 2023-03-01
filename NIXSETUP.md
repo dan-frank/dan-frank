@@ -129,13 +129,13 @@ Collection of my home-manager configurations.
 
 Programs that are managed by home-manager.
 
+### `/modules`
+
+Holds my Nix modules.
+
 ### `/overlays`
 
 This folder contains my personal overlays that don't really need, or have yet, to be pushed into the main nixpkgs repo.
-
-### `/schema`
-
-Holds schema for `flake.nix`.
 
 ### `/system`
 

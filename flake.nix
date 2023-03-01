@@ -115,16 +115,16 @@
         };
         utm-arm = utm-x86.override { system = "aarch64-linux"; };
 
-        linux-x86 = makeOverridable nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          modules = nixosCommonModules ++ [
-            ./system/nixos/host-linux.nix
-            {
-              users.primaryUser = primaryUserInfo;
-            }
-          ];
-        };
-        linux-arm = linux-x86.override { system = "aarch64-linux"; };
+        # linux-x86 = makeOverridable nixpkgs.lib.nixosSystem {
+        #   system = "x86_64-linux";
+        #   modules = nixosCommonModules ++ [
+        #     ./system/nixos/host-linux.nix
+        #     {
+        #       users.primaryUser = primaryUserInfo;
+        #     }
+        #   ];
+        # };
+        # linux-arm = linux-x86.override { system = "aarch64-linux"; };
       };
 
       homeConfigurations = {
@@ -159,7 +159,7 @@
         stateVersion = { system.stateVersion = nixosStateVersion; };
         packages = import ./system/packages.nix;
 
-        users-primaryUser = import ./schema/users.nix;
+        users-primaryUser = import ./modules/users.nix;
       };
 
       homeManagerModules = {
