@@ -151,7 +151,7 @@
         darwin-system = import ./system/darwin/system.nix;
         darwin-brew = import ./system/darwin/brew.nix;
 
-        users-primaryUser = import ./schema/users.nix;
+        users-primaryUser = import ./modules/users.nix;
       };
 
       nixosModules = {
