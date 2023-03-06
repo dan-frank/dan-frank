@@ -34,6 +34,7 @@
       "Dark Reader for Safari" = 1438243180;
       "DuckDuckGo Privacy for Safari" = 1482920575;
       "JSON Peep for Safari" = 1458969831;
+      Keynote = 409183694;
       Numbers = 409203825;
       Pages = 409201541;
       PiPifier = 1160374471;
