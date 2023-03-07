@@ -11,8 +11,8 @@ let
 in
 {
   home.sessionVariables = {
-    EDITOR = "${pkgs.neovim}/bin/nvim";
-    VISUAL = "${pkgs.neovim}/bin/nvim";
+    EDITOR = "nvim";
+    VISUAL = "nvim";
     EMAIL = "${user-info.email}";
     PAGER = "${pkgs.less}/bin/less";
     CLICOLOR = 1;
