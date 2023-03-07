@@ -75,6 +75,7 @@ in
     enable = true;
     initExtra = ''
       eval "$(direnv hook bash)"
+      eval $(dircolors -b ${LS_COLORS}/LS_COLORS)
     '';
   };
 
