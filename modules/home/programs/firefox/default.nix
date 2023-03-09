@@ -1,11 +1,21 @@
-{ pkgs, lib, ... }:
+{ config, pkgs, lib, ... }:
 let
   merge = lib.foldr (a: b: a // b) { };
-in
-{
+  pkgsFirefox = if pkgs.stdenv.isLinux then pkgs.firefox else pkgs.firefox-bin;
+in {
+  nixpkgs.config.packageOverrides = pkgs: {
+    nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
+      inherit pkgs;
+    };
+  };
+
+  home.shellAliases = {
+    firefox = "Open ${pkgsFirefox}/Applications/Firefox.app";
+  };
+
   programs.firefox = {
     enable = true;
-    package = if pkgs.stdenv.isLinux then pkgs.firefox else pkgs.firefox-bin;
+    package = pkgsFirefox;
     profiles = {
       default = {
         name = "Default";
@@ -21,10 +31,12 @@ in
           facebook-container
           onepassword-password-manager
           return-youtube-dislikes
+          sourcegraph
           sponsorblock
           ublock-origin
           vimium
         ];
+        userChrome = builtins.readFile ./config/userChrome.css;
       };
       # This does not have as strict privacy settings as the default profile.
       # It uses the default firefox settings. Useful when something is not

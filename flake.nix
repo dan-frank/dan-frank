@@ -180,7 +180,7 @@
         home-terminal = import ./home/terminal.nix;
 
         home-bat = import ./modules/home/programs/bat.nix;
-        home-firefox = import ./modules/home/programs/firefox/firefox.nix;
+        home-firefox = import ./modules/home/programs/firefox;
         home-neovim = import ./modules/home/programs/neovim.nix;
         home-vscode = import ./modules/home/programs/vscode.nix;
 
