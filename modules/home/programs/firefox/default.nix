@@ -151,8 +151,8 @@ in {
       # This does not have as strict privacy settings as the default profile.
       # It uses the default firefox settings. Useful when something is not
       # working using the default profile
-      shit = {
-        name = "crap";
+      insecure = {
+        name = "insecure";
         id = 1;
       };
     };
