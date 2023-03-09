@@ -14,12 +14,22 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
     flake-utils.url = "github:numtide/flake-utils";
+
+    nixpkgs-firefox-darwin = {
+      url = "github:bandithedoge/nixpkgs-firefox-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nur = {
+      url = "github:nix-community/NUR";
+    };
   };
 
   outputs = { self, nixpkgs, darwin, home-manager, flake-utils, ... } @ inputs:
     let
       inherit (darwin.lib) darwinSystem;
       inherit (inputs.nixpkgs-unstable.lib) attrValues makeOverridable optionalAttrs singleton;
+      #inherit (inputs.nixpkgs.stdenv) isDarwin;
+      isDarwin = nixpkgs.lib.hasSuffix "-darwin";
 
       systems = [
         "x86_64-darwin"
@@ -169,9 +179,10 @@
         home-shells = import ./home/shells.nix;
         home-terminal = import ./home/terminal.nix;
 
-        home-bat = import ./home/programs/bat.nix;
-        home-neovim = import ./home/programs/neovim.nix;
-        home-vscode = import ./home/programs/vscode.nix;
+        home-bat = import ./modules/home/programs/bat.nix;
+        home-firefox = import ./modules/home/programs/firefox;
+        home-neovim = import ./modules/home/programs/neovim.nix;
+        home-vscode = import ./modules/home/programs/vscode.nix;
 
         home-user-info = { lib, ... }: {
           options.home.user-info =
@@ -206,6 +217,9 @@
             inherit (nixpkgsConfig) config;
           };
         };
+
+        firefox = inputs.nixpkgs-firefox-darwin.overlay;
+        nur = inputs.nur.overlay;
       };
 
       # `nix develop`

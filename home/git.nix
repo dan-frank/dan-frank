@@ -8,6 +8,9 @@ in
     package = pkgs.pkgs-stable.git;
     userName = user-info.fullName;
     userEmail = user-info.email;
+    ignores = [
+      ".DS_Store"
+    ];
     extraConfig = {
       color.ui = "auto";
       core = {
