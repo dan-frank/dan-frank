@@ -18,7 +18,7 @@
       "bartender"
       "docker"
       "duckduckgo"
-      "firefox"
+      # "firefox"
       "google-chrome"
       "hazeover"
       "itsycal"
