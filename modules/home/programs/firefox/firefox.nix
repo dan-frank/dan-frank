@@ -1,14 +1,20 @@
 { config, pkgs, lib, ... }:
-{
+let
+  firefoxPkg = if pkgs.stdenv.isLinux then pkgs.firefox else pkgs.firefox-bin;
+in {
   nixpkgs.config.packageOverrides = pkgs: {
     nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
       inherit pkgs;
     };
   };
 
+  home.shellAliases = {
+    firefox = "Open ${firefoxPkg}/Applications/Firefox.app";
+  };
+
   programs.firefox = {
     enable = true;
-    package = if pkgs.stdenv.isLinux then pkgs.firefox else pkgs.firefox-bin;
+    package = firefoxPkg;
     profiles =
     let
       defaultSettings = {
