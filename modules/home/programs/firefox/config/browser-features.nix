@@ -18,6 +18,7 @@
   "toolkit.telemetry.firstShutdownPing.enabled" = false;
   "toolkit.telemetry.hybridContent.enabled" = false;
   "toolkit.telemetry.reportingpolicy.firstRun" = false;
+  "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
   # Disable health report
   # Disable sending Firefox health reports
   # (https://www.mozilla.org/privacy/firefox/#health-report) to Mozilla

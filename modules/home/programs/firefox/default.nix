@@ -146,7 +146,7 @@ in {
             meta = {};
           })
         ];
-        userChrome = builtins.readFile ./config/userChrome.css;
+        userChrome = builtins.readFile ./styles/retroFox.css;
       };
       # This does not have as strict privacy settings as the default profile.
       # It uses the default firefox settings. Useful when something is not
