@@ -35,7 +35,6 @@
   # time about their experience with Firefox.
   "browser.selfsupport.url" = "";
   # Content of the new tab page
-  # 
   "browser.newtabpage.enhanced" = false;
   # Disable autoplay of <code>&lt;video&gt;</code> tags.
   # Per default, <code>&lt;video&gt;</code> tags are allowed to start automatically.
@@ -43,4 +42,19 @@
   # some video sites.
   "media.autoplay.enabled" = true;
   "media.autoplay.default" = 0;
+  # Disable firefox login
+  "identity.fxaccounts.enabled" = "false";
+  "identity.fxaccounts.toolbar.enabled" = "false";
+  "identity.fxaccounts.pairing.enabled" = "false";
+  "identity.fxaccounts.commands.enabled" = "false";
+  # Don't use firefox password manger
+  "browser.contentblocking.report.lockwise.enabled" = "false";
+  # Don't show advertisement for breach detection
+  "extensions.fxmonitor.firstAlertShown" = "true";
+  # No tutorial please
+  "browser.uitour.enabled" = "false";
+  # Don't show 'report abuse' in extensions
+  "extensions.abuseReport.enabled" = "false";
+  # Don't auto-fill credit card information
+  "extensions.formautofill.creditCards.enabled" = "false";
 }
