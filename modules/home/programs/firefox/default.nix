@@ -49,6 +49,14 @@ in {
           duckduckgo-privacy-essentials
           facebook-container
           (buildFirefoxXpiAddon {
+            pname = "GarminGraphs";
+            version = "1.3.1";
+            addonId = "{93714d9d-3af9-4e4d-941d-1072bc3f5614}";
+            url = "https://addons.mozilla.org/firefox/downloads/file/3943346/garmin_graphs-1.3.1.xpi";
+            sha256 = "EuDENswWOPhro1gkMOtYDaSbbuL/Cx4uS/5XskFGcLM=";
+            meta = {};
+          })
+          (buildFirefoxXpiAddon {
             pname = "grepper";
             version = "0.0.8.9";
             addonId = "{2cbcd5ed-d916-4805-a4d0-a8da4ca8f13f}";
@@ -99,6 +107,14 @@ in {
             meta = {};
           })
           return-youtube-dislikes
+          (buildFirefoxXpiAddon {
+            pname = "Reverse Image Search";
+            version = "3.4.4";
+            addonId = "{0da2e603-21ba-4422-8049-b6d9e013ed84}";
+            url = "https://addons.mozilla.org/firefox/downloads/file/4074017/image_reverse_search-3.4.4.xpi";
+            sha256 = "IsHnNfA9N9ZKYRu9bRSxyzKVoM4NkcXqyjuexKeCVKE=";
+            meta = {};
+          })
           (buildFirefoxXpiAddon {
             pname = "smart-https";
             version = "0.3.2";
