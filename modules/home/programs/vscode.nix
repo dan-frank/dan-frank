@@ -59,6 +59,7 @@
       ];
       "window.zoomLevel" = 0.85;
       "workbench.colorTheme" = "GitHub Dark";
+      "workbench.iconTheme" = "material-icon-theme";
     };
     extensions = with pkgs.vscode-extensions; [
       bbenoist.nix
