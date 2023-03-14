@@ -32,7 +32,7 @@
         "suppressFileNotUnderSourceControlWarning" = true;
       };
       "java.semanticHighlighting.enabled" = true;
-      "metals.javaHome" = "${pkgs.jdk11}";
+      "metals.javaHome" = "${pkgs.jdk}";
       "remote.SSH.defaultExtensions" = [
         "bbenoist.nix"
         # "bierner.emojisense"
@@ -40,7 +40,6 @@
         "bierner.markdown-emoji"
         "bradlc.vscode-tailwindcss"
         "eamodio.gitlens"
-        # "file-icons.file-icons"
         "gencer.html-slim-scss-css-class-completion"
         "github.github-vscode-theme"
         "gruntfuggly.todo-tree"
@@ -57,7 +56,7 @@
         "usernamehw.errorlens"
         "vscodevim.vim"
       ];
-      "window.zoomLevel" = 0.85;
+      "window.zoomLevel" = 0.5;
       "workbench.colorTheme" = "GitHub Dark";
       "workbench.iconTheme" = "material-icon-theme";
     };
@@ -68,7 +67,6 @@
       bierner.markdown-emoji
       bradlc.vscode-tailwindcss
       eamodio.gitlens
-      # file-icons.file-icons
       gencer.html-slim-scss-css-class-completion
       github.github-vscode-theme
       gruntfuggly.todo-tree
