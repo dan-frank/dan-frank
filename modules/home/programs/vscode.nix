@@ -53,6 +53,7 @@
         "scala-lang.scala"
         "scalameta.metals"
         "shardulm94.trailing-spaces"
+        "tonybaloney.vscode-pets"
         "usernamehw.errorlens"
         "vscodevim.vim"
       ];
@@ -82,12 +83,12 @@
       usernamehw.errorlens
       vscodevim.vim
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-      # {
-      #   name = "Nix";
-      #   publisher = "bbenoist";
-      #   version = "1.0.1";
-      #   sha256 = "0zd0n9f5z1f0ckzfjr38xw2zzmcxg1gjrava7yahg5cvdcw6l35b";
-      # }
+      {
+        name = "vscode-pets";
+        publisher = "tonybaloney";
+        version = "1.2.2";
+        sha256 = "0zd0n9f5z1f0ckzfjr38xw2zzmcxg1gjrava7yahg5cvdcw6l35b";
+      }
     ];
   };
 }
