@@ -47,7 +47,6 @@
         "mhutchie.git-graph"
         "ms-vscode-remote.remote-ssh"
         "naumovs.color-highlight"
-        "oderwat.indent-rainbow"
         "pkief.material-icon-theme"
         "scala-lang.scala"
         "scalameta.metals"
@@ -74,7 +73,6 @@
       mhutchie.git-graph
       ms-vscode-remote.remote-ssh
       naumovs.color-highlight
-      oderwat.indent-rainbow
       pkief.material-icon-theme
       scala-lang.scala
       scalameta.metals
