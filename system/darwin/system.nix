@@ -16,7 +16,7 @@
       AppleEnableMouseSwipeNavigateWithScrolls = false;
       AppleEnableSwipeNavigateWithScrolls = true;
       AppleInterfaceStyle = "Dark";
-      ApplePressAndHoldEnabled = true;
+      ApplePressAndHoldEnabled = false;
       AppleShowAllExtensions = true;
       AppleShowScrollBars = "WhenScrolling";
       AppleMetricUnits = 1;
