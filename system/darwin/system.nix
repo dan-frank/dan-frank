@@ -68,7 +68,7 @@
       QuitMenuItem = true;
       ShowPathbar = true;
       FXDefaultSearchScope = "SCcf";
-      FXPreferredViewStyle = "icnv";
+      FXPreferredViewStyle = "Nlsv"; # "icnv" = Icon view, "Nlsv" = List view, "clmv" = Column View, "Flwv" = Gallery View
       _FXShowPosixPathInTitle = false;
       FXEnableExtensionChangeWarning = false;
     };
