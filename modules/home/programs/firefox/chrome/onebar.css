@@ -524,3 +524,14 @@ toolbarspring,
     flex-wrap: wrap !important;
   border-top: 1px solid #aeaeae33 !important;
 }
+
+
+/**
+ * Custom CSS Changes
+ */
+
+/* Font */
+* {
+  font-family: "Terminus (TTF)", sans-serif !important;
+  font-size: 14px !important;
+}
