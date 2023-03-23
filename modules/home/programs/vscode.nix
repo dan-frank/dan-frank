@@ -1,5 +1,10 @@
 { config, lib, pkgs, ... }:
-{
+let
+  font = {
+    family = "'Terminus (TTF)', sans-serif";
+    size = 15;
+  };
+in {
   imports = [
     "${fetchTarball {
       url = "https://github.com/msteen/nixos-vscode-server/tarball/master";
@@ -16,8 +21,8 @@
       "diffEditor.ignoreTrimWhitespace" = true;
       "editor.bracketPairColorization.enabled" = true;
       "editor.guides.bracketPairs" = true;
-      "editor.fontFamily" = "'Terminus (TTF)', sans-serif";
-      "editor.fontSize" = 15;
+      "editor.fontFamily" = font.family;
+      "editor.fontSize" = font.size;
       "editor.fontWeight" = "normal";
       "editor.lineNumbers" = "relative";
       "files.exclude" = {
