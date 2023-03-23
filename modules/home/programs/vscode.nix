@@ -16,6 +16,9 @@
       "diffEditor.ignoreTrimWhitespace" = true;
       "editor.bracketPairColorization.enabled" = true;
       "editor.guides.bracketPairs" = true;
+      "editor.fontFamily" = "'Terminus (TTF)', sans-serif";
+      "editor.fontSize" = 15;
+      "editor.fontWeight" = "normal";
       "files.exclude" = {
         "**/.classpath" = true;
         "**/.project" = true;
