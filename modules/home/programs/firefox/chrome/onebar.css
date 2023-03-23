@@ -526,6 +526,20 @@ toolbarspring,
 }
 
 
+/* Extra https://www.reddit.com/r/FirefoxCSS/comments/10fl39n/comment/j4ybdx9/?utm_source=share&utm_medium=web2x&context=3 */
+
+.panel-subview-footer-button {
+  -moz-box-ordinal-group:0 !important;
+  margin-left: 100px !important;
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+.subviewbutton.panel-subview-footer-button.unified-extensions-manage-extensions {
+  border: 1px solid Black !important;
+  width: 141px !important;
+}
+
 /**
  * Custom CSS Changes
  */
