@@ -19,6 +19,7 @@
       "editor.fontFamily" = "'Terminus (TTF)', sans-serif";
       "editor.fontSize" = 15;
       "editor.fontWeight" = "normal";
+      "editor.lineNumbers" = "relative";
       "files.exclude" = {
         "**/.classpath" = true;
         "**/.project" = true;
