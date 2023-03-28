@@ -43,10 +43,10 @@
   # used for fingerprinting.
   "dom.battery.enabled" = false;
   # Disable media device queries
-  # Prevent websites from accessing information about webcam and microphone
+  # Prevent websites from accessing information about webcam and microphone (if false)
   # (https://developer.mozilla.org/docs/Web/API/MediaDevices/enumerateDevices)
   # (possible fingerprinting).
-  "media.navigator.enabled" = false;
+  "media.navigator.enabled" = true;
   # Disable form autofill
   # Automatically filled form fields are used for fingerprinting
   # (https://freedom-to-tinker.com/2017/12/27/no-boundaries-for-user-identities-web-trackers-exploit-browser-login-managers/).
