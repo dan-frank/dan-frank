@@ -20,11 +20,14 @@ in {
     userSettings = {
       "diffEditor.ignoreTrimWhitespace" = true;
       "editor.bracketPairColorization.enabled" = true;
-      "editor.guides.bracketPairs" = true;
+      "editor.detectIndentation" = false;
       "editor.fontFamily" = font.family;
       "editor.fontSize" = font.size;
       "editor.fontWeight" = "normal";
+      "editor.guides.bracketPairs" = true;
+      "editor.insertSpaces" = true;
       "editor.lineNumbers" = "relative";
+      "editor.tabSize" = 2;
       "files.exclude" = {
         "**/.classpath" = true;
         "**/.project" = true;
