@@ -162,7 +162,11 @@ in {
             meta = {};
           })
         ];
-        userChrome = builtins.readFile ./chrome/onebar.css;
+        userChrome =
+          builtins.readFile ./chrome/onebar.css
+          + builtins.readFile ./chrome/compact-extensions.css
+          + builtins.readFile ./chrome/_custom.css
+          ;
       };
       # This does not have as strict privacy settings as the default profile.
       # It uses the default firefox settings. Useful when something is not
