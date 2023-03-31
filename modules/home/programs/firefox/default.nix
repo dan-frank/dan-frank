@@ -163,7 +163,8 @@ in {
           })
         ];
         userChrome =
-          builtins.readFile ./chrome/userChrome/onebar-bali.css
+          builtins.readFile ./chrome/userChrome/onebar-bali/default.css
+          + builtins.readFile ./chrome/userChrome/onebar-bali/mac-tweaks.css
           + builtins.readFile ./chrome/userChrome/compact-extensions.css
           + builtins.readFile ./chrome/userChrome/_custom.css
           ;
