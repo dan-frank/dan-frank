@@ -163,10 +163,11 @@ in {
           })
         ];
         userChrome =
-          builtins.readFile ./chrome/onebar.css
-          + builtins.readFile ./chrome/compact-extensions.css
-          + builtins.readFile ./chrome/_custom.css
+          builtins.readFile ./chrome/userChrome/onebar-bali.css
+          + builtins.readFile ./chrome/userChrome/compact-extensions.css
+          + builtins.readFile ./chrome/userChrome/_custom.css
           ;
+        userContent = builtins.readFile ./chrome/userContent/onebar-bali.css;
       };
       # This does not have as strict privacy settings as the default profile.
       # It uses the default firefox settings. Useful when something is not
