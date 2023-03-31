@@ -49,7 +49,7 @@
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])>#tabbrowser-arrowscrollbox>.tabbrowser-tab[first-visible-unpinned-tab] {margin-inline-start: 0!important}
 
 /*  Removes the x-button from the tabs  */
-/* .tab-close-button{display: none !important} */
+.tab-close-button{display: none !important}
 
 /*  Removes annoying border  */
 #navigator-toolbox{border:none !important;}
