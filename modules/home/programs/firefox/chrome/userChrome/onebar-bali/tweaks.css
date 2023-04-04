@@ -1,2 +1,10 @@
-/*  Removes the x-button from the tabs  */
-.tab-close-button{display: block !important}
+/* Adds hover effect to show close button */
+.tabbrowser-tab .tab-close-button {
+  display: block !important;
+  opacity: 0 !important;
+  transition: 0.15s ease-out;
+}
+.tabbrowser-tab:hover .tab-close-button {
+  display: block !important;
+  opacity: 1 !important;
+}
