@@ -166,7 +166,8 @@ in {
           builtins.readFile ./chrome/userChrome/onebar-bali/default.css
           + builtins.readFile ./chrome/userChrome/onebar-bali/tweaks.css
           + builtins.readFile ./chrome/userChrome/onebar-bali/mac-tweaks.css
-          + builtins.readFile ./chrome/userChrome/addons/compact-extensions.css
+          + builtins.readFile ./chrome/userChrome/addons/compact-extensions/default.css
+          + builtins.readFile ./chrome/userChrome/addons/compact-extensions/tweaks.css
           + builtins.readFile ./chrome/userChrome/addons/tweaks.css
           ;
         userContent = builtins.readFile ./chrome/userContent/onebar-bali.css;
