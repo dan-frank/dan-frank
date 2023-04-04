@@ -1,33 +1,4 @@
-/*
 #unified-extensions-view{
   --uei-icon-size: 22px;
-  --firefoxcss-number-of-extensions-in-a-row: 3;
+  --firefoxcss-number-of-extensions-in-a-row: 5;
 }
-
-#unified-extensions-panel #unified-extensions-view {
-  max-width: 210px !important;
-}
-
-#unified-extensions-view .unified-extensions-item-icon,
-#unified-extensions-view .unified-extensions-item[unified-extensions="true"] .webextension-browser-action
-> .toolbarbutton-badge-stack > .toolbarbutton-icon {
-    height: 20px !important;
-    width: 20px !important;
-}
-*/
-
-/* Extra https://www.reddit.com/r/FirefoxCSS/comments/10fl39n/comment/j4ybdx9/?utm_source=share&utm_medium=web2x&context=3 */
-
-/*
-.panel-subview-footer-button {
-  -moz-box-ordinal-group:0 !important;
-  margin-left: 100px !important;
-  margin-top: 5px !important;
-  margin-bottom: 5px !important;
-}
-
-.subviewbutton.panel-subview-footer-button.unified-extensions-manage-extensions {
-  border: 1px solid Black !important;
-  width: 141px !important;
-}
-*/
