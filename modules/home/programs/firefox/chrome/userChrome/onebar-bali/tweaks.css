@@ -8,3 +8,33 @@
   display: block !important;
   opacity: 1 !important;
 }
+
+/* Single Tab styling */
+@supports not -moz-bool-pref("onebar.disable-single-tab") {
+  #titlebar #tabbrowser-tabs .tabbrowser-tab:only-of-type {
+    width: max-content !important;
+    -moz-box-flex: 0 !important;
+    max-width: unset !important;
+    margin-inline-end: auto !important;
+    --toolbar-bgcolor: transparent !important;
+    --tab-selected-bgimage: transparent !important;
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+  .tabbrowser-tab:only-of-type .tab-text {
+    font-weight: 600 !important;
+  }
+  .tabbrowser-tab:only-of-type .tab-background {
+    background-color: transparent !important;
+    background-image: unset !important;
+    box-shadow: unset !important;
+  }
+  .tabbrowser-tab:only-of-type .tab-close-button {
+    display: none !important;
+  }
+  /*
+  #tabbrowser-tabs:not([closebuttons="activetab"]) ~ #alltabs-button {
+  */
+}
