@@ -9,6 +9,32 @@
   opacity: 1 !important;
 }
 
+/* Browser tab icon */
+.tabbrowser-tab .tab-icon-image {
+  opacity: 100 !important;
+  display: inline-block !important;
+  width: 16px !important;
+  padding-left: 0 !important;
+}
+.tabbrowser-tab:not([pinned]):not([selected]) .tab-icon-image {
+  opacity: 100 !important;
+  display: inline-block !important;
+  width: 16px !important;
+  padding-left: 0 !important;
+}
+.tabbrowser-tab:not([pinned]):hover .tab-icon-image {
+  opacity: 100 !important;
+  display: inline-block !important;
+  width: 16px !important;
+  padding-left: 0 !important;
+}
+.tabbrowser-tab:not([hover]) .tab-icon-image {
+  opacity: 100 !important;
+  display: inline-block !important;
+  width: 16px !important;
+  padding-left: 0 !important;
+}
+
 /* Single Tab styling */
 @supports not -moz-bool-pref("onebar.disable-single-tab") {
   #titlebar #tabbrowser-tabs .tabbrowser-tab:only-of-type {
