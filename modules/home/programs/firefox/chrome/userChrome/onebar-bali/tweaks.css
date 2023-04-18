@@ -60,6 +60,9 @@
   .tabbrowser-tab:only-of-type .tab-close-button {
     display: none !important;
   }
+  .tabbrowser-tab:only-of-type .tab-label-container {
+    mask-image: unset !important;
+  }
   /*
   #tabbrowser-tabs:not([closebuttons="activetab"]) ~ #alltabs-button {
   */
