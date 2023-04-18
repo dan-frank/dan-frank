@@ -108,6 +108,14 @@ in {
           })
           return-youtube-dislikes
           (buildFirefoxXpiAddon {
+            pname = "Read Aloud: A Text to Speech Voice Reader";
+            version = "1.63.0";
+            addonId = "{ddc62400-f22d-4dd3-8b4a-05837de53c2e}";
+            url = "https://addons.mozilla.org/firefox/downloads/file/4091503/read_aloud-1.63.0.xpi";
+            sha256 = "sVw0ot3wpgMKlNK4VmLu9AFZji5DAyWbYp4MaD4aHPw=";
+            meta = {};
+          })
+          (buildFirefoxXpiAddon {
             pname = "Reverse Image Search";
             version = "3.4.4";
             addonId = "{0da2e603-21ba-4422-8049-b6d9e013ed84}";
