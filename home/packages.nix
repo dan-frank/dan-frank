@@ -14,6 +14,10 @@ in {
     tree
     less
 
+    # UI Tools
+    dbeaver
+    zoom-us
+
     # Fun
     asciiquarium
     cmatrix

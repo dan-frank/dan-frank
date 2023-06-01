@@ -16,7 +16,6 @@
       # "1password"
       "alacritty"
       # "awscli"
-      # "dbeaver-community"
       "docker"
       "duckduckgo"
       "google-chrome"
@@ -24,7 +23,6 @@
       "tigervnc-viewer"
       "utm"
       "visual-studio-code"
-      "zoom"
     ];
     masApps = {
       "1Password for Safari" = 1569813296;
