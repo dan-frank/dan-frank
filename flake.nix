@@ -182,7 +182,7 @@
         home-bat = import ./modules/home/programs/bat.nix;
         home-firefox = import ./modules/home/programs/firefox;
         home-neovim = import ./modules/home/programs/neovim.nix;
-        home-vscode = import ./modules/home/programs/vscode.nix;
+        home-vscode = import ./modules/home/programs/vscode;
 
         home-user-info = { lib, ... }: {
           options.home.user-info =
