@@ -170,14 +170,12 @@ in {
             meta = {};
           })
         ];
-        userChrome =
-          builtins.readFile ./chrome/userChrome/onebar-bali/default.css
-          + builtins.readFile ./chrome/userChrome/onebar-bali/tweaks.css
-          + builtins.readFile ./chrome/userChrome/onebar-bali/mac-tweaks.css
-          + builtins.readFile ./chrome/userChrome/addons/compact-extensions/default.css
-          + builtins.readFile ./chrome/userChrome/addons/compact-extensions/tweaks.css
-          + builtins.readFile ./chrome/userChrome/addons/tweaks.css
-          ;
+        userChrome = builtins.concatStringsSep " " [
+          (import ./chrome/userChrome/cascade/default.nix pkgs)
+          (builtins.readFile ./chrome/userChrome/addons/compact-extensions/default.css)
+          (builtins.readFile ./chrome/userChrome/addons/compact-extensions/tweaks.css)
+          (builtins.readFile ./chrome/userChrome/addons/tweaks.css)
+        ];
         userContent = builtins.readFile ./chrome/userContent/onebar-bali.css;
       };
       # This does not have as strict privacy settings as the default profile.
