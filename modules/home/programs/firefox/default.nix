@@ -171,9 +171,8 @@ in {
           })
         ];
         userChrome = builtins.concatStringsSep " " [
-          (import ./chrome/userChrome/cascade/default.nix pkgs)
-          (builtins.readFile ./chrome/userChrome/addons/compact-extensions/default.css)
-          (builtins.readFile ./chrome/userChrome/addons/compact-extensions/tweaks.css)
+          (import ./chrome/userChrome/cascade pkgs)
+          (import ./chrome/userChrome/addons/compact-extensions pkgs)
           (builtins.readFile ./chrome/userChrome/addons/tweaks.css)
         ];
         userContent = builtins.readFile ./chrome/userContent/onebar-bali.css;
