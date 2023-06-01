@@ -53,16 +53,13 @@ in
     "..." = "cd ../..";
     "...." = "cd ../../..";
     "....." = "cd ../../../..";
+    "......" = "cd ../../../../..";
 
     # Name shortening
     docc = "docker-compose";
 
-    # Get public key
-    pubkey = "pbcopy < ~/.ssh/id_rsa.pub";
-
-    # Natural Transformation
-    ntssh = "ssh daniel@ntworkstation.hopto.org -p 26";
-    ntlocalhost = "open http://ntworkstation.hopto.org:9005";
+    # AnyJunk
+    ajssh = "ssh -i ~/.ssh/dan-frank_cloud_dev_env.pem -p 22 ec2-user@clouddev.local";
   } // lib.optionalAttrs pkgs.stdenv.isDarwin {
     # Homebrew - TODO Remove / integrate into nix-darwin
     brewuu = "brew update; brew upgrade";
