@@ -26,6 +26,7 @@
 
       active_window_opacity = 1.0;
       normal_window_opacity = 0.8;
+      window_border_blur = "off";
 
       layout = "bsp";
       auto_balance = "off";
