@@ -13,14 +13,15 @@
       lockfiles = true;
     };
     casks = [
-      # "1password"
-      "alacritty"
-      # "awscli"
-      "docker"
+      # == Brew only ==
+      "1password"
       "duckduckgo"
       "google-chrome"
       # "openvpn"
-      "tigervnc-viewer"
+
+      # == To allow app access via spotlight ==
+      "alacritty"
+      "docker"
       "utm"
       "visual-studio-code"
     ];

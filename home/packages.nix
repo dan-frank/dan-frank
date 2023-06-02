@@ -14,8 +14,13 @@ in {
     tree
     less
 
+    # CLI Services
+    awscli
+    utm
+
     # UI Tools
     dbeaver
+    tigervnc
     zoom-us
 
     # Fun
