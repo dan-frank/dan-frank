@@ -32,6 +32,7 @@ let
 in
 mergeFiles [
   ./includes/cascade-config-mouse.css
+  ./vars.css
   ./includes/cascade-colours.css
   ./includes/cascade-layout.css
   ./includes/cascade-responsive.css
