@@ -59,7 +59,7 @@ in
     docc = "docker-compose";
 
     # AnyJunk
-    ajssh = "ssh -i ~/.ssh/dan-frank_cloud_dev_env.pem -p 22 ec2-user@clouddev.local";
+    ajssh = "ssh -L 5901:localhost:5901 -o StrictHostKeychecking=no -i ~/.ssh/dan-frank_cloud_dev_env.pem ec2-user@clouddev.local";
   } // lib.optionalAttrs pkgs.stdenv.isDarwin {
     # Homebrew - TODO Remove / integrate into nix-darwin
     brewuu = "brew update; brew upgrade";
