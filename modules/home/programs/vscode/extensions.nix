@@ -18,6 +18,7 @@ with pkgs.vscode-extensions;
   scala-lang.scala
   scalameta.metals
   shardulm94.trailing-spaces
+  tabnine.tabnine-vscode
   usernamehw.errorlens
   vscodevim.vim
 ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [

@@ -17,6 +17,7 @@
     "scala-lang.scala"
     "scalameta.metals"
     "shardulm94.trailing-spaces"
+    "tabnine.tabnine-vscode"
     "tonybaloney.vscode-pets"
     "usernamehw.errorlens"
     "vscodevim.vim"

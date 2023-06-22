@@ -20,6 +20,7 @@ in {
       (import ./settings/languages.nix pkgs)
       (import ./settings/remote-ssh.nix)
       (import ./settings/search.nix)
+      (import ./settings/tabnine.nix)
     ];
     extensions = import ./extensions.nix { pkgs = pkgs; };
   };
