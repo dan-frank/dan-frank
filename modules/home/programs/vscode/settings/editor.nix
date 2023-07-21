@@ -7,6 +7,7 @@ in {
   "diffEditor.ignoreTrimWhitespace" = true;
   "editor.bracketPairColorization.enabled" = true;
   "editor.detectIndentation" = false;
+  "editor.formatOnSave" = true;
   "editor.fontFamily" = font.family;
   "editor.fontSize" = font.size;
   "editor.fontWeight" = "normal";
