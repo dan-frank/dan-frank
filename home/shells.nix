@@ -43,6 +43,7 @@ in
     rgf = "rg --files | rg";
 
     # Basic console commands
+    stdssh = "TERM=xterm-256color ssh"; # SSH in common term mode
     ls = "ls --color=auto -F";
     ll = "ls -l";
     la = "ls -a";
@@ -59,7 +60,7 @@ in
     docc = "docker-compose";
 
     # AnyJunk
-    ajssh = "ssh -L 5901:localhost:5901 -o StrictHostKeychecking=no -i ~/.ssh/dan-frank_cloud_dev_env.pem ec2-user@clouddev.local";
+    ajssh = "stdssh -L 5901:localhost:5901 -o StrictHostKeychecking=no -i ~/.ssh/dan-frank_cloud_dev_env.pem ec2-user@clouddev.local";
   } // lib.optionalAttrs pkgs.stdenv.isDarwin {
     # Homebrew - TODO Remove / integrate into nix-darwin
     brewuu = "brew update; brew upgrade";
