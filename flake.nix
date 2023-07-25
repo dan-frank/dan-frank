@@ -179,6 +179,9 @@
         home-shells = import ./home/shells.nix;
         home-terminal = import ./home/terminal.nix;
 
+        home-bash = import ./modules/home/programs/bash.nix;
+        home-zsh = import ./modules/home/programs/zsh.nix;
+
         home-bat = import ./modules/home/programs/bat.nix;
         home-firefox = import ./modules/home/programs/firefox;
         home-neovim = import ./modules/home/programs/neovim.nix;
