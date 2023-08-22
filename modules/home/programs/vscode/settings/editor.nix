@@ -18,5 +18,6 @@ in {
   "window.zoomLevel" = 0.5;
   "workbench.colorTheme" = "GitHub Dark";
   "workbench.iconTheme" = "material-icon-theme";
+  "terminal.integrated.fontSize" = font.size;
   "terminal.integrated.scrollback" = 10000;
 }
