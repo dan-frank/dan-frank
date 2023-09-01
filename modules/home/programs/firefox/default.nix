@@ -20,11 +20,11 @@ in {
       default = {
         name = "Default";
         settings = merge [
-          (import ./config/annoyances.nix)
-          (import ./config/browser-features.nix)
-          (import ./config/privacy.nix)
-          (import ./config/tracking.nix)
-          (import ./config/security.nix)
+          (import ./config/settings/annoyances.nix)
+          (import ./config/settings/browser-features.nix)
+          (import ./config/settings/privacy.nix)
+          (import ./config/settings/tracking.nix)
+          (import ./config/settings/security.nix)
         ];
         extensions = with pkgs.nur.repos.rycee.firefox-addons; [
           (buildFirefoxXpiAddon {
