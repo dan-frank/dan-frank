@@ -15,7 +15,7 @@ in {
     less
 
     # CLI Services
-    awscli
+    awscli2
     utm
 
     # UI Tools
