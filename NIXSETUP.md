@@ -100,6 +100,12 @@ nix build \
 ./result/sw/bin/darwin-rebuild switch --flake .#macbook-arm
 ```
 
+Once this script has run, and you are in *zsh*, you can instead use the `nb` function, i.e.
+
+```
+nb macbook-arm
+```
+
 2. **Open up a new terminal session** and run the following to apply the configs 
 
 ```
