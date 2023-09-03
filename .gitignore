@@ -1,2 +1,5 @@
 # Ignore result of Nix builds
 result
+
+# LSP config files
+.luarc.json

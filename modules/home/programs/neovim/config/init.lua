@@ -1,0 +1,10 @@
+require("settings")
+require("remaps")
+require("lsp")
+
+require("plugins.cmp")
+require("plugins.fugitive")
+require("plugins.harpoon")
+require("plugins.nvim-metals")
+require("plugins.telescope")
+require("plugins.undotree")
