@@ -17,7 +17,7 @@
       "1password"
       "duckduckgo"
       "google-chrome"
-      # "openvpn"
+      "macfuse"
 
       # == To allow app access via spotlight ==
       "alacritty"
@@ -25,7 +25,7 @@
       "utm"
       "visual-studio-code"
     ];
-    masApps = {
+    masApps = { # App Store applications
       "1Password for Safari" = 1569813296;
       "AdGuard for Safari" = 1440147259;
       "Bears Countdown" = 1536711520;

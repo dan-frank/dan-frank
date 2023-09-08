@@ -16,11 +16,13 @@ in {
 
     # CLI Services
     awscli2
-    utm
+    macfuse-stubs
+    sshfs
 
     # UI Tools
     dbeaver
     tigervnc
+    utm
     zoom-us
 
     # Fun
