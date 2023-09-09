@@ -20,14 +20,13 @@ with vimPlugins; [
   # Editor
   github-nvim-theme
   rainbow_parentheses
-  tagbar
   indentLine
-  nvim-ts-rainbow
-  nvim-ts-autotag
+  lualine-nvim
 
   harpoon
   vim-fugitive
-  # gitsigns-nvim
+  gitsigns-nvim
+  git-messenger-vim
   undotree
 
   # Lua libs
@@ -36,6 +35,8 @@ with vimPlugins; [
 
   telescope-nvim
   telescope-fzy-native-nvim
+  nvim-ts-rainbow
+  nvim-ts-autotag
 
   # LSP
   nvim-lspconfig
@@ -61,6 +62,7 @@ with vimPlugins; [
       require('todo-comments').setup{}
     '';
   }
+
   {
     plugin = (nvim-treesitter.withPlugins (plugins:
       with plugins; [
@@ -88,10 +90,6 @@ with vimPlugins; [
     );
     type = "lua";
     config = ''
-      require 'nvim-treesitter.configs'.setup {
-        highlight = { enable = true },
-        indent = { enable = true },
-      }
     '';
   }
 ]
