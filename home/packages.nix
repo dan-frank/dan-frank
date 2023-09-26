@@ -15,7 +15,6 @@ in {
     less
 
     # CLI Services
-    awscli2
     macfuse-stubs
     sshfs
 
