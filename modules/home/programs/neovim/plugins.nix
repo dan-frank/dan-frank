@@ -18,22 +18,66 @@ let
 in
 with vimPlugins; [
   # Editor
-  github-nvim-theme
+  {
+    plugin = github-nvim-theme;
+    type = "lua";
+    config = ''
+      require('github-theme').setup({
+        theme_style = 'dark',
+        dark_float = true,
+      })
+    '';
+  }
   rainbow_parentheses
   indentLine
-  lualine-nvim
+  {
+    plugin = lualine-nvim;
+    type = "lua";
+    config = builtins.readFile ./config/plugins/lualine-nvim.lua;
+  }
+  {
+    plugin = todo-comments-nvim;
+    type = "lua";
+    config = ''
+      require('todo-comments').setup{}
+    '';
+  }
 
-  harpoon
-  vim-fugitive
-  gitsigns-nvim
+  {
+    plugin = harpoon;
+    type = "lua";
+    config = builtins.readFile ./config/plugins/harpoon.lua;
+  }
+  {
+    plugin = vim-fugitive;
+    type = "lua";
+    config = ''
+      vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+    '';
+  }
+  {
+    plugin = gitsigns-nvim;
+    type = "lua";
+    config = builtins.readFile ./config/plugins/gitsigns-nvim.lua;
+  }
   git-messenger-vim
-  undotree
+  {
+    plugin = undotree;
+    type = "lua";
+    config = ''
+      vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+    '';
+  }
 
   # Lua libs
   plenary-nvim
   popup-nvim
 
-  telescope-nvim
+  {
+    plugin = telescope-nvim;
+    type = "lua";
+    config = builtins.readFile ./config/plugins/telescope-nvim.lua;
+  }
   telescope-fzy-native-nvim
   nvim-ts-rainbow
   nvim-ts-autotag
@@ -41,9 +85,17 @@ with vimPlugins; [
   # LSP
   nvim-lspconfig
   nvim-jdtls
-  nvim-metals
+  {
+    plugin = nvim-metals;
+    type = "lua";
+    config = builtins.readFile ./config/plugins/nvim-metals.lua;
+  }
 
-  nvim-cmp
+  {
+    plugin = nvim-cmp;
+    type = "lua";
+    config = builtins.readFile ./config/plugins/nvim-cmp.lua;
+  }
   nvim-dap
   cmp-nvim-lsp
   cmp-nvim-lsp-signature-help
@@ -54,14 +106,6 @@ with vimPlugins; [
   cmp-emoji
   luasnip
   cmp_luasnip
-
-  {
-    plugin = todo-comments-nvim;
-    type = "lua";
-    config = ''
-      require('todo-comments').setup{}
-    '';
-  }
 
   {
     plugin = (nvim-treesitter.withPlugins (plugins:
@@ -89,7 +133,6 @@ with vimPlugins; [
       ])
     );
     type = "lua";
-    config = ''
-    '';
+    config = builtins.readFile ./config/plugins/nvim-treesitter.lua;
   }
 ]

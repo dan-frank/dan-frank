@@ -9,15 +9,11 @@ in {
     plugins = pkgs.callPackage ./plugins.nix { inherit config pkgs inputs; };
     extraConfig = ''
       syntax on
-
-      lua << EOF
-      require('github-theme').setup({
-          theme_style = 'dark',
-          dark_float = true,
-      })
-      EOF
-
-      lua require('init')
+    '';
+    extraLuaConfig = ''
+      ${builtins.readFile ./config/settings.lua}
+      ${builtins.readFile ./config/remaps.lua}
+      ${builtins.readFile ./config/lsp.lua}
     '';
 
     extraPackages = with pkgs; [
@@ -41,12 +37,5 @@ in {
       rnix-lsp
       sumneko-lua-language-server
     ];
-  };
-
-  xdg.configFile = {
-    "nvim/lua" = {
-      source = ./config;
-      recursive = true;
-    };
   };
 }
