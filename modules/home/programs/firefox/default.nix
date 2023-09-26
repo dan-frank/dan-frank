@@ -27,6 +27,7 @@ in {
           (import ./config/settings/security.nix)
         ];
         search = {
+          default = "DuckDuckGo";
           engines = merge [
             (import ./config/search/nix-packages.nix { inherit pkgs; })
           ];
