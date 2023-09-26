@@ -26,6 +26,12 @@ in {
           (import ./config/settings/tracking.nix)
           (import ./config/settings/security.nix)
         ];
+        search = {
+          engines = merge [
+            (import ./config/search/nix-packages.nix { inherit pkgs; })
+          ];
+          force = true;
+        };
         extensions = with pkgs.nur.repos.rycee.firefox-addons; [
           (buildFirefoxXpiAddon {
             pname = "amazon-container";
