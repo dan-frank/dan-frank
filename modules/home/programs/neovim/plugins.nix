@@ -6,7 +6,7 @@ let
     vimPlugins
     vimUtils;
 
-  github-nvim-theme = vimUtils.buildVimPluginFrom2Nix {
+  github-nvim-theme = vimUtils.buildVimPlugin {
     name = "github-nvim-theme";
     src = pkgs.fetchFromGitHub {
       owner = "projekt0n";
