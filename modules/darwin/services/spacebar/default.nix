@@ -23,7 +23,7 @@
       spaces                     = "on";
       spaces_for_all_displays    = "on";
       space_icon                 = "•";
-      space_icon_strip           = "I II III IV V VI VII VIII IX X";
+      space_icon_strip           = "I II III IV V VI VII VIII IX";
       space_icon_color           = "0xff458588";
       space_icon_color_secondary = "0xff78c4d4";
       space_icon_color_tertiary  = "0xfffff9b0";
