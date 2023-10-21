@@ -38,12 +38,20 @@ in
       bindkey -M vicmd 'j' history-beginning-search-forward-end
       bindkey ' ' magic-space                               # [Space] - don't do history expansion
 
+      # Brew
+      export PATH="/opt/homebrew/bin:$PATH"
+
       # Load colors for prettier `ls`
       eval $(dircolors -b ${LS_COLORS}/LS_COLORS)
 
       # Little bit of visual flair on shell start
       typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
       neofetch
+ 
+      # Load private vars
+      if [[ -f ~/.private_vars ]]; then
+        source ~/.private_vars
+      fi
     '';
     # https://github.com/unixorn/awesome-zsh-plugins
     plugins = [

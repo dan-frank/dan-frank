@@ -14,6 +14,11 @@ in
     initExtra = ''
       eval "$(direnv hook bash)"
       eval $(dircolors -b ${LS_COLORS}/LS_COLORS)
+
+      # Load private vars
+      if [[ -f ~/.private_vars ]]; then
+        source ~/.private_vars
+      fi
     '';
   };
 }
