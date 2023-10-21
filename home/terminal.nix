@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 let
   # fontFamily = "Terminus (TTF)";
-  fontFamily = "TerminessTTF Nerd Font";
+  fontFamily = "Terminess Nerd Font";
 
   github-dark = {
     primary = {

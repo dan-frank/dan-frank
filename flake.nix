@@ -100,7 +100,6 @@
     in
     {
       darwinConfigurations = rec {
-        # My macOS configuration
         macbook-x86 = makeOverridable darwinSystem {
           system = "x86_64-darwin";
           modules = nixDarwinCommonModules ++ [
@@ -111,6 +110,15 @@
           ];
         };
         macbook-arm = macbook-x86.override { system = "aarch64-darwin"; };
+        hss-016404 = macbook-x86.override {
+          system = "aarch64-darwin";
+          modules = nixDarwinCommonModules ++ [
+            ./system/darwin/host-mac.nix
+            {
+              users.primaryUser = primaryUserInfo // { username = "dlucas"; };
+            }
+          ];
+        };
       };
 
       nixosConfigurations = rec {

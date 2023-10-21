@@ -15,8 +15,8 @@
       spacing_right              = 16;
       background_color           = "0xff24292e";
       foreground_color           = "0xffa8a8a8";
-      text_font                  = ''"TerminessTTF Nerd Font:Medium:17.0"'';
-      icon_font                  = ''"TerminessTTF Nerd Font:Medium:17.0"'';
+      text_font                  = ''"Terminess Nerd Font:Bold:17.0"'';
+      icon_font                  = ''"Terminess Nerd Font:Bold:17.0"'';
       title                      = "on";
       display_separator          = "on";
       display_separator_icon     = "";

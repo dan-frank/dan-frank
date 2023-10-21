@@ -21,7 +21,7 @@ in {
     # UI Tools
     dbeaver
     tigervnc
-    utm
+    # utm
     zoom-us
 
     # Fun
