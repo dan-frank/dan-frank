@@ -6,7 +6,7 @@ let
   DEVELOPER = "dan-frank";
 in
 pkgs.writeShellApplication {
-  name = "aj-stop";
+  name = "hss-stop";
   runtimeInputs = with pkgs; [ awscli2 ];
   text = ''
     set -e

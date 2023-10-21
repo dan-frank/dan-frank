@@ -7,7 +7,7 @@ let
   HOST = "clouddev.local";
 in
 pkgs.writeShellApplication {
-  name = "aj-start";
+  name = "hss-start";
   runtimeInputs = with pkgs; [ awscli2 ];
   text = ''
     set -e

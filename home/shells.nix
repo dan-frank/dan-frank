@@ -49,13 +49,18 @@ in
     "....." = "cd ../../../..";
     "......" = "cd ../../../../..";
 
+    # Scala
+    scalafmt = "sbt -mem 16384 scalafmt";
+
     # Name shortening
     docc = "docker-compose";
 
-    # AnyJunk
-    ajssh = "stdssh -L 5901:localhost:5901 -o StrictHostKeychecking=no -i ~/.ssh/dan-frank_cloud_dev_env.pem ec2-user@clouddev.local";
-    ajmount = "mkdir -p ~/Remotes; sshfs -o StrictHostKeychecking=no -o IdentityFile=~/.ssh/dan-frank_cloud_dev_env.pem ec2-user@clouddev.local:/home/ec2-user ~/Remotes/any-junk -C";
-    ajunmount = "umount ~/Remotes/any-junk; rmdir ~/Remotes/any-junk";
+    # HSS
+    hss-ssh = "stdssh -L 5901:localhost:5901 -o StrictHostKeychecking=no -i ~/.ssh/dan-frank_cloud_dev_env.pem ec2-user@clouddev.local";
+    hss-mount = "mkdir -p ~/Remotes; sshfs -o StrictHostKeychecking=no -o IdentityFile=~/.ssh/dan-frank_cloud_dev_env.pem ec2-user@clouddev.local:/home/ec2-user ~/Remotes/any-junk -C";
+    hss-unmount = "umount ~/Remotes/any-junk; rmdir ~/Remotes/any-junk";
+    hss-hyrax = "git clone https://github.com/HSS-Proservice/hyrax.git";
+    hss-merge = "git hssmerge";
   } // lib.optionalAttrs pkgs.stdenv.isDarwin {
     # Homebrew - TODO Remove / integrate into nix-darwin
     brewuu = "brew update; brew upgrade";

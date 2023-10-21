@@ -1,7 +1,7 @@
 { pkgs, ... }:
 let
-  aj-start-script = import ../scripts/aj-start.nix { inherit pkgs; };
-  aj-stop-script = import ../scripts/aj-stop.nix { inherit pkgs; };
+  hss-start-script = import ../scripts/hss-start.nix { inherit pkgs; };
+  hss-stop-script = import ../scripts/hss-stop.nix { inherit pkgs; };
   nb-script = import ../scripts/nb.nix { inherit pkgs; };
 in
 {
@@ -10,8 +10,8 @@ in
     git
     vscode
 
-    aj-start-script
-    aj-stop-script
+    hss-start-script
+    hss-stop-script
     nb-script
   ];
 }
