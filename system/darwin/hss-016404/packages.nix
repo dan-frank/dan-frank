@@ -1,7 +1,6 @@
 { pkgs, ... }:
 let
   hss-apply-jdk-certs = import ../../../scripts/hss/apply-jdk-certs.nix { inherit pkgs; };
-  hss-docker-restart = import ../../../scripts/hss/docker-restart.nix { inherit pkgs; };
   hss-mount = import ../../../scripts/hss/mount.nix { inherit pkgs; };
   hss-start = import ../../../scripts/hss/start.nix { inherit pkgs; };
   hss-stop = import ../../../scripts/hss/stop.nix { inherit pkgs; };
@@ -23,7 +22,6 @@ in
 
     # === Scripts ===
     hss-apply-jdk-certs
-    hss-docker-restart
     hss-mount
     hss-start
     hss-stop
