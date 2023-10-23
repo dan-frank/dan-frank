@@ -24,12 +24,6 @@ in {
     cowsay
     lolcat
     vimgolf
-
-    # == HSS ==
-    # UI Tools
-    dbeaver
-    tigervnc
-    zoom-us
   ];
 
   home.file = {

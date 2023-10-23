@@ -29,5 +29,10 @@ in
     hss-stop
     hss-swag
     hss-unmount
+
+    # === UI Tools ===
+    dbeaver
+    tigervnc
+    zoom-us
   ];
 }
