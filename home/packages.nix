@@ -26,10 +26,6 @@ in {
     vimgolf
 
     # == HSS ==
-    # CLI Services
-    macfuse-stubs
-    sshfs
-
     # UI Tools
     dbeaver
     tigervnc
