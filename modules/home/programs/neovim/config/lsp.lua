@@ -16,7 +16,7 @@ local servers = {
   { name = "bashls", opts = { filetypes = { "sh", "zsh" } } },
   { name = "cssls", opts = {} },
   { name = "graphql", opts = {} },
-  { name = "ltex-ls", opts = {
+  { name = "ltex", opts = {
       filetypes = { "latex", "tex", "bib", "markdown", "gitcommit" },
       -- use_spellfile = true,
       settings = {
