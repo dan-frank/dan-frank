@@ -3,6 +3,7 @@ let
   link = config.lib.file.mkOutOfStoreSymlink;
 in {
   programs.home-manager.enable = true;
+  programs.java.enable = true; # <- HSS
 
   home.packages = with pkgs; [
     # CLI Tools
@@ -14,15 +15,8 @@ in {
     tree
     less
 
-    # CLI Services
-    macfuse-stubs
-    sshfs
-
     # UI Tools
-    dbeaver
-    tigervnc
     # utm
-    zoom-us
 
     # Fun
     asciiquarium
@@ -30,6 +24,16 @@ in {
     cowsay
     lolcat
     vimgolf
+
+    # == HSS ==
+    # CLI Services
+    macfuse-stubs
+    sshfs
+
+    # UI Tools
+    dbeaver
+    tigervnc
+    zoom-us
   ];
 
   home.file = {

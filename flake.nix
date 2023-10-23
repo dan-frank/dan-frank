@@ -110,10 +110,12 @@
           ];
         };
         macbook-arm = macbook-x86.override { system = "aarch64-darwin"; };
+
         hss-016404 = macbook-x86.override {
           system = "aarch64-darwin";
           modules = nixDarwinCommonModules ++ [
             ./system/darwin/host-mac.nix
+            ./system/darwin/hss-016404/packages.nix
             {
               users.primaryUser = primaryUserInfo // { username = "dlucas"; };
             }
