@@ -3,9 +3,9 @@
 
   inputs = {
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixpkgs-22.11-darwin";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixpkgs-23.05-darwin";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    nixos-stable.url = "github:nixos/nixpkgs/nixos-22.11";
+    nixos-stable.url = "github:nixos/nixpkgs/nixos-23.05";
 
     darwin.url = "github:LnL7/nix-darwin";
     darwin.inputs.nixpkgs.follows = "nixpkgs-unstable";
@@ -44,8 +44,8 @@
         overlays = attrValues self.overlays;
       };
 
-      homeManagerStateVersion = "22.11";
-      nixosStateVersion = "22.11";
+      homeManagerStateVersion = "23.05";
+      nixosStateVersion = "23.05";
 
       primaryUserInfo = {
         username = "dan";
