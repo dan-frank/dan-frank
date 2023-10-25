@@ -19,7 +19,7 @@
       icon_font                  = ''"Terminess Nerd Font:Bold:17.0"'';
       title                      = "on";
       display_separator          = "on";
-      display_separator_icon     = "";
+      display_separator_icon     = "  ";
       spaces                     = "on";
       spaces_for_all_displays    = "on";
       space_icon                 = "•";
