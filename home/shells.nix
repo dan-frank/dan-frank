@@ -51,6 +51,7 @@ in
 
     # Scala
     scalafmt = "sbt -mem 16384 scalafmt";
+    sbtclean = "rm -rf .bsp project target";
 
     # Name shortening
     docc = "docker-compose";
