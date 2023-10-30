@@ -11,6 +11,7 @@ with pkgs.vscode-extensions;
   github.github-vscode-theme
   gruntfuggly.todo-tree
   matklad.rust-analyzer
+  mechatroner.rainbow-csv
   mhutchie.git-graph
   ms-vscode-remote.remote-ssh
   naumovs.color-highlight

@@ -11,6 +11,7 @@
     "gruntfuggly.todo-tree"
     "matklad.rust-analyzer"
     "mhutchie.git-graph"
+    "mechatroner.rainbow-csv"
     "ms-vscode-remote.remote-ssh"
     "naumovs.color-highlight"
     "pkief.material-icon-theme"
