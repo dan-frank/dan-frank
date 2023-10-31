@@ -8,6 +8,7 @@ with pkgs.vscode-extensions;
   bradlc.vscode-tailwindcss
   eamodio.gitlens
   gencer.html-slim-scss-css-class-completion
+  github.copilot
   github.github-vscode-theme
   gruntfuggly.todo-tree
   matklad.rust-analyzer
@@ -19,7 +20,6 @@ with pkgs.vscode-extensions;
   scala-lang.scala
   scalameta.metals
   shardulm94.trailing-spaces
-  tabnine.tabnine-vscode
   usernamehw.errorlens
   vscodevim.vim
 ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
