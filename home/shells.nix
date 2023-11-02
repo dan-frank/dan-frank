@@ -55,11 +55,6 @@ in
 
     # Name shortening
     docc = "docker-compose";
-
-    # HSS
-    hss-ssh = "stdssh -L 5901:localhost:5901 -o StrictHostKeychecking=no -i ~/.ssh/dan-frank_cloud_dev_env.pem ec2-user@clouddev.local";
-    hss-hyrax = "git clone https://github.com/HSS-Proservice/hyrax.git";
-    hss-merge = "git hssmerge";
   } // lib.optionalAttrs pkgs.stdenv.isDarwin {
     # Homebrew - TODO Remove / integrate into nix-darwin
     brewuu = "brew update; brew upgrade";

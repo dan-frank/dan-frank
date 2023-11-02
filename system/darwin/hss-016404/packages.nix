@@ -2,7 +2,10 @@
 let
   hss-apply-jdk-certs = import ../../../scripts/hss/apply-jdk-certs.nix { inherit pkgs; };
   hss-db-secret = import ../../../scripts/hss/db-secret.nix { inherit pkgs; };
+  hss-hyrax = import ../../../scripts/hss/hyrax.nix { inherit pkgs; };
+  hss-merge = import ../../../scripts/hss/merge.nix { inherit pkgs; };
   hss-mount = import ../../../scripts/hss/mount.nix { inherit pkgs; };
+  hss-ssh = import ../../../scripts/hss/ssh.nix { inherit pkgs; };
   hss-start = import ../../../scripts/hss/start.nix { inherit pkgs; };
   hss-stop = import ../../../scripts/hss/stop.nix { inherit pkgs; };
   hss-swag = import ../../../scripts/hss/swag.nix { inherit pkgs; };
@@ -24,7 +27,10 @@ in
     # === Scripts ===
     hss-apply-jdk-certs
     hss-db-secret
+    hss-hyrax
+    hss-merge
     hss-mount
+    hss-ssh
     hss-start
     hss-stop
     hss-swag
