@@ -62,6 +62,11 @@ with vimPlugins; [
   }
   git-messenger-vim
   {
+    plugin = copilot-lua;
+    type = "lua";
+    config = builtins.readFile ./config/plugins/copilot.lua;
+  }
+  {
     plugin = undotree;
     type = "lua";
     config = ''
