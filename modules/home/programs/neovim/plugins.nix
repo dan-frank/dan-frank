@@ -84,33 +84,27 @@ with vimPlugins; [
     config = builtins.readFile ./config/plugins/telescope-nvim.lua;
   }
   telescope-fzy-native-nvim
-  nvim-ts-rainbow
-  nvim-ts-autotag
 
   # LSP
   nvim-lspconfig
+  nvim-dap
+  {
+    plugin = nvim-cmp;
+    type = "lua";
+    config = builtins.readFile ./config/plugins/nvim-cmp.lua;
+  }
+  cmp-nvim-lsp
+  cmp-nvim-lsp-signature-help
+  cmp-path
+  cmp-buffer
+  luasnip
+  cmp_luasnip
   nvim-jdtls
   {
     plugin = nvim-metals;
     type = "lua";
     config = builtins.readFile ./config/plugins/nvim-metals.lua;
   }
-
-  {
-    plugin = nvim-cmp;
-    type = "lua";
-    config = builtins.readFile ./config/plugins/nvim-cmp.lua;
-  }
-  nvim-dap
-  cmp-nvim-lsp
-  cmp-nvim-lsp-signature-help
-  cmp-buffer
-  cmp-path
-  cmp-cmdline
-  cmp-nvim-lua
-  cmp-emoji
-  luasnip
-  cmp_luasnip
 
   {
     plugin = (nvim-treesitter.withPlugins (plugins:
@@ -140,4 +134,6 @@ with vimPlugins; [
     type = "lua";
     config = builtins.readFile ./config/plugins/nvim-treesitter.lua;
   }
+  nvim-ts-rainbow
+  nvim-ts-autotag
 ]
