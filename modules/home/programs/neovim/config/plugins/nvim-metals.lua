@@ -22,8 +22,6 @@ end
 metals_config.on_attach = function(client, bufnr)
   require("metals").setup_dap()
 
-  lspconfig.custom_attach(client, bufnr)
-
   map("n", "cpp", [[<cmd>lua require("metals").hover_worksheet({ border = "single" })<CR>]])
   map("n", "ctt", [[<cmd>lua require("metals.tvp").toggle_tree_view()<CR>]])
   map("n", "ctr", [[<cmd>lua require("metals.tvp").reveal_in_tree()<CR>]])
