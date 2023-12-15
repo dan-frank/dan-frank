@@ -29,7 +29,11 @@ with vimPlugins; [
     '';
   }
   rainbow_parentheses
-  indentLine
+  {
+    plugin = indent-blankline-nvim;
+    type = "lua";
+    config = builtins.readFile ./config/plugins/indent-blankline-nvim.lua;
+  }
   {
     plugin = lualine-nvim;
     type = "lua";
