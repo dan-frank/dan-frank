@@ -29,7 +29,7 @@ opt.isfname:append("@-@")
 
 opt.updatetime = 50
 
-opt.colorcolumn = "80"
+opt.colorcolumn = "100"
 
 opt.laststatus = 2
 opt.showmatch = true
