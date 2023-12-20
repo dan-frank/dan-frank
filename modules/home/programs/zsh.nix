@@ -52,6 +52,9 @@ in
       if [[ -f ~/.private_vars ]]; then
         source ~/.private_vars
       fi
+
+      # HSS SBT Use Cache
+      export SBT_TPOLECAT_CI=true
     '';
     # https://github.com/unixorn/awesome-zsh-plugins
     plugins = [
