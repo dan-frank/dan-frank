@@ -19,6 +19,7 @@ in
     gaa = "git add --all";
     gc = "git commit";
     gco = "git checkout";
+    gf = "git fetch";
     gl = "git pull";
     glom = "git pull origin main";
     gp = "git push";
