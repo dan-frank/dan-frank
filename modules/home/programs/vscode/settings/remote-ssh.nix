@@ -1,7 +1,6 @@
 {
   "remote.SSH.defaultExtensions" = [
     "bbenoist.nix"
-    # "bierner.emojisense"
     "bierner.markdown-checkbox"
     "bierner.markdown-emoji"
     "bradlc.vscode-tailwindcss"

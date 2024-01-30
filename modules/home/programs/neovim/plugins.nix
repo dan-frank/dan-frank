@@ -77,6 +77,7 @@ with vimPlugins; [
       vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
     '';
   }
+  rainbow-delimiters-nvim
 
   # Lua libs
   plenary-nvim
@@ -138,6 +139,5 @@ with vimPlugins; [
     type = "lua";
     config = builtins.readFile ./config/plugins/nvim-treesitter.lua;
   }
-  nvim-ts-rainbow
   nvim-ts-autotag
 ]

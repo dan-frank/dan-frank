@@ -2,7 +2,6 @@
 with pkgs.vscode-extensions;
 [
   bbenoist.nix
-  # bierner.emojisense
   bierner.markdown-checkbox
   bierner.markdown-emoji
   bradlc.vscode-tailwindcss
@@ -14,6 +13,7 @@ with pkgs.vscode-extensions;
   matklad.rust-analyzer
   mechatroner.rainbow-csv
   mhutchie.git-graph
+  # ms-vsliveshare.vsliveshare
   ms-vscode-remote.remote-ssh
   naumovs.color-highlight
   pkief.material-icon-theme
