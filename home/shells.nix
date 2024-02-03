@@ -56,6 +56,7 @@ in
 
     # Name shortening
     docc = "docker-compose";
+    v = "vim .";
   } // lib.optionalAttrs pkgs.stdenv.isDarwin {
     # Homebrew - TODO Remove / integrate into nix-darwin
     brewuu = "brew update; brew upgrade";
