@@ -189,10 +189,10 @@
         home-shells = import ./home/shells.nix;
         home-terminal = import ./home/terminal.nix;
 
-        home-bash = import ./modules/home/programs/bash.nix;
-        home-zsh = import ./modules/home/programs/zsh.nix;
+        home-bash = import ./modules/home/programs/bash;
+        home-zsh = import ./modules/home/programs/zsh;
 
-        home-bat = import ./modules/home/programs/bat.nix;
+        home-bat = import ./modules/home/programs/bat;
         home-firefox = import ./modules/home/programs/firefox;
         home-neovim = import ./modules/home/programs/neovim;
         home-vscode = import ./modules/home/programs/vscode;

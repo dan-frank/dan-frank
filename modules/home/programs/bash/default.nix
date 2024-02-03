@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:
 let
-  # ! Move to nix flake
+  # TODO: Move to nix flake
   LS_COLORS = pkgs.fetchFromGitHub {
     owner = "trapd00r";
     repo = "LS_COLORS";
