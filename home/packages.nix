@@ -14,6 +14,7 @@ in {
     neofetch # freshfetch macchina
     tree
     less
+    htop
 
     # UI Tools
     # utm
