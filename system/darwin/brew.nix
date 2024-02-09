@@ -29,6 +29,7 @@
       "Bears Countdown" = 1536711520;
       "Dark Reader for Safari" = 1438243180;
       "DuckDuckGo Privacy for Safari" = 1482920575;
+      "Endel: Focus, Sleep, Relax" = 1346247457;
       "JSON Peep for Safari" = 1458969831;
       Keynote = 409183694;
       Numbers = 409203825;
