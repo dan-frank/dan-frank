@@ -7,6 +7,7 @@ pkgs.writeShellApplication {
     echo "Note: If you don't have a profile you can create one with \`aws configure sso\`"
     echo "============================================================================="
 
+    aws sso login --profile dan-frank
     aws --profile dan-frank secretsmanager get-secret-value --secret-id arn:aws:secretsmanager:eu-west-2:860977539643:secret:hyrax-staging.anyjunk.persist.db.password-c9KufH --region eu-west-2
   '';
 }
