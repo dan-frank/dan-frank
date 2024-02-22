@@ -44,7 +44,6 @@ in
     lla = "ls -la";
 
     # Navigation
-    ":q" = "exit";
     ".." = "cd ..";
     "..." = "cd ../..";
     "...." = "cd ../../..";
@@ -55,7 +54,11 @@ in
     scalafmt = "sbt -mem 16384 scalafmt";
     sbtclean = "rm -rf .bsp project target";
 
+    # Helpful
+    cleanDsStore = "find . -name \".DS_Store\" -print -type f -delete";
+
     # Name shortening
+    ":q" = "exit";
     docc = "docker-compose";
     v = "vim .";
   } // lib.optionalAttrs pkgs.stdenv.isDarwin {
