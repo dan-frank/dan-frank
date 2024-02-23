@@ -1,0 +1,6 @@
+{
+  Terminus = {
+    font = "";
+    alacritty.font = "";
+  };
+}
