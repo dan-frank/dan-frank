@@ -196,6 +196,7 @@
         home-firefox = import ./modules/home/programs/firefox;
         home-neovim = import ./modules/home/programs/neovim;
         home-vscode = import ./modules/home/programs/vscode;
+        home-zoxide = import ./modules/home/programs/zoxide;
 
         home-user-info = { lib, ... }: {
           options.home.user-info =
