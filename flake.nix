@@ -7,11 +7,13 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixos-stable.url = "github:nixos/nixpkgs/nixos-23.05";
 
-    darwin.url = "github:LnL7/nix-darwin";
-    darwin.inputs.nixpkgs.follows = "nixpkgs-unstable";
-
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
+
+    darwin = {
+      url = "github:LnL7/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
 
     flake-utils.url = "github:numtide/flake-utils";
 
@@ -19,9 +21,7 @@
       url = "github:bandithedoge/nixpkgs-firefox-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nur = {
-      url = "github:nix-community/NUR";
-    };
+    nur.url = "github:nix-community/NUR";
   };
 
   outputs = { self, nixpkgs, darwin, home-manager, flake-utils, ... } @ inputs:
@@ -63,12 +63,14 @@
           rec {
             nixpkgs = nixpkgsConfig;
             users.users.${primaryUser.username}.home = "/Users/${primaryUser.username}";
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.${primaryUser.username} = {
-              imports = attrValues self.homeManagerModules;
-              home.stateVersion = homeManagerStateVersion;
-              home.user-info = config.users.primaryUser;
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.${primaryUser.username} = {
+                imports = attrValues self.homeManagerModules;
+                home.stateVersion = homeManagerStateVersion;
+                home.user-info = config.users.primaryUser;
+              };
             };
           })
       ];
@@ -89,11 +91,13 @@
               extraGroups = [ "wheel" ];
               shell = pkgs.zsh;
             };
-            home-manager.useGlobalPkgs = true;
-            home-manager.users.${primaryUser.username} = {
-              imports = attrValues self.homeManagerModules;
-              home.stateVersion = homeManagerStateVersion;
-              home.user-info = config.users.primaryUser;
+            home-manager = {
+              useGlobalPkgs = true;
+              users.${primaryUser.username} = {
+                imports = attrValues self.homeManagerModules;
+                home.stateVersion = homeManagerStateVersion;
+                home.user-info = config.users.primaryUser;
+              };
             };
           })
       ];
