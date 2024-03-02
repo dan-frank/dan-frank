@@ -14,6 +14,21 @@
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    nix-homebrew = {
+      url = "github:zhaofengli-wip/nix-homebrew";
+    };
+    homebrew-bundle = {
+      url = "github:homebrew/homebrew-bundle";
+      flake = false;
+    };
+    homebrew-core = {
+      url = "github:homebrew/homebrew-core";
+      flake = false;
+    };
+    homebrew-cask = {
+      url = "github:homebrew/homebrew-cask";
+      flake = false;
+    };
 
     flake-utils.url = "github:numtide/flake-utils";
 
@@ -24,7 +39,7 @@
     nur.url = "github:nix-community/NUR";
   };
 
-  outputs = { self, nixpkgs, darwin, home-manager, flake-utils, ... } @ inputs:
+  outputs = { self, nixpkgs, darwin, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask, home-manager, flake-utils, ... } @ inputs:
     let
       inherit (darwin.lib) darwinSystem;
       inherit (inputs.nixpkgs-unstable.lib) attrValues makeOverridable optionalAttrs singleton;
@@ -47,15 +62,20 @@
       homeManagerStateVersion = "23.05";
       nixosStateVersion = "23.05";
 
-      primaryUserInfo = {
-        username = "dan";
-        fullName = "Daniel Lucas";
-        email = "dan.frank.lucas@gmail.com";
-        github = "dan-frank";
+      userInfo = {
+        primary = {
+          username = "dan";
+          fullName = "Daniel Lucas";
+          email = "dan.frank.lucas@gmail.com";
+          github = "dan-frank";
+        };
+
+        work = userInfo.primary // { username = "dlucas"; };
       };
 
       nixDarwinCommonModules = attrValues self.darwinModules ++ [
         home-manager.darwinModules.home-manager
+        nix-homebrew.darwinModules.nix-homebrew
         ({ config, lib, pkgs, ... }:
           let
             inherit (config.users) primaryUser;
@@ -71,6 +91,17 @@
                 home.stateVersion = homeManagerStateVersion;
                 home.user-info = config.users.primaryUser;
               };
+            };
+            nix-homebrew = {
+              user = primaryUser.username;
+              enable = true;
+              taps = {
+                "homebrew/homebrew-core" = homebrew-core;
+                "homebrew/homebrew-cask" = homebrew-cask;
+                "homebrew/homebrew-bundle" = homebrew-bundle;
+              };
+              mutableTaps = false;
+              autoMigrate = true;
             };
           })
       ];
@@ -104,24 +135,24 @@
     in
     {
       darwinConfigurations = rec {
-        macbook-x86 = makeOverridable darwinSystem {
+        darwin-mac = darwin.lib.darwinSystem {
           system = "x86_64-darwin";
           modules = nixDarwinCommonModules ++ [
-            ./system/darwin/host-mac.nix
+            ./hosts/darwin
+            # Do I need this?
             {
-              users.primaryUser = primaryUserInfo;
+              users.primaryUser = userInfo.primary;
             }
           ];
         };
-        macbook-arm = macbook-x86.override { system = "aarch64-darwin"; };
 
-        hss-016404 = macbook-x86.override {
+        hss-016404 = darwin.lib.darwinSystem {
           system = "aarch64-darwin";
           modules = nixDarwinCommonModules ++ [
-            ./system/darwin/host-mac.nix
-            ./system/darwin/hss-016404/packages.nix
+            ./hosts/darwin/hss-016404
+            # Do I need this?
             {
-              users.primaryUser = primaryUserInfo // { username = "dlucas"; };
+              users.primaryUser = userInfo.work;
             }
           ];
         };
@@ -131,9 +162,9 @@
         utm-x86 = makeOverridable nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = nixosCommonModules ++ [
-            ./system/nixos/host-utm.nix
+            ./hosts/nixos/utm-vm
             {
-              users.primaryUser = primaryUserInfo;
+              users.primaryUser = userInfo.primary;
             }
           ];
         };
@@ -142,9 +173,9 @@
         # linux-x86 = makeOverridable nixpkgs.lib.nixosSystem {
         #   system = "x86_64-linux";
         #   modules = nixosCommonModules ++ [
-        #     ./system/nixos/host-linux.nix
+        #     ./hosts/nixos/linux
         #     {
-        #       users.primaryUser = primaryUserInfo;
+        #       users.primaryUser = userInfo.primary;
         #     }
         #   ];
         # };
@@ -161,27 +192,17 @@
             home.username = config.home.user-info.username;
             home.homeDirectory = "/home/${config.home.username}";
             home.stateVersion = homeManagerStateVersion;
-            home.user-info = primaryUserInfo;
+            home.user-info = userInfo.primary;
           });
         };
       };
 
       darwinModules = {
-        common = import ./system/common.nix;
-        packages = import ./system/packages.nix;
-
-        darwin-bootstrap = import ./system/darwin/bootstrap.nix;
-        darwin-packages = import ./system/darwin/packages.nix;
-        darwin-system = import ./system/darwin/system.nix;
-        darwin-brew = import ./system/darwin/brew.nix;
-
         users-primaryUser = import ./modules/users.nix;
       };
 
       nixosModules = {
-        common = import ./system/common.nix;
         stateVersion = { system.stateVersion = nixosStateVersion; };
-        packages = import ./system/packages.nix;
 
         users-primaryUser = import ./modules/users.nix;
       };

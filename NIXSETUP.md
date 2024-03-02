@@ -1,7 +1,7 @@
 # `dan-frank`'s Nix System Configuration 
 
 I'm using Nix to manage my applications and their configurations.
-This file will act as a guide for how to setup and run these files.
+This file will act as a guide for how to set up and run these files.
 
 _This setup is heavily inspired (stolen) from @hardselius' wonderful [dotfiles](https://github.com/hardselius/dotfiles)._
 
@@ -24,7 +24,7 @@ _This setup is heavily inspired (stolen) from @hardselius' wonderful [dotfiles](
 ## Dependencies
 
 - [Nix](https://nixos.org/)
-- [Homebrew](https://brew.sh) (_MacOS only_)
+- [Homebrew](https://brew.sh) (_macOS only_)
 
 ## Preliminary Steps / Setup
 
@@ -62,7 +62,7 @@ $ /System/Library/Filesystems/apfs.fs/Contents/Resources/apfs.util -t # For Big 
 
 ---
 
-**The following are _MacOS_ only steps**
+**The following are _macOS_ only steps**
 
 4. Install Homebrew
 
@@ -74,9 +74,9 @@ $ /System/Library/Filesystems/apfs.fs/Contents/Resources/apfs.util -t # For Big 
 
 System Settings > Keyboard > Keyboard Shortcuts > Mission Control > Turn on "Switch to Desktop 1 - 9"
 
-6. **Log in** to AppStore
+6. **Log in** to App Store
 
-AppStore > Login
+App Store > Login
 
 7. Install other apps
 
@@ -168,6 +168,6 @@ The following links consit of useful resources that I used to learn about Nix an
 1. Setup packages / services / configurations with modules (more control, can easily create multiple hosts using only specific packages)
 1. Update configurations to allow for hosts Work M2 + NixOS VM + Asahi + RaspberryPi
 1. Add `.zshhistory` to repo
-1. See if I can manage MacOS Keyboard Shortcuts with SKHD or alternative utility
+1. See if I can manage macOS Keyboard Shortcuts with SKHD or alternative utility
 1. Look into if I can [configure Safari settings](https://daiderd.com/nix-darwin/manual/index.html#opt-system.defaults.CustomUserPreferences)
 1. Look into resolving this which doesn't work [LnL7/nix-darwin#214](https://github.com/LnL7/nix-darwin/issues/214) & [IvarWithoutBones/dotfiles@0b3faad](https://github.com/IvarWithoutBones/dotfiles/commit/0b3faad8bd1d0e1af6103caf59b206666ab742f4) and removing some brew packages

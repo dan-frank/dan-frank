@@ -5,6 +5,9 @@ in
 with lib; {
   imports = [
     "${modulesPath}/profiles/minimal.nix"
+
+    ./../../common.nix
+    ./../../packages.nix
   ];
 
   wsl = {

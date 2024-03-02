@@ -1,7 +1,18 @@
-{ config, pkgs, ... }:
-let
-  cfg = config.system;
-in {
+# { config, pkgs, ... }:
+{
+  imports = [
+    ./../common.nix
+    ./../packages.nix
+
+    ./brew.nix
+    ./packages.nix
+    ./settings.nix
+
+    ./../../modules/darwin/services/skhd
+    ./../../modules/darwin/services/spacebar
+    ./../../modules/darwin/services/yabai
+  ];
+
   # Copy applications into ~/Applications/Nix Apps. This workaround allows us
   # to find applications installed by nix through spotlight.
   # system.activationScripts.applications.text = pkgs.lib.mkForce (
@@ -21,9 +32,9 @@ in {
   #     done
   #   ''
   # );
-  imports = [
-    ../../modules/darwin/services/skhd
-    ../../modules/darwin/services/spacebar
-    ../../modules/darwin/services/yabai
-  ];
+
+  nix.settings.trusted-users = [ "@admin" ];
+  nix.configureBuildUsers = true;
+  services.nix-daemon.enable = true;
+  system.stateVersion = 4;
 }

@@ -17,19 +17,7 @@ let
   hss-unmount = import ../../../scripts/hss/unmount.nix { inherit pkgs; };
 in
 {
-  environment.systemPackages = with pkgs; [
-    # === Hyrax Dependancies ===
-    coursier
-    jdk17
-    sbt
-    scala-cli
-    scalafmt
-
-    # === Additional ===
-    nodejs
-    swagger-cli
-
-    # === Scripts ===
+  environment.systemPackages = [
     hss-apply-jdk-certs
     hss-db-secret
     hss-hyrax
@@ -45,10 +33,5 @@ in
     hss-stop
     hss-swag
     hss-unmount
-
-    # === UI Tools ===
-    dbeaver
-    tigervnc
-    zoom-us
   ];
 }
