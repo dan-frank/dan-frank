@@ -11,7 +11,6 @@ in {
     ripgrep
     vifm
     bottom
-    neofetch # freshfetch macchina
     tree
     less
     htop

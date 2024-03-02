@@ -46,15 +46,14 @@ in
 
       # Little bit of visual flair on shell start
       typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-      neofetch
+
+      # Shell prompts -> neofetch / freshfetch / macchina
+      ${pkgs.macchina}/bin/macchina
  
       # Load private vars
       if [[ -f ~/.private_vars ]]; then
         source ~/.private_vars
       fi
-
-      # HSS SBT Use Cache
-      export SBT_TPOLECAT_CI=true
     '';
     plugins = (import ./config/plugins.nix { inherit pkgs; } );
 
