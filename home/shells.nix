@@ -38,10 +38,6 @@ in
 
     # Basic console commands
     stdssh = "TERM=xterm-256color ssh"; # SSH in common term mode
-    ls = "ls --color=auto -F";
-    ll = "ls -l";
-    la = "ls -a";
-    lla = "ls -la";
 
     # Navigation
     ".." = "cd ..";

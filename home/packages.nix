@@ -7,11 +7,9 @@ in {
 
   home.packages = with pkgs; [
     # CLI Tools
-    coreutils
     ripgrep
     vifm
     bottom
-    tree
     less
     htop
 
