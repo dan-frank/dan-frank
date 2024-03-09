@@ -10,7 +10,6 @@ in {
     ripgrep
     vifm
     bottom
-    less
     htop
 
     # UI Tools
