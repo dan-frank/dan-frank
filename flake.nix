@@ -221,6 +221,7 @@
         home-firefox = import ./modules/home/programs/firefox;
         home-lsd = import ./modules/home/programs/lsd;
         home-neovim = import ./modules/home/programs/neovim;
+        home-ripgrep = import ./modules/home/programs/ripgrep;
         home-vscode = import ./modules/home/programs/vscode;
         home-zoxide = import ./modules/home/programs/zoxide;
 

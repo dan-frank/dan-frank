@@ -7,7 +7,6 @@ in {
 
   home.packages = with pkgs; [
     # CLI Tools
-    ripgrep
     vifm
     bottom
     htop
