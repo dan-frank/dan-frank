@@ -5,7 +5,6 @@
     ./../packages.nix
 
     ./brew.nix
-    ./packages.nix
     ./settings.nix
 
     ./../../modules/darwin/services/skhd
@@ -37,4 +36,10 @@
   nix.configureBuildUsers = true;
   services.nix-daemon.enable = true;
   system.stateVersion = 4;
+
+  programs.nix-index.enable = true;
+
+  # environment.systemPackages = with pkgs; [
+  #   yabai
+  # ];
 }
