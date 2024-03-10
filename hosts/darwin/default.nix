@@ -1,8 +1,7 @@
 # { config, pkgs, ... }:
 {
   imports = [
-    ./../common.nix
-    ./../packages.nix
+    ./../common
 
     ./brew.nix
     ./settings.nix

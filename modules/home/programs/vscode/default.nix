@@ -15,7 +15,7 @@ in {
     enable = true;
     # package = pkgs.vscodium; #pkgs.vscode.fhs;
     userSettings = merge [
-      (import ./settings/editor.nix)
+      (import ./settings/editor.nix { inherit config; })
       (import ./settings/git.nix)
       (import ./settings/languages.nix pkgs)
       (import ./settings/remote-ssh.nix)

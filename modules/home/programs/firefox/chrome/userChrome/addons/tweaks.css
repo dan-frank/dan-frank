@@ -4,7 +4,8 @@
 
 /* Font */
 * {
-  font-family: "Terminus (TTF)", sans-serif !important;
+  /* TODO: Pass nix font */
+  font-family: "Iosevka-Extended", sans-serif !important;
   font-size: 14px !important;
 }
 

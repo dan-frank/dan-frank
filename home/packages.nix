@@ -27,4 +27,3 @@ in {
     ".p10k.zsh".source = link ./../dotfiles/p10k.zsh;
   };
 }
-

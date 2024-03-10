@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  nb-script = import ../scripts/nb.nix { inherit pkgs; };
+  nb-script = import ./../../scripts/nb.nix { inherit pkgs; };
 in
 {
   environment.systemPackages = with pkgs; [

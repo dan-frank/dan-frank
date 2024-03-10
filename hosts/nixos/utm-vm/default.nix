@@ -2,8 +2,7 @@
   imports = [
     (modulesPath + "/profiles/qemu-guest.nix")
 
-    ./../../common.nix
-    ./../../packages.nix
+    ./../../common
   ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "virtio_pci" "usbhud" "usb_storage" "sr_mod" ];

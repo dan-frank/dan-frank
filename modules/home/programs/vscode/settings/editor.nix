@@ -1,6 +1,7 @@
+{ config }:
 let
   font = {
-    family = "'Terminus (TTF)', sans-serif";
+    family = "'${config.fontProfiles.regular.family}', sans-serif";
     size = 15;
   };
 in {

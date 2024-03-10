@@ -1,9 +1,7 @@
 { config, pkgs, lib, ... }:
 let
-  # fontFamily = "Terminus (TTF)";
-  fontFamily = "Terminess Nerd Font";
-
-  themes = (import ./config/themes.nix);
+  setfont = import ./setfont.nix;
+  themes = import ./config/themes.nix;
 in
 {
   programs.alacritty = {
@@ -41,12 +39,8 @@ in
         { key = "N"; mods = "Command|Shift"; action = "SpawnNewInstance"; }
       ];
       colors = themes.github-dark;
-      font = {
-        normal.family = "${fontFamily}";
-        bold.family = "${fontFamily}";
-        italic.family = "${fontFamily}";
-        bold_italic.family = "${fontFamily}";
-        size = 17;
+      font = setfont config.fontProfiles.monospace.family // {
+        size = 16;
       };
     };
   };

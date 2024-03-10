@@ -198,16 +198,20 @@
       };
 
       darwinModules = {
-        users-primaryUser = import ./modules/users.nix;
+        users-primaryUser = import ./options/users.nix;
+        fontProfiles = import ./options/fontProfiles.nix;
       };
 
       nixosModules = {
         stateVersion = { system.stateVersion = nixosStateVersion; };
 
-        users-primaryUser = import ./modules/users.nix;
+        users-primaryUser = import ./options/users.nix;
+        fontProfiles = import ./options/fontProfiles.nix;
       };
 
       homeManagerModules = {
+        home-modules = import ./home;
+
         home-config-files = import ./home/config-files.nix;
         home-git = import ./home/git.nix;
         home-packages = import ./home/packages.nix;
@@ -229,6 +233,7 @@
           options.home.user-info =
             (self.darwinModules.users-primaryUser { inherit lib; }).options.users.primaryUser;
         };
+        fontProfiles = import ./options/fontProfiles.nix;
       };
 
       overlays = {

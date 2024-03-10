@@ -15,22 +15,14 @@
     ];
   };
 
+  imports = [
+    ./fonts.nix
+    ./../../settings/fontProfiles.nix
+    ./packages.nix
+  ];
+
   programs.zsh = {
     enable = true;
     promptInit = "";
-  };
-
-  fonts = {
-    fontDir.enable = true;
-    fonts = with pkgs; [
-      terminus_font
-      hack-font
-      terminus_font_ttf
-      (nerdfonts.override {
-        fonts = [
-          "Terminus"
-        ];
-      })
-    ];
   };
 }
