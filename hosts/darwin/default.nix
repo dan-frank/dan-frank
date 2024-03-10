@@ -4,6 +4,7 @@
     ./../common
 
     ./brew.nix
+    ./packages.nix
     ./settings.nix
 
     ./../../modules/darwin/services/skhd
