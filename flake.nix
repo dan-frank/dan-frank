@@ -212,23 +212,6 @@
       homeManagerModules = {
         home-modules = import ./home;
 
-        home-config-files = import ./home/config-files.nix;
-        home-git = import ./home/git.nix;
-        home-packages = import ./home/packages.nix;
-        home-shells = import ./home/shells.nix;
-        home-terminal = import ./home/terminal.nix;
-
-        home-bash = import ./modules/home/programs/bash;
-        home-zsh = import ./modules/home/programs/zsh;
-
-        home-bat = import ./modules/home/programs/bat;
-        home-firefox = import ./modules/home/programs/firefox;
-        home-lsd = import ./modules/home/programs/lsd;
-        home-neovim = import ./modules/home/programs/neovim;
-        home-ripgrep = import ./modules/home/programs/ripgrep;
-        home-vscode = import ./modules/home/programs/vscode;
-        home-zoxide = import ./modules/home/programs/zoxide;
-
         home-user-info = { lib, ... }: {
           options.home.user-info =
             (self.darwinModules.users-primaryUser { inherit lib; }).options.users.primaryUser;
