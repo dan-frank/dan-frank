@@ -21,4 +21,5 @@ in {
   "workbench.iconTheme" = "material-icon-theme";
   "terminal.integrated.fontSize" = font.size;
   "terminal.integrated.scrollback" = 10000;
+  "editor.minimap.enabled" = false;
 }
