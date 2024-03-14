@@ -2,7 +2,7 @@
 {
   programs.lsd = {
     enable = true;
-    enableAliases = true;
+    enableAliases = false;
     settings = {
       blocks = ["permission" "size" "user" "group" "date" "name"];
       date = "relative";
@@ -13,5 +13,13 @@
         dir-grouping = "first";
       };
     };
+  };
+
+  home.shellAliases = {
+    ls = "lsd";
+    ll = "lsd -l";
+    la = "lsd -a";
+    lla = "lsd -la";
+    lt = "lsd --tree";
   };
 }
