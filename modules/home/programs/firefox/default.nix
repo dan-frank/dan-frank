@@ -180,7 +180,7 @@ in {
         userChrome = builtins.concatStringsSep " " [
           (import ./chrome/userChrome/cascade pkgs)
           (import ./chrome/userChrome/addons/compact-extensions pkgs)
-          (builtins.readFile ./chrome/userChrome/addons/tweaks.css)
+          (import ./chrome/userChrome/addons/tweaks.nix { inherit config; })
         ];
       };
       # This does not have as strict privacy settings as the default profile.
