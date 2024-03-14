@@ -7,9 +7,6 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixos-stable.url = "github:nixos/nixpkgs/nixos-23.05";
 
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
-
     darwin = {
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
@@ -30,7 +27,12 @@
       flake = false;
     };
 
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
+
     flake-utils.url = "github:numtide/flake-utils";
+
+    nix-colors.url = "github:misterio77/nix-colors";
 
     nixpkgs-firefox-darwin = {
       url = "github:bandithedoge/nixpkgs-firefox-darwin";
@@ -91,6 +93,7 @@
                 home.stateVersion = homeManagerStateVersion;
                 home.user-info = config.users.primaryUser;
               };
+              extraSpecialArgs = { inherit inputs; };
             };
             nix-homebrew = {
               user = primaryUser.username;
@@ -129,6 +132,7 @@
                 home.stateVersion = homeManagerStateVersion;
                 home.user-info = config.users.primaryUser;
               };
+              extraSpecialArgs = { inherit inputs; };
             };
           })
       ];
@@ -137,6 +141,7 @@
       darwinConfigurations = rec {
         darwin-mac = darwin.lib.darwinSystem {
           system = "x86_64-darwin";
+          specialArgs = { inherit inputs; };
           modules = nixDarwinCommonModules ++ [
             ./hosts/darwin
             # Do I need this?
@@ -148,6 +153,7 @@
 
         hss-016404 = darwin.lib.darwinSystem {
           system = "aarch64-darwin";
+          specialArgs = { inherit inputs; };
           modules = nixDarwinCommonModules ++ [
             ./hosts/darwin/hss-016404
             # Do I need this?
@@ -161,6 +167,7 @@
       nixosConfigurations = rec {
         utm-x86 = makeOverridable nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
           modules = nixosCommonModules ++ [
             ./hosts/nixos/utm-vm
             {
@@ -172,6 +179,7 @@
 
         # linux-x86 = makeOverridable nixpkgs.lib.nixosSystem {
         #   system = "x86_64-linux";
+        #   specialArgs = { inherit inputs; };
         #   modules = nixosCommonModules ++ [
         #     ./hosts/nixos/linux
         #     {
@@ -188,6 +196,7 @@
             system = "x86_64-linux";
             inherit (nixpkgsConfig) config overlays;
           };
+          extraSpecialArgs = { inherit inputs; };
           modules = attrValues self.homeManagerModules ++ singleton ({ config, ... }: {
             home.username = config.home.user-info.username;
             home.homeDirectory = "/home/${config.home.username}";
@@ -200,6 +209,7 @@
       darwinModules = {
         users-primaryUser = import ./options/users.nix;
         fontProfiles = import ./options/fontProfiles.nix;
+        nixColors = inputs.nix-colors.homeManagerModules.default;
       };
 
       nixosModules = {
@@ -207,6 +217,7 @@
 
         users-primaryUser = import ./options/users.nix;
         fontProfiles = import ./options/fontProfiles.nix;
+        nixColors = inputs.nix-colors.homeManagerModules.default;
       };
 
       homeManagerModules = {
@@ -217,6 +228,7 @@
             (self.darwinModules.users-primaryUser { inherit lib; }).options.users.primaryUser;
         };
         fontProfiles = import ./options/fontProfiles.nix;
+        nixColors = inputs.nix-colors.homeManagerModules.default;
       };
 
       overlays = {

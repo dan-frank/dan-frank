@@ -1,30 +1,23 @@
 { config, pkgs, inputs, ... }:
+with config.colorscheme.colors;
 let
   inherit (pkgs)
     fetchFromGitHub
     # lua53Packages
     vimPlugins
     vimUtils;
-
-  github-nvim-theme = vimUtils.buildVimPlugin {
-    name = "github-nvim-theme";
-    src = pkgs.fetchFromGitHub {
-      owner = "projekt0n";
-      repo = "github-nvim-theme";
-      rev = "b3f15193d1733cc4e9c9fe65fbfec329af4bdc2a";
-      sha256 = "wLX81wgl4E50mRig9erbLyrxyGbZllFbHFAQ9+v60W4=";
-    };
-  };
 in
 with vimPlugins; [
   # Editor
   {
-    plugin = github-nvim-theme;
+    plugin = nvim-base16;
     type = "lua";
     config = ''
-      require('github-theme').setup({
-        theme_style = 'dark',
-        dark_float = true,
+      require('base16-colorscheme').setup({
+          base00 = '#${base00}', base01 = '#${base01}', base02 = '#${base02}', base03 = '#${base03}',
+          base04 = '#${base04}', base05 = '#${base05}', base06 = '#${base06}', base07 = '#${base07}',
+          base08 = '#${base08}', base09 = '#${base09}', base0A = '#${base0A}', base0B = '#${base0B}',
+          base0C = '#${base0C}', base0D = '#${base0D}', base0E = '#${base0E}', base0F = '#${base0F}',
       })
     '';
   }

@@ -1,8 +1,7 @@
 # Helpful
 # - https://sourcegraph.com/github.com/cbrewster/nix-home/-/blob/home/neovim.nix
 { config, lib, pkgs, inputs, ... }:
-let
-in {
+{
   programs.neovim = {
     enable = true;
     vimAlias = true;

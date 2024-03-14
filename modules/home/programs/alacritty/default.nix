@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 let
   setfont = import ./setfont.nix;
-  themes = import ./config/themes.nix;
+  theme = import ./theme.nix { inherit config; };
 in
 {
   programs.alacritty = {
@@ -38,7 +38,7 @@ in
         { key = "Key9"; mods = "Alt"; chars = "ª"; }
         { key = "N"; mods = "Command|Shift"; action = "SpawnNewInstance"; }
       ];
-      colors = themes.github-dark;
+      colors = theme;
       font = setfont config.fontProfiles.monospace.family // {
         size = 16;
       };

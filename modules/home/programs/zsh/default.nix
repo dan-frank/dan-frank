@@ -49,7 +49,6 @@ in
     sessionVariables = rec {
       NVIM_TUI_ENABLE_TRUE_COLOR = "1";
       DEV_ALLOW_ITERM2_INTEGRATION = "1";
-      ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE = "fg=013"; # (colors)[https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg]
     };
   };
 }

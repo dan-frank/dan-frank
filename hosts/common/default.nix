@@ -16,8 +16,10 @@
   };
 
   imports = [
-    ./fonts.nix
+    ./../../settings/colors.nix
     ./../../settings/fontProfiles.nix
+
+    ./fonts.nix
     ./packages.nix
   ];
 
