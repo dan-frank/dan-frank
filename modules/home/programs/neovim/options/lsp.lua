@@ -13,10 +13,12 @@ capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 -- All servers are installed by Nix
 local servers = {
-  { name = "bashls", opts = { filetypes = { "sh", "zsh" } } },
-  { name = "cssls", opts = {} },
+  { name = "bashls",  opts = { filetypes = { "sh", "zsh" } } },
+  { name = "cssls",   opts = {} },
   { name = "graphql", opts = {} },
-  { name = "ltex", opts = {
+  {
+    name = "ltex",
+    opts = {
       filetypes = { "latex", "tex", "bib", "markdown", "gitcommit" },
       -- use_spellfile = true,
       settings = {
@@ -55,18 +57,22 @@ local servers = {
       }
     }
   },
-  { name = "html", opts = {} },
-  { name = "jsonls", opts = {
+  { name = "html",        opts = {} },
+  {
+    name = "jsonls",
+    opts = {
       commands = {
         Format = {
           function()
-            vim.lsp.buf.range_formatting({}, {0, 0}, {vim.fn.line("$"), 0})
+            vim.lsp.buf.range_formatting({}, { 0, 0 }, { vim.fn.line("$"), 0 })
           end
         }
       }
     }
   },
-  { name = "lua_ls", opts = {
+  {
+    name = "lua_ls",
+    opts = {
       settings = {
         Lua = {
           runtime = {
@@ -76,7 +82,7 @@ local servers = {
             path = runtime_path,
           },
           -- Get the language server to recognize the `vim` global
-          diagnostics = { globals = {"vim"} },
+          diagnostics = { globals = { "vim" } },
           -- Make the server aware of Neovim runtime files
           workspace = { library = vim.api.nvim_get_runtime_file("", true) },
           -- Disable telemetry
@@ -85,9 +91,9 @@ local servers = {
       },
     }
   },
-  { name = "marksman", opts = {} },
-  { name = "phpactor", opts = {} },
-  { name = "rnix", opts = {} },
+  { name = "marksman",    opts = {} },
+  { name = "phpactor",    opts = {} },
+  { name = "rnix",        opts = {} },
   { name = "tailwindcss", opts = {} },
 }
 
@@ -99,7 +105,7 @@ for _, server in ipairs(servers) do
   }
 
   -- Merge opts with default setup
-  for k,v in pairs(server.opts) do setup[k] = v end
+  for k, v in pairs(server.opts) do setup[k] = v end
 
   lspconfig[server.name].setup(setup)
 end

@@ -1,5 +1,3 @@
-# Helpful
-# - https://sourcegraph.com/github.com/cbrewster/nix-home/-/blob/home/neovim.nix
 { pkgs, ... }:
 {
   imports = [

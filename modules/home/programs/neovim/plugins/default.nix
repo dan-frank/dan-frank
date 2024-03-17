@@ -3,22 +3,22 @@ with pkgs.vimPlugins;
 {
   imports = [
     # Theme
-    ./nvim-base16
     ./indent-blankline-nvim
     ./lualine-nvim
+    ./nvim-base16
     ./todo-comments-nvim
 
     # Git
-    ./harpoon
-    ./vim-fugitive
-    ./gitsigns-nvim
     ./copilot-lua
+    ./gitsigns-nvim
+    ./vim-fugitive
 
     # Editor
-    ./undotree
+    ./harpoon
+    ./lsp
     ./telescope
     ./treesitter
-    ./lsp
+    ./undotree
   ];
 
   programs.neovim.plugins = [
