@@ -1,18 +1,21 @@
 # Helpful
 # - https://sourcegraph.com/github.com/cbrewster/nix-home/-/blob/home/neovim.nix
-{ config, lib, pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
+  imports = [
+    ./plugins
+  ];
+
   programs.neovim = {
     enable = true;
     vimAlias = true;
-    plugins = pkgs.callPackage ./plugins.nix { inherit config pkgs inputs; };
     extraConfig = ''
       syntax on
     '';
     extraLuaConfig = ''
-      ${builtins.readFile ./config/settings.lua}
-      ${builtins.readFile ./config/remaps.lua}
-      ${builtins.readFile ./config/lsp.lua}
+      ${builtins.readFile ./options/settings.lua}
+      ${builtins.readFile ./options/remaps.lua}
+      ${builtins.readFile ./options/lsp.lua}
     '';
 
     extraPackages = with pkgs; [
