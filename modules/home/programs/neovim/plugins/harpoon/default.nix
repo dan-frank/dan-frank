@@ -1,9 +1,12 @@
 { pkgs, ... }:
 with pkgs.vimPlugins;
 {
-  programs.neovim.plugins = [{
-    plugin = harpoon;
-    type = "lua";
-    config = builtins.readFile ./init.lua;
-  }];
+  programs.neovim.plugins = [
+    plenary-nvim
+    {
+      plugin = harpoon;
+      type = "lua";
+      config = builtins.readFile ./init.lua;
+    }
+  ];
 }

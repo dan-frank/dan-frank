@@ -2,14 +2,10 @@
 with pkgs.vimPlugins;
 {
   programs.neovim.plugins = [
-    plenary-nvim
-    popup-nvim
-
     {
-      plugin = telescope-nvim;
+      plugin = git-messenger-vim;
       type = "lua";
       config = builtins.readFile ./init.lua;
     }
-    telescope-fzy-native-nvim
   ];
 }

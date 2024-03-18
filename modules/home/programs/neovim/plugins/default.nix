@@ -11,6 +11,7 @@ with pkgs.vimPlugins;
     # Git
     ./copilot-lua
     ./gitsigns-nvim
+    ./git-messenger-vim
     ./vim-fugitive
 
     # Editor
@@ -25,12 +26,5 @@ with pkgs.vimPlugins;
     # Theme
     rainbow_parentheses
     rainbow-delimiters-nvim
-
-    # Git
-    git-messenger-vim
-
-    # Lua libs
-    plenary-nvim
-    popup-nvim
   ];
 }
