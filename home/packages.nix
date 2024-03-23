@@ -7,7 +7,6 @@ in {
 
   home.packages = with pkgs; [
     # CLI Tools
-    vifm
     bottom
     htop
 
