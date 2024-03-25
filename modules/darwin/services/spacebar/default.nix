@@ -1,5 +1,5 @@
 { config, pkgs, ... }:
-with config.colorscheme.colors;
+with config.colorscheme.palette;
 {
   system.defaults.NSGlobalDomain._HIHideMenuBar = true;
 

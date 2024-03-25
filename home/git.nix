@@ -11,6 +11,9 @@ in
     ignores = [
       ".DS_Store"
     ];
+    aliases = {
+      blame = "blame -w -C -C -C";
+    };
     extraConfig = {
       color.ui = "auto";
       core = {

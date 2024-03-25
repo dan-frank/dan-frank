@@ -34,7 +34,6 @@
 
       # Other
       nodePackages.bash-language-server
-      rnix-lsp
       sumneko-lua-language-server
     ];
   };

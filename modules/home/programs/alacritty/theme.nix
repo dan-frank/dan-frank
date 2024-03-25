@@ -1,5 +1,5 @@
 { config, ... }:
-with config.colorscheme.colors;
+with config.colorscheme.palette;
 {
   cursor = {
     text = "0x${base00}";

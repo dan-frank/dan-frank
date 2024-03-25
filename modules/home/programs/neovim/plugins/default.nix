@@ -5,7 +5,7 @@ with pkgs.vimPlugins;
     # Theme
     ./indent-blankline-nvim
     ./lualine-nvim
-    ./nvim-base16
+    ./base16-nvim
     ./todo-comments-nvim
 
     # Git
