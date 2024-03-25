@@ -14,7 +14,7 @@ vim.keymap.set("n", "<C-s>", function() ui.nav_file(2) end)
 vim.keymap.set("n", "<C-z>", function() ui.nav_file(3) end)
 vim.keymap.set("n", "<C-x>", function() ui.nav_file(4) end)
 
-vim.keymap.set("n", "<leader>hm", "<cmd>Telescope harpoon marks<CR>")
+vim.keymap.set("n", "<leader>hm", "<CMD>Telescope harpoon marks<CR>")
 
 require("harpoon").setup({
   global_settings = {

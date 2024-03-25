@@ -9,10 +9,7 @@ with pkgs.vimPlugins;
     ./todo-comments-nvim
 
     # Git
-    ./copilot-lua
-    ./gitsigns-nvim
-    ./git-messenger-vim
-    ./vim-fugitive
+    ./git
 
     # Editor
     ./harpoon
