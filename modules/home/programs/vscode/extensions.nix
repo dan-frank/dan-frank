@@ -5,6 +5,7 @@ with pkgs.vscode-extensions;
   bierner.markdown-checkbox
   bierner.markdown-emoji
   bradlc.vscode-tailwindcss
+  catppuccin.catppuccin-vsc
   eamodio.gitlens
   gencer.html-slim-scss-css-class-completion
   github.copilot

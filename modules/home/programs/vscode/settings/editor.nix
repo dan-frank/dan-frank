@@ -14,7 +14,7 @@ in {
   "editor.lineNumbers" = "relative";
   "editor.tabSize" = 2;
   "window.zoomLevel" = 0.5;
-  "workbench.colorTheme" = "GitHub Dark";
+  "workbench.colorTheme" = "Catppuccin Mocha";
   "workbench.iconTheme" = "material-icon-theme";
   "terminal.integrated.fontSize" = fontSize;
   "terminal.integrated.scrollback" = 10000;
