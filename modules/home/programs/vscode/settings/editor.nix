@@ -19,4 +19,5 @@ in {
   "terminal.integrated.fontSize" = fontSize;
   "terminal.integrated.scrollback" = 10000;
   "editor.minimap.enabled" = false;
+  "editor.stickyScroll.enabled" = false;
 }
