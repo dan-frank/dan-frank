@@ -190,22 +190,6 @@
         # linux-arm = linux-x86.override { system = "aarch64-linux"; };
       };
 
-      homeConfigurations = {
-        dan = home-manager.lib.homeManagerConfiguration {
-          pkgs = import inputs.nixpkgs-unstable {
-            system = "x86_64-linux";
-            inherit (nixpkgsConfig) config overlays;
-          };
-          extraSpecialArgs = { inherit inputs; };
-          modules = attrValues self.homeManagerModules ++ singleton ({ config, ... }: {
-            home.username = config.home.user-info.username;
-            home.homeDirectory = "/home/${config.home.username}";
-            home.stateVersion = homeManagerStateVersion;
-            home.user-info = userInfo.primary;
-          });
-        };
-      };
-
       darwinModules = {
         users-primaryUser = import ./options/users.nix;
         fontProfiles = import ./options/fontProfiles.nix;
