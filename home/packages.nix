@@ -1,7 +1,5 @@
 { config, pkgs, lib, ... }:
-let
-  link = config.lib.file.mkOutOfStoreSymlink;
-in {
+{
   programs.home-manager.enable = true;
   programs.java.enable = true; # <- HSS
 
@@ -23,6 +21,5 @@ in {
 
   home.file = {
     ".hushlogin".text = "";
-    ".p10k.zsh".source = link ./../dotfiles/p10k.zsh;
   };
 }

@@ -8,17 +8,20 @@
     ./git.nix
     ./packages.nix
     ./shells.nix
-    ./terminal.nix
 
-    ./../modules/home/programs/bash
-    ./../modules/home/programs/zsh
-
-    ./../modules/home/programs/bat
-    ./../modules/home/programs/firefox
-    ./../modules/home/programs/lsd
-    ./../modules/home/programs/neovim
-    ./../modules/home/programs/ripgrep
-    ./../modules/home/programs/vscode
-    ./../modules/home/programs/zoxide
+    ./../modules/shells
+    ./../modules/programs
   ];
+
+  bash.enable = true;
+  zsh.enable = true;
+
+  alacritty.enable = true;
+  bat.enable = true;
+  firefox.enable = true;
+  lsd.enable = true;
+  neovim.enable = true;
+  ripgrep.enable = true;
+  vscode.enable = true;
+  zoxide.enable = true;
 }

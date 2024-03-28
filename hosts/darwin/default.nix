@@ -7,9 +7,7 @@
     ./packages.nix
     ./settings.nix
 
-    ./../../modules/darwin/services/skhd
-    ./../../modules/darwin/services/spacebar
-    ./../../modules/darwin/services/yabai
+    ./../../modules/services/darwin
   ];
 
   # Copy applications into ~/Applications/Nix Apps. This workaround allows us
@@ -39,7 +37,5 @@
 
   programs.nix-index.enable = true;
 
-  # environment.systemPackages = with pkgs; [
-  #   yabai
-  # ];
+  yabai.enable = true;
 }
