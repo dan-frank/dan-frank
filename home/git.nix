@@ -13,6 +13,7 @@ in
     ];
     aliases = {
       blame = "blame -w -C -C -C";
+      stash = "stash --include-untracked";
     };
     extraConfig = {
       color.ui = "auto";
