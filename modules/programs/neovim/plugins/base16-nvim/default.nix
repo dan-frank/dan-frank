@@ -3,7 +3,7 @@ with config.colorscheme.palette;
 with pkgs.vimPlugins;
 {
   programs.neovim.plugins = [{
-    plugin = nvim-base16;
+    plugin = base16-nvim;
     type = "lua";
     config = ''
       require('base16-colorscheme').setup({
