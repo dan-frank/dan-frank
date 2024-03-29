@@ -26,6 +26,7 @@ in {
       extraPackages = with pkgs; [
         # LSPs
         # nodePackages.coc-metals
+        nil # Nix
 
         # Webdev
         nodePackages.graphql-language-service-cli
@@ -33,15 +34,15 @@ in {
         nodePackages.typescript-language-server
         nodePackages.vscode-langservers-extracted
         nodePackages.yaml-language-server
-        phpactor
+        phpactor # PHP
 
         # Writing
-        marksman
-        ltex-ls
+        marksman # Markdown
+        ltex-ls # Latex
 
         # Other
-        nodePackages.bash-language-server
-        sumneko-lua-language-server
+        nodePackages.bash-language-server # Bash
+        sumneko-lua-language-server # Lua
       ];
     };
   };

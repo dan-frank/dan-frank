@@ -255,7 +255,7 @@
           in
           pkgs.mkShell {
             nativeBuildInputs = with pkgs; [
-              rnix-lsp
+              nil
               nixpkgs-fmt
             ];
           }

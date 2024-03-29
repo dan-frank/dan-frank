@@ -92,8 +92,8 @@ local servers = {
     }
   },
   { name = "marksman",    opts = {} },
+  { name = "nil_ls",      opts = {} },
   { name = "phpactor",    opts = {} },
-  { name = "rnix",        opts = {} },
   { name = "tailwindcss", opts = {} },
 }
 
