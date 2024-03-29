@@ -40,10 +40,11 @@
         auto_balance = "off";
         split_ratio = 0.5;
 
+        external_bar = "all:0:36";
         top_padding = 10;
-        bottom_padding = 10 + 36;
-        left_padding = 10;
         right_padding = 10;
+        bottom_padding = 10;
+        left_padding = 10;
         window_gap = 10;
 
         mouse_modifier = "alt";
