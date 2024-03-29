@@ -16,7 +16,7 @@ in {
     programs.zsh = {
       enable = true;
       enableCompletion = true;
-      enableAutosuggestions = true;
+      autosuggestion.enable = true;
       # dotDir = "${homeDirectory}/.config/.zsh";
       history = {
         # path = config.programs.zsh.dotDir + "/.zsh_history";
