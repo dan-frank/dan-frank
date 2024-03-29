@@ -37,5 +37,5 @@
 
   programs.nix-index.enable = true;
 
-  yabai.enable = true;
+  services.darwin.yabai.enable = true;
 }

@@ -1,10 +1,12 @@
 { pkgs, lib, config, ... }:
-{
-  options = {
-    bash.enable = lib.mkEnableOption "Enables bash and configuration";
+let
+  cfg = config.shells.bash;
+in {
+  options.shells.bash = {
+    enable = lib.mkEnableOption "Enables bash and configuration";
   };
 
-  config = lib.mkIf config.bash.enable {
+  config = lib.mkIf cfg.enable {
     programs.bash = {
       enable = true;
       initExtra = ''

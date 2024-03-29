@@ -1,14 +1,15 @@
 { pkgs, lib, config, ... }:
 let
+  cfg = config.programs.apps.alacritty;
+
   setfont = import ./setfont.nix;
   theme = import ./theme.nix { inherit config; };
-in
-{
-  options = {
-    alacritty.enable = lib.mkEnableOption "Enables alacritty and configuration";
+in {
+  options.programs.apps.alacritty = {
+    enable = lib.mkEnableOption "Enables alacritty and configuration";
   };
 
-  config = lib.mkIf config.alacritty.enable {
+  config = lib.mkIf cfg.enable {
     programs.alacritty = {
       enable = true;
       settings = {

@@ -1,10 +1,12 @@
 { pkgs, lib, config, ... }:
-{
-  options = {
-    skhd.enable = lib.mkEnableOption "Enables skhd and configuration";
+let
+  cfg = config.services.darwin.skhd;
+in {
+  options.services.darwin.skhd = {
+    enable = lib.mkEnableOption "Enables skhd and configuration";
   };
 
-  config = lib.mkIf config.skhd.enable {
+  config = lib.mkIf cfg.enable {
     services.skhd = {
       enable = true;
       package = pkgs.skhd;

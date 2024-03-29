@@ -1,13 +1,14 @@
 { pkgs, lib, config, ... }:
 let
+  cfg = config.programs.cli.bat;
+
   base16theme = pkgs.writeText "base16.tmTheme" (import ./theme.nix config.colorscheme);
-in
-{
-  options = {
-    bat.enable = lib.mkEnableOption "Enables bat and configuration";
+in {
+  options.programs.cli.bat = {
+    enable = lib.mkEnableOption "Enables bat and configuration";
   };
 
-  config = lib.mkIf config.bat.enable {
+  config = lib.mkIf cfg.enable {
     programs.bat = {
       enable = true;
       config = {

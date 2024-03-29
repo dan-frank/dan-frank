@@ -1,13 +1,15 @@
 { pkgs, lib, config, ... }:
 let
+  cfg = config.programs.apps.firefox;
+
   merge = lib.foldr (a: b: a // b) { };
   pkgsFirefox = if pkgs.stdenv.isLinux then pkgs.firefox else pkgs.firefox-bin;
 in {
-  options = {
-    firefox.enable = lib.mkEnableOption "Enables firefox and configuration";
+  options.programs.apps.firefox = {
+    enable = lib.mkEnableOption "Enables firefox and configuration";
   };
 
-  config = lib.mkIf config.firefox.enable {
+  config = lib.mkIf cfg.enable {
     nixpkgs.config.packageOverrides = pkgs: {
       nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
         inherit pkgs;

@@ -1,13 +1,14 @@
 { pkgs, lib, config, ... }:
 let
+  cfg = config.shells.zsh;
+
   inherit (config.home) homeDirectory;
-in
-{
-  options = {
-    zsh.enable = lib.mkEnableOption "Enables zsh and configuration";
+in {
+  options.shells.zsh = {
+    enable = lib.mkEnableOption "Enables zsh and configuration";
   };
 
-  config = lib.mkIf config.zsh.enable {
+  config = lib.mkIf cfg.enable {
     home.file = {
       ".p10k.zsh".source = config.lib.file.mkOutOfStoreSymlink ./dotfiles/p10k.zsh;
     };

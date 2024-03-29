@@ -1,9 +1,11 @@
 { pkgs, lib, config, ... }:
 let
+  cfg = config.programs.apps.vscode;
+
   merge = lib.foldr (a: b: a // b) { };
 in {
-  options = {
-    vscode.enable = lib.mkEnableOption "Enables vscode and configuration";
+  options.programs.apps.vscode = {
+    enable = lib.mkEnableOption "Enables vscode and configuration";
   };
 
   imports = [
@@ -13,7 +15,7 @@ in {
     }}/modules/vscode-server/home.nix"
   ];
 
-  config = lib.mkIf config.vscode.enable {
+  config = lib.mkIf cfg.enable {
     services.vscode-server.enable = true;
 
     programs.vscode = {

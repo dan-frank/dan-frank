@@ -1,15 +1,16 @@
 { pkgs, lib, config, ... }:
-{
-  options = {
-    neovim.enable = lib.mkEnableOption "Enables neovim and configuration";
+let
+  cfg = config.programs.cli.neovim;
+in {
+  options.programs.cli.neovim = {
+    enable = lib.mkEnableOption "Enables neovim and configuration";
   };
 
-  # imports = lib.optionals config.vscode.enable [
   imports = [
     ./plugins
   ];
 
-  config = lib.mkIf config.neovim.enable {
+  config = lib.mkIf cfg.enable {
     programs.neovim = {
       enable = true;
       vimAlias = true;

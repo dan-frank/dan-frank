@@ -1,11 +1,13 @@
 { pkgs, lib, config, ... }:
 with config.colorscheme.palette;
-{
-  options = {
-    spacebar.enable = lib.mkEnableOption "Enables spacebar and configuration";
+let
+  cfg = config.services.darwin.spacebar;
+in {
+  options.services.darwin.spacebar = {
+    enable = lib.mkEnableOption "Enables spacebar and configuration";
   };
 
-  config = lib.mkIf config.spacebar.enable {
+  config = lib.mkIf cfg.enable {
     system.defaults.NSGlobalDomain._HIHideMenuBar = true;
 
     services.spacebar = {

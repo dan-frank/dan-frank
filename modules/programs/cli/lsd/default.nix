@@ -1,10 +1,12 @@
 { pkgs, lib, config, ... }:
-{
-  options = {
-    lsd.enable = lib.mkEnableOption "Enables lsd and configuration";
+let
+  cfg = config.programs.cli.lsd;
+in {
+  options.programs.cli.lsd = {
+    enable = lib.mkEnableOption "Enables lsd and configuration";
   };
 
-  config = lib.mkIf config.lsd.enable {
+  config = lib.mkIf cfg.enable {
     programs.lsd = {
       enable = true;
       enableAliases = false;

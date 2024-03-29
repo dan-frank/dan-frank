@@ -1,12 +1,14 @@
 { pkgs, lib, config, ... }:
-{
-  options = {
-    yabai.enable = lib.mkEnableOption "Enables yabai and configuration";
+let
+  cfg = config.services.darwin.yabai;
+in {
+  options.services.darwin.yabai = {
+    enable = lib.mkEnableOption "Enables yabai and configuration";
   };
 
-  config = lib.mkIf config.yabai.enable {
-    skhd.enable = true;
-    spacebar.enable = true;
+  config = lib.mkIf cfg.enable {
+    services.darwin.skhd.enable = true;
+    services.darwin.spacebar.enable = true;
 
     system.defaults.spaces.spans-displays = false;
     security.accessibilityPrograms = [ "${pkgs.yabai}/bin/yabai" ];
