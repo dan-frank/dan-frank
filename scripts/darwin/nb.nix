@@ -1,5 +1,5 @@
 { pkgs }:
-let 
+let
   figletFonts = pkgs.fetchFromGitHub {
     owner = "xero";
     repo = "figlet-fonts";

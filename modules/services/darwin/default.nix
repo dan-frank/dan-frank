@@ -1,7 +1,7 @@
 {
   imports = [
+    ./menubar
     ./skhd
-    ./spacebar
     ./yabai
   ];
 }

@@ -14,8 +14,10 @@ in {
   };
 
   config = lib.mkIf cfg.enable {
-    services.darwin.skhd.enable = true;
-    services.darwin.spacebar.enable = true;
+    services.darwin = {
+      menubar.enable = true;
+      skhd.enable = true;
+    };
 
     system.defaults.spaces.spans-displays = false;
     security.accessibilityPrograms = [ "${pkgs.yabai}/bin/yabai" ];
