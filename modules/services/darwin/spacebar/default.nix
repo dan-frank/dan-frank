@@ -33,8 +33,8 @@ in {
         space_icon                 = "•";
         space_icon_strip           = "I II III IV V VI VII VIII IX";
         space_icon_color           = "0xff${base0C}";
-        space_icon_color_secondary = "0xff${base0E}";
-        space_icon_color_tertiary  = "0xff${base00}";
+        space_icon_color_secondary = "0xff${base0D}";
+        space_icon_color_tertiary  = "0xff${base0E}";
         right_shell                = "off";
         right_shell_icon           = "";
         right_shell_command        = "whoami";
