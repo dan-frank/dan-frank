@@ -1,9 +1,16 @@
 { pkgs, lib, config, ... }:
+with config.colorscheme.palette;
 let
   cfg = config.services.darwin.yabai;
 in {
   options.services.darwin.yabai = {
     enable = lib.mkEnableOption "Enables yabai and configuration";
+
+    padding = lib.mkOption {
+      default = 0;
+      type = lib.types.int;
+      description = "Padding aroung Yabai windows";
+    };
   };
 
   config = lib.mkIf cfg.enable {
@@ -12,6 +19,10 @@ in {
 
     system.defaults.spaces.spans-displays = false;
     security.accessibilityPrograms = [ "${pkgs.yabai}/bin/yabai" ];
+
+    services.darwin.yabai = {
+      padding = 10;
+    };
 
     services.yabai = {
       enable = true;
@@ -30,9 +41,9 @@ in {
         window_border_placement = "inset";
         window_border_width = 2;
 
-        active_window_border_color = "0xff6d3ab0";
-        normal_window_border_color = "0xff505050";
-        insert_window_border_color = "0xffd75f5f";
+        active_window_border_color = "0xff${base0C}";
+        normal_window_border_color = "0xff${base0D}";
+        insert_window_border_color = "0xff${base0E}";
 
         active_window_opacity = 1.0;
         normal_window_opacity = 0.8;
@@ -42,12 +53,11 @@ in {
         auto_balance = "off";
         split_ratio = 0.5;
 
-        external_bar = "all:0:36";
-        top_padding = 10;
-        right_padding = 10;
-        bottom_padding = 10;
-        left_padding = 10;
-        window_gap = 10;
+        top_padding = cfg.padding;
+        right_padding = cfg.padding;
+        bottom_padding = cfg.padding;
+        left_padding = cfg.padding;
+        window_gap = cfg.padding;
 
         mouse_modifier = "alt";
         mouse_action1 = "move";
