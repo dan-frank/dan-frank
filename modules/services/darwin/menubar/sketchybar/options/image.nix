@@ -11,7 +11,7 @@ in {
   };
 
   string = lib.mkOption {
-    type = lib.types.string;
+    type = lib.types.str;
     description = "The image to display in the bar";
     example = "<path>, app.<bundle-id>, app.<name>, media.artwork";
   };

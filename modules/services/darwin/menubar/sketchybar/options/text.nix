@@ -12,7 +12,7 @@ in {
 
   string = lib.mkOption {
     default = "";
-    type = lib.types.string;
+    type = lib.types.str;
     description = "Sets the text to the specified string";
   };
 
