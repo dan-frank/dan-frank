@@ -30,6 +30,11 @@ in {
     };
 
     services.darwin.sketchybar = {
+      font = {
+        style = "Regular";
+        size = 16.0;
+      };
+
       bar = {
         color = getColor { color = "black"; opacity = "o0"; };
         border-color = getColor { color = "black"; };

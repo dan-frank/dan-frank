@@ -5,7 +5,7 @@ let
   options = import ./options { inherit lib; };
   themes = import ./themes { inherit pkgs lib config; };
 in {
-  imports = [ themes.bubbles ];
+  imports = [ themes.minimal ];
 
   options.services.darwin.sketchybar = {
     enable = lib.mkEnableOption "Enables Sketchybar and configuration";
@@ -32,8 +32,6 @@ in {
     services.darwin.sketchybar = {
       font = {
         family = config.fontProfiles.monospace.family;
-        style = "Regular";
-        size = 16.0;
       };
     };
   };
