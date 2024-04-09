@@ -11,10 +11,6 @@ in
     ignores = [
       ".DS_Store"
     ];
-    aliases = {
-      blame = "blame -w -C -C -C";
-      stash = "stash --include-untracked";
-    };
     extraConfig = {
       color.ui = "auto";
       core = {

@@ -18,20 +18,17 @@ in
     ga = "git add";
     gaa = "git add --all";
     gc = "git commit";
+    gb = "git branch";
     gco = "git checkout";
     gf = "git fetch";
     gl = "git pull";
-    glom = "git pull origin main";
     gp = "git push";
     gd = "git diff";
-    gb = "git branch";
-    gba = "git branch -a";
-    del = "git branch -d";
+    gblm = "git blame -w -C -C -C";
+    gs = "git stash --include-untracked";
     glg = "git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit";
     gr = "git rm";
     gra = "git rm `git status | grep deleted | awk '{print $2}'`";
-    gh = "git log -p --follow --";
-    git-fuck-everything = "git-abort; git reset .; git checkout .; git clean -f -d";
 
     # RipGrep
     rgf = "rg --files | rg";
@@ -47,8 +44,8 @@ in
     "......" = "cd ../../../../..";
 
     # Scala
-    scalafmt = "sbt -mem 16384 scalafmt";
-    sbtclean = "rm -rf .bsp project target";
+    scalafmt = "sbt -mem 8192 scalafmtAll";
+    sbtcleanup = "rm -rf .bsp project target";
 
     # Helpful
     cleanDsStore = "find . -name \".DS_Store\" -print -type f -delete";
@@ -56,7 +53,7 @@ in
     # Name shortening
     ":q" = "exit";
     docc = "docker-compose";
-    v = "vim .";
+    v = "nvim .";
   } // lib.optionalAttrs pkgs.stdenv.isDarwin {
     # Homebrew - TODO Remove / integrate into nix-darwin
     brewuu = "brew update; brew upgrade";
