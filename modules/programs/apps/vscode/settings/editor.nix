@@ -6,7 +6,7 @@ in {
   "editor.bracketPairColorization.enabled" = true;
   "editor.detectIndentation" = false;
   "editor.formatOnSave" = true;
-  "editor.fontFamily" = config.fontProfiles.regular.family;
+  "editor.fontFamily" = config.fontProfiles.monospace.family;
   "editor.fontSize" = fontSize;
   "editor.fontWeight" = "normal";
   "editor.guides.bracketPairs" = true;
