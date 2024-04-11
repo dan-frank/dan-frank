@@ -17,6 +17,7 @@ in {
   config = lib.mkIf cfg.enable {
     services.sketchybar = {
       enable = true;
+      extraPackages = with pkgs; [ jq ];
     };
 
     system.defaults.NSGlobalDomain._HIHideMenuBar = true;

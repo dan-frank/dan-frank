@@ -18,7 +18,6 @@ in {
     services.sketchybar = {
       config = builtins.readFile sketchybarrc;
       extraPackages = with pkgs; [
-        jq
         gh
         # ical-buddy
         # sketchybar-helper
