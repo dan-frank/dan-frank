@@ -1,6 +1,6 @@
 {
   imports = [
-    ./alacritty
+    ./terminal
     ./firefox
     ./vscode
   ];

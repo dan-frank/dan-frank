@@ -1,11 +1,11 @@
-{ pkgs, lib, config, ... }:
+{ lib, config, ... }:
 let
-  cfg = config.programs.apps.alacritty;
+  cfg = config.programs.apps.terminal.alacritty;
 
   setfont = import ./setfont.nix;
   theme = import ./theme.nix { inherit config; };
 in {
-  options.programs.apps.alacritty = {
+  options.programs.apps.terminal.alacritty = {
     enable = lib.mkEnableOption "Enables alacritty and configuration";
   };
 

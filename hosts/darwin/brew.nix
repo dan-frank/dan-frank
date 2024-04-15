@@ -19,6 +19,7 @@
       # == To allow app access via spotlight ==
       "alacritty"
       "docker"
+      "kitty"
       "visual-studio-code"
     ];
     # App Store applications

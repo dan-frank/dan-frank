@@ -19,8 +19,8 @@
   };
 
   programs.apps = {
-    alacritty.enable = true;
     firefox.enable = true;
+    terminal.enable = true;
     vscode.enable = true;
   };
 
