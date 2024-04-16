@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ pkgs, lib, config, ... }:
 let
   cfg = config.programs.apps.terminal.kitty;
 
@@ -24,7 +24,8 @@ in {
         cursor_stop_blinking_after = 0;
         cursor_underline_thickness = "1.5";
         disable_ligatures = "never";
-        editor = "nvim";
+        copy_on_select = true;
+        editor = "${pkgs.neovim}/bin/nvim";
         font_family = "${config.fontProfiles.monospace.family}";
         font_size = "16.0";
         hide_window_decorations = "titlebar-only";
