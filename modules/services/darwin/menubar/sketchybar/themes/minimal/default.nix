@@ -17,7 +17,7 @@ in {
       };
 
       bar = {
-        color = "0xff${base01}";
+        color = "0xff${base00}";
         position = "top";
         height = 36;
         padding = 12;
