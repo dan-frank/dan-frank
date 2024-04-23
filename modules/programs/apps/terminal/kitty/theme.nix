@@ -4,7 +4,7 @@ with config.colorscheme.palette;
   # The basic colors
   foreground = "#${base05}";
   background = "#${base00}";
-  selection_foreground = "#${base05}";
+  selection_foreground = "#${base02}";
   selection_background = "#${base04}";
 
   # Tab bar colors
@@ -12,7 +12,7 @@ with config.colorscheme.palette;
   active_tab_foreground = "#${base01}";
   active_tab_background = "#${base0D}";
   inactive_tab_foreground = "#${base06}";
-  inactive_tab_background = "#${base03}";
+  inactive_tab_background = "#${base02}";
 
   # Cursor colors
   cursor = "#${base05}";
