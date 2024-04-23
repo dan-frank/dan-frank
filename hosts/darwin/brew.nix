@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   homebrew = {
     enable = true;
@@ -17,7 +16,6 @@
       "tableplus"
 
       # == To allow app access via spotlight ==
-      "alacritty"
       "docker"
       "kitty"
       "visual-studio-code"
@@ -42,4 +40,3 @@
     };
   };
 }
-

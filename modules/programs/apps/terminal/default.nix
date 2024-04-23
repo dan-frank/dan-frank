@@ -13,7 +13,7 @@ in {
 
   config = lib.mkIf cfg.enable {
     programs.apps.terminal = {
-      alacritty.enable = true;
+      alacritty.enable = false;
       kitty.enable = true;
     };
   };
