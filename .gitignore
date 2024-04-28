@@ -4,3 +4,6 @@ nix-build.log
 
 # LSP config files
 .luarc.json
+
+# Editor configs
+.idea
