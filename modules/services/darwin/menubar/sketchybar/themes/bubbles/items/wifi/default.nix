@@ -5,7 +5,7 @@ let
   script = import ./script.nix { inherit pkgs config; };
 
   defaults = import ./../../defaults { inherit pkgs config; };
-  scripts = import ./../../../../scripts { inherit pkgs; };
+  scripts = import ./../../scripts { inherit pkgs; };
 in pkgs.writeShellScript "wifi.sh" ''
   source ${defaults.menu}
   source ${defaults.menuItem}

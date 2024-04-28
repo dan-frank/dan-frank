@@ -1,7 +1,7 @@
 { pkgs, config, ...  }:
 let
   colors = import ./../../colors.nix { inherit pkgs config; };
-  scripts = import ./../../../../scripts { inherit pkgs; };
+  scripts = import ./../../scripts { inherit pkgs; };
 
   helpers = import ./../../helpers { inherit pkgs config; };
   inherit (helpers) getColor;
