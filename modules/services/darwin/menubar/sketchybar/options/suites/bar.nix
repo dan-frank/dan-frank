@@ -3,7 +3,7 @@ let
   # TODO: get from cfg.options ?
   options = import ./../default.nix { inherit lib; };
 in {
-  inherit (options) color border-color border-width corner-radius padding y-offset blur-radius text topmost;
+  inherit (options) color background border-color border-width corner-radius drawing icon label padding blur-radius text topmost y-offset;
 
   height = options.height.override {
     default = 36;

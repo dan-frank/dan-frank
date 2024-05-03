@@ -5,7 +5,7 @@ let
   options = import ./options { inherit lib; };
   themes = import ./themes { inherit pkgs lib config; };
 in {
-  imports = [ themes.bubbles ];
+  imports = [ themes.underlines ];
 
   options.services.darwin.sketchybar = {
     enable = lib.mkEnableOption "Enables Sketchybar and configuration";
@@ -17,7 +17,6 @@ in {
   config = lib.mkIf cfg.enable {
     services.sketchybar = {
       enable = true;
-      extraPackages = with pkgs; [ jq ];
     };
 
     system.defaults.NSGlobalDomain._HIHideMenuBar = true;

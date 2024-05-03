@@ -17,7 +17,9 @@
 
   background = import ./background.nix { inherit lib; };
   font = import ./font.nix { inherit lib; };
+  icon = import ./icon.nix { inherit lib; };
   image = import ./image.nix { inherit lib; };
+  label = import ./label.nix { inherit lib; };
   shadow = import ./shadow.nix { inherit lib; };
   text = import ./text.nix { inherit lib; };
 

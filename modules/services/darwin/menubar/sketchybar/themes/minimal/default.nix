@@ -8,6 +8,7 @@ in {
   config = lib.mkIf cfg.enable {
     services.sketchybar = {
       config = builtins.readFile sketchybarrc;
+      extraPackages = with pkgs; [ jq ];
     };
 
     services.darwin.sketchybar = {

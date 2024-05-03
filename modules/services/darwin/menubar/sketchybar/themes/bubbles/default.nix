@@ -1,5 +1,5 @@
 # Reference -> https://github.com/FelixKratz/SketchyBar/discussions/47?sort=top#discussioncomment-7890276
-# Dotfiles -> https://github.com/Pe8er/dotfiles/tree/master/config.symlink/sketchybar
+# Dotfiles  -> https://github.com/Pe8er/dotfiles/tree/master/config.symlink/sketchybar
 { pkgs, lib, config, ... }:
 let
   cfg = config.services.darwin.sketchybar;
@@ -18,6 +18,7 @@ in {
     services.sketchybar = {
       config = builtins.readFile sketchybarrc;
       extraPackages = with pkgs; [
+        jq
         gh
         # ical-buddy
         # sketchybar-helper
