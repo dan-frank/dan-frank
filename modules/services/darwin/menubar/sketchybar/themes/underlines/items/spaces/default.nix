@@ -29,12 +29,16 @@ in pkgs.writeShellScript "spaces.sh" ''
 
   SPACES=($(yabai -m query --spaces | jq -r '.[].index'))
   for SID in "''${SPACES[@]}"; do
-    sketchybar  --add space space.$SID left                        \
-                --set space.$SID  "''${spaces[@]}"                 \
-                                  click_script="${space-click}"    \
-                                  script="${space-highlight}"      \
-                                  associated_space=$SID            \
-                                  icon=$SID                        \
-                --subscribe space.$SID  mouse.clicked front_app_switched space_change update_yabai_icon space_windows_change
+    sketchybar  --add space space.$SID  left                          \
+                --set space.$SID        "''${spaces[@]}"              \
+                                        click_script="${space-click}" \
+                                        script="${space-highlight}"   \
+                                        associated_space=$SID         \
+                                        icon=$SID                     \
+                --subscribe space.$SID  mouse.clicked                 \
+                                        front_app_switched            \
+                                        space_change                  \
+                                        update_yabai_icon             \
+                                        space_windows_change
   done
 ''

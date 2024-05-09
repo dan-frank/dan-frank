@@ -3,7 +3,7 @@ pkgs.writeShellScript "space-highlight.sh" ''
   args=()
 
   if [ "$SELECTED" = "true" ]; then
-    args+=(--set spaces_$DID.label label=''${NAME#"spaces_$DID."} \
+    args+=(--set space."$DID".label label=''${NAME#"space.$DID."} \
           --set $NAME icon.background.y_offset=-9              )
   else
     args+=(--set $NAME icon.background.y_offset=-20)
