@@ -30,7 +30,7 @@ in {
             y = 10;
           };
         };
-        scrolling.history = 10000;
+        scrolling.history = config.programs.apps.terminal.scrollback;
         keyboard.bindings = [
           { key = "Key0"; mods = "Alt"; chars = "º"; }
           { key = "Key1"; mods = "Alt"; chars = "¡"; }

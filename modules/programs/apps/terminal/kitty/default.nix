@@ -34,7 +34,7 @@ in {
         italic_font = "auto";
         placement_strategy = "center";
         resize_in_steps = "yes";
-        scrollback_lines = 10000;
+        scrollback_lines = config.programs.apps.terminal.scrollback;
         tab_bar_edge = "bottom";
         tab_bar_min_tabs = 1;
         tab_bar_style = "powerline";
