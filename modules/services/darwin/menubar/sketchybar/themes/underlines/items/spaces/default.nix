@@ -30,7 +30,7 @@ in pkgs.writeShellScript "spaces.sh" ''
   SPACES=($(yabai -m query --spaces | jq -r '.[].index'))
   for SID in "''${SPACES[@]}"; do
     sketchybar  --add space space.$SID  left                          \
-                --set space.$SID        "''${spaces[@]}"              \
+                --set space.$SID        "''${SPACES[@]}"              \
                                         click_script="${space-click}" \
                                         script="${space-highlight}"   \
                                         associated_space=$SID         \
