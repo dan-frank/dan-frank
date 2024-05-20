@@ -13,8 +13,6 @@
     swagger-cli
 
     # === UI Tools ===
-    dbeaver
-    tigervnc
     zoom-us
   ];
 }
