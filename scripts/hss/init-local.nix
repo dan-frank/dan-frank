@@ -87,11 +87,11 @@ sudo ./import.sh $JAVA_HOME/lib/security/cacerts
 
 aws sso login --profile hss
 
-$(echo "Run AWS VPN" | lolcat)
+EOF
+      echo "Run AWS VPN" | lolcat
+      cat << EOF
 
-sbt -mem 16384 -Daws.region=eu-west-2 -Daws.profile=hss -Dconfig.resource=application-local.conf
-
-hyrax/runMain uk.co.anyjunk.hyrax.Boot
+echo "hyrax/runMain uk.co.anyjunk.hyrax.Boot" | sbt -mem 16384 -Daws.region=eu-west-2 -Daws.profile=hss -Dconfig.resource=application-local.conf
 EOF
     else
       echo "Usage: hss-init-local <database-to-connect>"
