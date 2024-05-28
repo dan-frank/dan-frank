@@ -8,7 +8,7 @@ let
   helpers = import ./../../helpers { inherit pkgs config; };
   inherit (helpers) makeFont getColor;
 in pkgs.writeShellScript "spaces.sh" ''
-  spaces=(
+  space=(
     background.padding_left=0
     background.padding_right=1
     drawing=on
@@ -30,7 +30,7 @@ in pkgs.writeShellScript "spaces.sh" ''
   SPACES=($(yabai -m query --spaces | jq -r '.[].index'))
   for SID in "''${SPACES[@]}"; do
     sketchybar  --add space space.$SID  left                          \
-                --set space.$SID        "''${SPACES[@]}"              \
+                --set space.$SID        "''${space[@]}"               \
                                         click_script="${space-click}" \
                                         script="${space-highlight}"   \
                                         associated_space=$SID         \
