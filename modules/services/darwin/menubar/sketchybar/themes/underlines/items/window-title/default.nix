@@ -16,6 +16,7 @@ in pkgs.writeShellScript "window-title.sh" ''
                                       label.padding_left=-0                          \
                                       label.color=0xffd5d9dd                         \
             --subscribe window_title  app_name                                       \
+                                      mouse.clicked                                  \
                                       space_change                                   \
                                       front_app_switched                             \
                                       window_focus                                   \
