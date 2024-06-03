@@ -48,6 +48,17 @@ in {
 
       extraConfig = ''
         modify_font cell_height 100%
+
+        map alt+ctrl+1 goto_tab 1
+        map alt+ctrl+2 goto_tab 2
+        map alt+ctrl+3 goto_tab 3
+        map alt+ctrl+4 goto_tab 4
+        map alt+ctrl+5 goto_tab 5 
+        map alt+ctrl+6 goto_tab 6
+        map alt+ctrl+7 goto_tab 7
+        map alt+ctrl+8 goto_tab 8
+        map alt+ctrl+9 goto_tab 9
+        map alt+ctrl+0 goto_tab 10
       '';
     };
   };
