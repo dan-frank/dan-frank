@@ -2,11 +2,11 @@
 with pkgs.vimPlugins;
 {
   programs.neovim.plugins = [
-    {
-      plugin = copilot-lua;
-      type = "lua";
-      config = builtins.readFile ./copilot.lua;
-    }
+    # {
+    #   plugin = copilot-lua;
+    #   type = "lua";
+    #   config = builtins.readFile ./copilot.lua;
+    # }
     {
       plugin = git-messenger-vim;
       type = "lua";
