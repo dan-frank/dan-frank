@@ -2,6 +2,7 @@
 let
   hss-apply-jdk-certs = import ../../../scripts/hss/apply-jdk-certs.nix { inherit pkgs; };
   hss-db-secret = import ../../../scripts/hss/db-secret.nix { inherit pkgs; };
+  hss-freshdesk-sandbox-get = import ../../../scripts/hss/freshdesk-sandbox-get.nix { inherit pkgs; };
   hss-hyrax = import ../../../scripts/hss/hyrax.nix { inherit pkgs; };
   hss-hyrax-all = import ../../../scripts/hss/hyrax-all.nix { inherit pkgs; };
   hss-hyrax-protocols = import ../../../scripts/hss/hyrax-protocols.nix { inherit pkgs; };
@@ -21,6 +22,7 @@ in
   environment.systemPackages = [
     hss-apply-jdk-certs
     hss-db-secret
+    hss-freshdesk-sandbox-get
     hss-hyrax
     hss-hyrax-all
     hss-hyrax-protocols
