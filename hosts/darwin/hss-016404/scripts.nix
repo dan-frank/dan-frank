@@ -5,6 +5,7 @@ let
   hss-freshdesk-sandbox-get = import ../../../scripts/hss/freshdesk-sandbox-get.nix { inherit pkgs; };
   hss-hyrax = import ../../../scripts/hss/hyrax.nix { inherit pkgs; };
   hss-hyrax-all = import ../../../scripts/hss/hyrax-all.nix { inherit pkgs; };
+  hss-hyrax-common = import ../../../scripts/hss/hyrax-common.nix { inherit pkgs; };
   hss-hyrax-protocols = import ../../../scripts/hss/hyrax-protocols.nix { inherit pkgs; };
   hss-hyrax-protocols-local = import ../../../scripts/hss/hyrax-protocols-local.nix { inherit pkgs; };
   hss-hyrax-search = import ../../../scripts/hss/hyrax-search.nix { inherit pkgs; };
@@ -25,6 +26,7 @@ in
     hss-freshdesk-sandbox-get
     hss-hyrax
     hss-hyrax-all
+    hss-hyrax-common
     hss-hyrax-protocols
     hss-hyrax-protocols-local
     hss-hyrax-search
