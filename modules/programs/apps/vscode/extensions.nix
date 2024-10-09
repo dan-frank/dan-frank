@@ -11,7 +11,7 @@ with pkgs.vscode-extensions;
   github.copilot
   github.github-vscode-theme
   gruntfuggly.todo-tree
-  matklad.rust-analyzer
+  rust-lang.rust-analyzer
   mechatroner.rainbow-csv
   mhutchie.git-graph
   # ms-vsliveshare.vsliveshare

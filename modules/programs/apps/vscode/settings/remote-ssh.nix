@@ -10,7 +10,7 @@
     "github.copilot"
     "github.copilot-chat"
     "gruntfuggly.todo-tree"
-    "matklad.rust-analyzer"
+    "rust-lang.rust-analyzer"
     "mhutchie.git-graph"
     "mechatroner.rainbow-csv"
     "ms-vscode-remote.remote-ssh"

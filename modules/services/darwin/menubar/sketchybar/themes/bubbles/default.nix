@@ -27,7 +27,7 @@ in {
 
     # https://sourcegraph.com/github.com/Cu3PO42/gleaming-glacier@5abb8c0a3fb72cafbc7ca113e5f135142d0b51c8/-/blob/features/darwin/wm.nix?L116:5-116:15
     # https://sourcegraph.com/github.com/Cu3PO42/gleaming-glacier@5abb8c0a3fb72cafbc7ca113e5f135142d0b51c8/-/blob/packages/ical-buddy.nix
-    fonts.fonts = with pkgs; [
+    fonts.packages = with pkgs; [
       # sketchybar-app-font
       # liga-sfmono-nerd-font
       # font-awesome

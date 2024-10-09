@@ -3,8 +3,7 @@ let
   cfg = config.fontProfiles;
 in {
   fonts = {
-    fontDir.enable = true;
-    fonts = with pkgs; [
+    packages = with pkgs; [
       iosevka
       fira-code
       terminus_font
