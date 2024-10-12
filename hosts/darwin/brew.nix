@@ -19,6 +19,7 @@
       "docker"
       "kitty"
       "visual-studio-code"
+      "zen-browser"
     ];
     # App Store applications
     masApps = {
