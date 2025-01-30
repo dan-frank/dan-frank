@@ -12,8 +12,8 @@ in pkgs.writeShellApplication {
 include "application.conf"
 
 anyjunk {
-  persist.db.writeEndpoint = "hyrax-''${DB}.cluster-cpmn3r9ef2qs.eu-west-2.rds.amazonaws.com"
-  persist.db.readEndpoint = "hyrax-''${DB}.cluster-ro-cpmn3r9ef2qs.eu-west-2.rds.amazonaws.com"
+  persist.db.writeEndpoint = "hyrax-''${DB}.cluster-cvduhlzmvq4b.eu-west-1.rds.amazonaws.com"
+  persist.db.readEndpoint = "hyrax-''${DB}.cluster-ro-cvduhlzmvq4b.eu-west-1.rds.amazonaws.com"
   persist.db.api.password = "PZ9A8bvNmSzvQQZtvbuy4DNfZtFqhbDu"
   application.environment = "staging"
   service {
@@ -83,15 +83,17 @@ Next steps:
 
 cd ./hyrax/src/universal
 sudo ./import.sh $JAVA_HOME/lib/security/cacerts
-....
+.... or cd ../../..
 
-aws sso login --profile hss
+nix-shell -p awscli2
+
+aws sso login --profile hss-dev
 
 EOF
       echo "Run AWS VPN" | lolcat
       cat << EOF
 
-echo "hyrax/runMain uk.co.anyjunk.hyrax.Boot" | sbt -mem 16384 -Daws.region=eu-west-2 -Daws.profile=hss -Dconfig.resource=application-local.conf
+echo "hyrax/runMain uk.co.anyjunk.hyrax.Boot" | sbt -mem 16384 -Daws.region=eu-west-1 -Daws.profile=hss -Dconfig.resource=application-local.conf
 EOF
     else
       echo "Usage: hss-init-local <database-to-connect>"
