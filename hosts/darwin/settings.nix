@@ -11,7 +11,7 @@
     NSGlobalDomain = {
       AppleEnableMouseSwipeNavigateWithScrolls = false;
       AppleEnableSwipeNavigateWithScrolls = true;
-      AppleInterfaceStyle = "Dark";
+      AppleInterfaceStyle = null; # null / "Dark"
       ApplePressAndHoldEnabled = false;
       AppleShowAllExtensions = true;
       AppleShowScrollBars = "WhenScrolling";

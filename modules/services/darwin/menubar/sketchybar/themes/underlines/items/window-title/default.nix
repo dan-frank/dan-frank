@@ -1,4 +1,5 @@
 { pkgs, config, ...  }:
+with config.colorscheme.palette;
 let
   cfg = config.services.darwin.sketchybar;
 
@@ -14,7 +15,7 @@ in pkgs.writeShellScript "window-title.sh" ''
                                       label.font="${makeFont cfg.font}"              \
                                       label.y_offset=2                               \
                                       label.padding_left=-0                          \
-                                      label.color=0xffd5d9dd                         \
+                                      label.color="0xff${base05}"                    \
             --subscribe window_title  app_name                                       \
                                       mouse.clicked                                  \
                                       space_change                                   \
