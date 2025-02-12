@@ -5,17 +5,13 @@ with pkgs.vscode-extensions;
   bierner.markdown-checkbox
   bierner.markdown-emoji
   bradlc.vscode-tailwindcss
-  catppuccin.catppuccin-vsc
   eamodio.gitlens
   gencer.html-slim-scss-css-class-completion
   github.copilot
-  github.github-vscode-theme
   gruntfuggly.todo-tree
   rust-lang.rust-analyzer
   mechatroner.rainbow-csv
   mhutchie.git-graph
-  # ms-vsliveshare.vsliveshare
-  ms-vscode-remote.remote-ssh
   naumovs.color-highlight
   pkief.material-icon-theme
   scala-lang.scala

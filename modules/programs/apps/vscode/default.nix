@@ -25,7 +25,6 @@ in {
         (import ./settings/editor.nix { inherit config; })
         (import ./settings/git.nix)
         (import ./settings/languages.nix pkgs)
-        (import ./settings/remote-ssh.nix)
         (import ./settings/search.nix)
       ];
       extensions = import ./extensions.nix { pkgs = pkgs; };

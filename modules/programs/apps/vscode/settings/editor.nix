@@ -3,21 +3,33 @@ let
   fontSize = 15;
 in {
   "diffEditor.ignoreTrimWhitespace" = true;
-  "editor.bracketPairColorization.enabled" = true;
-  "editor.detectIndentation" = false;
   "editor.formatOnSave" = true;
+  "editor.formatOnPaste" = false;
+
+  "editor.detectIndentation" = false;
+
+  # "workbench.list.smoothScrolling" = true;
+  # "editor.smoothScrolling" = true;
+  # "editor.cursorSmoothCaretAnimation" = "on";
+
+  "editor.lineNumbers" = "relative";
+  "editor.minimap.enabled" = false;
+  "editor.stickyScroll.enabled" = false;
+  "window.zoomLevel" = 0.5;
+  "editor.wordWrap" = "on";
+  "editor.cursorBlinking" = "phase";
+
+  "editor.bracketPairColorization.enabled" = true;
+  "editor.guides.bracketPairs" = true;
+  "editor.guides.indentation" = true;
+  "editor.guides.highlightActiveIndentation" = true;
+
+  "editor.insertSpaces" = true;
+  "editor.tabSize" = 2;
+
   "editor.fontFamily" = config.fontProfiles.monospace.family;
   "editor.fontSize" = fontSize;
   "editor.fontWeight" = "normal";
-  "editor.guides.bracketPairs" = true;
-  "editor.insertSpaces" = true;
-  "editor.lineNumbers" = "relative";
-  "editor.tabSize" = 2;
-  "window.zoomLevel" = 0.5;
-  "workbench.colorTheme" = "Catppuccin Mocha";
-  "workbench.iconTheme" = "material-icon-theme";
-  "terminal.integrated.fontSize" = fontSize;
-  "terminal.integrated.scrollback" = 10000;
-  "editor.minimap.enabled" = false;
-  "editor.stickyScroll.enabled" = false;
+  "editor.lineHeight" = 1.6;
+  "editor.fontLigatures" = true;
 }
