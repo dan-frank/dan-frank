@@ -21,5 +21,11 @@ in
     enable = lib.mkEnableOption "Whether to enable font profiles";
     monospace = mkFontOption "monospace";
     regular = mkFontOption "regular";
+    fontSize = lib.mkOption {
+      type = lib.types.int;
+      default = 14;
+      description = "Theme font size";
+      example = "14";
+    };
   };
 }

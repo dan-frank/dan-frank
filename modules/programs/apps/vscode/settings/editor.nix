@@ -1,7 +1,5 @@
 { config }:
-let
-  fontSize = 15;
-in {
+{
   "diffEditor.ignoreTrimWhitespace" = true;
   "editor.formatOnSave" = true;
   "editor.formatOnPaste" = false;
@@ -28,7 +26,7 @@ in {
   "editor.tabSize" = 2;
 
   "editor.fontFamily" = config.fontProfiles.monospace.family;
-  "editor.fontSize" = fontSize;
+  "editor.fontSize" = config.fontProfiles.fontSize;
   "editor.fontWeight" = "normal";
   "editor.lineHeight" = 1.6;
   "editor.fontLigatures" = true;

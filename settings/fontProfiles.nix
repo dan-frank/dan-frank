@@ -10,5 +10,6 @@
       family = "Iosevka";
       package = pkgs.iosevka;
     };
+    fontSize = 16;
   };
 }

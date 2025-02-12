@@ -46,7 +46,7 @@ in {
         ];
         colors = theme;
         font = setfont config.fontProfiles.monospace.family // {
-          size = 16;
+          size = config.fontProfiles.fontSize;
         };
       };
     };
